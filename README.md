@@ -1,14 +1,14 @@
 # PRO-smidig
 Veldedighetsplatform for Meliora Impact
 
-Link til prototype: https://www.figma.com/file/ton1erJaL488rYxoApisfM/prototype-pt-2?node-id=0%3A1
+[Prototype.](https://www.figma.com/file/ton1erJaL488rYxoApisfM/prototype-pt-2?node-id=0%3A1) 
 
-Link til heroku: xxx
+[Heroku.](https://pro201-smidig.herokuapp.com/)
 
 ## TODO
 
-* [ ] Lage alle build scripter
-* [ ] Deploye prosjektet på Heroku
+* [x] Lage alle build scripter
+* [x] Deploye prosjektet på Heroku
 
 ## Front-end
 
