@@ -12,7 +12,7 @@ Link til heroku: xxx
 
 ## Front-end
 
-* [ ] Lage React prosjekt
+* [x] Lage React prosjekt
 * [ ] Lage navbar
 * [ ] Lage footer
 * [ ] Legge til logo som tab icon
@@ -34,8 +34,8 @@ Link til heroku: xxx
 ### Logg inn
 
 Logg inn:
-* [ ] Logg inn form
-* [ ] Logg inn med Google
+* [x] Logg inn form
+* [x] Logg inn med Google
 * [ ] Logg inn med Active Directory (Microsoft) ?
 
 Registrer ny bruker:
@@ -69,7 +69,7 @@ Legg til punkter her
 
 ## Back-end
 
-* [ ] Sette opp Express
+* [x] Sette opp Express
 
 ### Databaser
 
@@ -81,11 +81,11 @@ Legg til punkter her
 ### Logg inn API
 
 * [ ] `POST` registrere ny bruker
-* [ ] `POST` logge inn en bruker
+* [x] `POST` logge inn en bruker
 
 ### Bruker API
 
-* [ ] `GET` hente informasjon om bruker
+* [x] `GET` hente informasjon om bruker
 * [ ] Redigere informasjon om bruker
 * [ ] Slette bruker
 
