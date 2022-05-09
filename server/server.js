@@ -1,17 +1,21 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import fetch from "node-fetch";
 import path from "path";
+import dotenv from "dotenv";
 
+dotenv.config();
 const app = express();
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
 app.use(cookieParser(process.env.COOKIE_SECRET));
 
 const oauth_config = {
     discovery_endpoint:
         "https://accounts.google.com/.well-known/openid-configuration",
-    client_id: process.env.CLIENT_ID_GOOGLE,
+    client_id: process.env.CLIENT_ID,
     scope: "openid email profile",
 };
 
