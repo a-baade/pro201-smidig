@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Profile component should test div element 1`] = `<div />`;
+exports[`Profile component should show demo profile 1`] = `"<div><h1>Profile for userinfo ()</h1><div><img alt=\\"Profile picture\\"></div></div>"`;
 
-exports[`Profile component should test text in h1 1`] = `<div />`;
+exports[`Profile component should test div element 1`] = `HTMLCollection []`;
+
+exports[`Profile component should test text in h1 element 1`] = `/Profile for/i`;

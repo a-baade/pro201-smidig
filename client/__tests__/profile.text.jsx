@@ -15,6 +15,30 @@ describe("Profile component", () => {
         <Profile />
       </MemoryRouter>
     );
-    expect(divEl).toMatchSnapshot();
+    expect(divEl.getElementsByTagName("div")).toMatchSnapshot();
+  });
+
+  it("should test text in h1 element", function () {
+    const h1El = document.createTextNode(/Profile for/i);
+    expect(h1El).toMatchSnapshot();
+  });
+
+  it("should show demo profile", async function () {
+    const userinfo = {
+      userinfo: { name: "test name", email: "test email" },
+    };
+    const divEl = document.createElement("div");
+    const root = createRoot(divEl);
+    await act(async () => {
+      root.render(
+        <ProfileContext.Provider value={{ userinfo: () => userinfo }}>
+          <Profile />
+        </ProfileContext.Provider>
+      );
+    });
+    expect(
+      Object.values(divEl.querySelectorAll("h1")).map((e) => e.innerHTML)
+    ).toEqual(["Profile for userinfo ()"]);
+    expect(divEl.innerHTML).toMatchSnapshot();
   });
 });

@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Login component should redirect to login with google 1`] = `Object {}`;
+
+exports[`Login component should test text in h1 element 1`] = `/Please wait.../i`;

@@ -1,7 +1,7 @@
 import { act, Simulate } from "react-dom/test-utils";
 import ReactDOM from "react-dom";
 import React from "react";
-import { Login, ProfileContext } from "../login";
+import { Login, LoginCallback, ProfileContext } from "../login";
 import { MemoryRouter } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 
@@ -31,5 +31,9 @@ describe("Login component", () => {
     );
     expect(params).toMatchSnapshot();
     //expect(params).toMatchObject({ client_id, redirect_uri });
+  });
+
+  it("should test text in h1 element", function () {
+    const h1El = document.createTextNode(/Please wait.../i);
   });
 });
