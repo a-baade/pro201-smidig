@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run test:client && npm run test:server",
+    "test:client": "cd client && npm test",
+    "test:server": "cd server && npm test",
     "dev": "concurrently npm:dev:client npm:dev:server",
     "dev:client": "cd client && npm run dev",
     "dev:server": "cd server && npm run dev",
@@ -21,5 +23,8 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^7.1.0"
+  },
+  "dependencies": {
+    "prettier": "^2.6.2"
   }
 }

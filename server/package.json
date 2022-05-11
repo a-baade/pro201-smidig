@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "dev": "nodemon server.js",
     "build": "npm install",
     "start": "node server.js"
@@ -14,7 +14,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.16",
+    "supertest": "^6.2.2"
   },
   "dependencies": {
     "body-parser": "^1.20.0",
@@ -22,5 +26,17 @@
     "dotenv": "^16.0.0",
     "express": "^4.18.1",
     "node-fetch": "^3.2.3"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
   }
 }
