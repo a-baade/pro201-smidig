@@ -35,5 +35,32 @@ describe("Login component", () => {
 
   it("should test text in h1 element", function () {
     const h1El = document.createTextNode(/Please wait.../i);
+    expect(h1El).toMatchSnapshot();
+  });
+
+  it("should post to server", async function() {
+    window.sessionStorage.setItem("expected_state", "test");
+    const access_token = `abc`;
+    const location = new URL(
+      `https://www.example.com#access_token=${access_token}&state=test`
+    );
+    delete window.location;
+    window.location = new URL(location);
+
+    const domElement = document.createElement("div");
+    const registerLogin = jest.fn();
+    const reload = jest.fn();
+
+    const root = createRoot(domElement);
+    await act(() => {
+      root.render(
+        <MemoryRouter initialEntries={["/callback"]}>
+          <ProfileContext.Provider value={{registerLogin}}>
+            <LoginCallback reload={reload}/>
+          </ProfileContext.Provider>
+        </MemoryRouter>
+      );
+    });
+    expect(registerLogin).toBeCalledWith({access_token});
   });
 });

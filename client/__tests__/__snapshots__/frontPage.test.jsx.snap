@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`FrontPage component should render correctly 1`] = `""`;
+
+exports[`FrontPage component should render wrong 1`] = `""`;
+
 exports[`FrontPage component should test  div element 1`] = `""`;
 
 exports[`FrontPage component should test link element 1`] = `""`;

@@ -1,6 +1,6 @@
 import { FrontPage } from "../frontPage";
 import React from "react";
-import { MemoryRouter } from "react-router-dom";
+import { Link, MemoryRouter } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 
 describe("FrontPage component", () => {
@@ -13,6 +13,17 @@ describe("FrontPage component", () => {
       </MemoryRouter>
     );
     expect(domEl.innerHTML).toMatchSnapshot();
+  });
+
+  it("should render correctly", function() {
+    const linkEl = document.createElement("Link");
+    const root = createRoot(linkEl);
+    root.render(
+      <MemoryRouter>
+        <Link to={"/login"}>Login</Link>
+      </MemoryRouter>
+    );
+    expect(linkEl.innerHTML).toMatchSnapshot();
   });
 
   it("should test text in link element", function () {
