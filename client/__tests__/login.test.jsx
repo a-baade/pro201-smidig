@@ -1,45 +1,46 @@
 import { act, Simulate } from "react-dom/test-utils";
 import ReactDOM from "react-dom";
 import React from "react";
-import { LoginPage, LoginCallback, ProfileContext } from "../loginPage";
+import { LoginPage } from "../loginPage";
 import { MemoryRouter } from "react-router-dom";
-import { createRoot } from "react-dom/client";
+import {ApiContext} from "../apiContext";
 
 describe("LoginPage component", () => {
-  it("should redirect to login with google", async function () {
+  it("should redirect to login with google", async () => {
     const location = new URL("https://www.example.com");
     delete window.location;
     window.location = new URL(location);
 
-    const authorization_endpoint = `https://www.example.com/`;
+    const authorization_endpoint = `https://foo.example.com/auth`;
     const client_id = `1095583458734985klshdkajshdlaks.apps.googleusercontent.com`;
 
     const domElement = document.createElement("div");
-    const root = createRoot(domElement);
-    root.render(
+    //const root = createRoot(domElement);
+    ReactDOM.render(
       <MemoryRouter>
-        <LoginPage />
-      </MemoryRouter>
+        <LoginPage
+          config={{
+            google: { authorization_endpoint, client_id },
+          }}
+        />
+      </MemoryRouter>,
+      domElement
     );
-
-    const redirect_uri = `${location.origin}/login/callback`;
+    await act(async () => {
+      await Simulate.click(domElement.querySelector("button"));
+    });
+    const redirect_uri = `${location.origin}/login/google/callback`;
     expect(window.location.origin + window.location.pathname).toEqual(
       authorization_endpoint
     );
     const params = Object.fromEntries(
       new URLSearchParams(window.location.search.substring(1))
     );
-    expect(params).toMatchSnapshot();
     expect(params).toMatchObject({ client_id, redirect_uri });
   });
-
-  it("should test text in h1 element", function () {
-    const h1El = document.createTextNode(/Please wait.../i);
-    expect(h1El).toMatchSnapshot();
-  });
-
-  it("should post to server", async function() {
+  it("posts received token to server", async () => {
     window.sessionStorage.setItem("expected_state", "test");
+
     const access_token = `abc`;
     const location = new URL(
       `https://www.example.com#access_token=${access_token}&state=test`
@@ -48,23 +49,24 @@ describe("LoginPage component", () => {
     window.location = new URL(location);
 
     const domElement = document.createElement("div");
+    //const root = createRoot(domElement);
     const registerLogin = jest.fn();
     const reload = jest.fn();
-
-    const root = createRoot(domElement);
-    /*
     await act(() => {
-      root.render(
-        <MemoryRouter initialEntries={["/callback"]}>
-          <ProfileContext.Provider value={{registerLogin}}>
-            <LoginCallback reload={reload}/>
-          </ProfileContext.Provider>
-        </MemoryRouter>
+      ReactDOM.render(
+        <MemoryRouter initialEntries={["/google/callback"]}>
+          <ApiContext.Provider value={{ registerLogin }}>
+            <LoginPage reload={reload} />
+          </ApiContext.Provider>
+        </MemoryRouter>,
+        domElement
       );
     });
+    expect(registerLogin).toBeCalledWith("google", { access_token });
+  });
 
-     */
-    //expect(registerLogin).toBeCalledWith({access_token});
-    expect(domElement).toMatchSnapshot();
+  it("should test text in h1 element", function () {
+    const h1El = document.createTextNode(/Please wait.../i);
+    expect(h1El).toMatchSnapshot();
   });
 });
