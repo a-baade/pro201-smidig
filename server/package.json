@@ -38,5 +38,12 @@
         }
       ]
     ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!server.js",
+      "!coverage/**"
+    ]
   }
 }

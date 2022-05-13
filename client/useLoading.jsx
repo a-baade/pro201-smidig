@@ -1,14 +1,14 @@
 import {useEffect, useState} from "react";
 
-export function useLoader(loadingFn) {
+export function useLoading(loadingFunction, deps = []) {
     const [loading, setLoading] = useState(true);
-    const [data, setData] = useState();
     const [error, setError] = useState();
+    const [data, setData] = useState();
 
     async function load() {
         try {
             setLoading(true);
-            setData(await loadingFn());
+            setData(await loadingFunction());
         } catch (error) {
             setError(error);
         } finally {
@@ -16,6 +16,9 @@ export function useLoader(loadingFn) {
         }
     }
 
-    useEffect(() => load(), []);
-    return { loading, data, error };
+    useEffect(() => {
+        load();
+    }, deps);
+
+    return { loading, error, data, reload: load };
 }

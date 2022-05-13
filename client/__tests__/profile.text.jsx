@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import React from "react";
 import { MemoryRouter } from "react-router-dom";
 import { createRoot } from "react-dom/client";
-import { ProfileContext } from "../login";
+import { ProfileContext } from "../loginPage";
 import { act } from "react-dom/test-utils";
 
 describe("Profile component", () => {
@@ -40,5 +40,6 @@ describe("Profile component", () => {
       Object.values(divEl.querySelectorAll("h1")).map((e) => e.innerHTML)
     ).toEqual(["Profile for userinfo ()"]);
     expect(divEl.innerHTML).toMatchSnapshot();
+    expect.stringContaining("Profile for test name (test email)");
   });
 });

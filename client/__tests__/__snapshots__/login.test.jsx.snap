@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Login component should redirect to login with google 1`] = `Object {}`;
+exports[`LoginPage component should post to server 1`] = `<div />`;
 
-exports[`Login component should test text in h1 element 1`] = `/Please wait.../i`;
+exports[`LoginPage component should redirect to login with google 1`] = `Object {}`;
+
+exports[`LoginPage component should test text in h1 element 1`] = `/Please wait.../i`;

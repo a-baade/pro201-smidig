@@ -1,17 +1,18 @@
-import React, {useContext} from "react";
-import { ProfileContext } from "./login";
+import React from "react";
 
-export function Profile() {
-    const { userinfo } = useContext(ProfileContext);
-
-    return (
+export function Profile({ user }) {
+  return (
+    <div>
+      <h1>Profile</h1>
+      <div>
         <div>
-            <h1>
-                Profile for {userinfo.name} ({userinfo.email})
-            </h1>
-            <div>
-                <img src={userinfo.picture} alt="Profile picture" />
-            </div>
+          <h3>Name: {user.google.name}</h3>
+          <h4>Email: {user.google.email}</h4>
         </div>
-    );
+        <div>
+          <img src={user.google.picture} alt="Profile picture" />
+        </div>
+      </div>
+    </div>
+  );
 }
