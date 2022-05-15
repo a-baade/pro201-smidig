@@ -6,10 +6,11 @@ import { act } from "react-dom/test-utils";
 
 describe("Profile component", () => {
   it("should test div element", async function () {
+    const user = {google: { name: "test name", email: "test email" }};
     const divEl = document.createElement("div");
     ReactDOM.render(
       <MemoryRouter>
-        <Profile />
+        <Profile user={user}/>
       </MemoryRouter>,
       divEl
     );

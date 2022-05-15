@@ -4,6 +4,8 @@ import cookieParser from "cookie-parser";
 import * as path from "path";
 import dotenv from "dotenv";
 import {LoginApi} from "./loginApi.js";
+import { MongoClient } from "mongodb";
+import { CharitiesApi } from "./charitiesApi.js";
 
 dotenv.config();
 const app = express();
@@ -11,6 +13,15 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser(process.env.COOKIE_SECRET));
+
+const mongoClient = new MongoClient(process.env.MONGODB_URL);
+mongoClient.connect().then(async () => {
+    console.log("Connected to mongodb");
+    app.use(
+      "/api/charities",
+      CharitiesApi(mongoClient.db(process.env.MONGO_DATABASE || "smidig-prosjekt"))
+    );
+});
 
 app.use("/api/login", LoginApi());
 app.use(express.static("../client/dist/"));

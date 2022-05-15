@@ -2,4 +2,63 @@
 
 exports[`Profile component should show demo profile 1`] = `"<div><h1>Profile</h1><div><div><h3>Name: test name</h3><h3>Email: test email</h3></div><div><img alt=\\"Profile picture\\"></div></div></div>"`;
 
+exports[`Profile component should test div element 1`] = `
+HTMLCollection [
+  <div>
+    <h1>
+      Profile
+    </h1>
+    <div>
+      <div>
+        <h3>
+          Name: 
+          test name
+        </h3>
+        <h3>
+          Email: 
+          test email
+        </h3>
+      </div>
+      <div>
+        <img
+          alt="Profile picture"
+        />
+      </div>
+    </div>
+  </div>,
+  <div>
+    <div>
+      <h3>
+        Name: 
+        test name
+      </h3>
+      <h3>
+        Email: 
+        test email
+      </h3>
+    </div>
+    <div>
+      <img
+        alt="Profile picture"
+      />
+    </div>
+  </div>,
+  <div>
+    <h3>
+      Name: 
+      test name
+    </h3>
+    <h3>
+      Email: 
+      test email
+    </h3>
+  </div>,
+  <div>
+    <img
+      alt="Profile picture"
+    />
+  </div>,
+]
+`;
+
 exports[`Profile component should test text in h1 element 1`] = `/Profile for/i`;
