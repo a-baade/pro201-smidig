@@ -1,0 +1,80 @@
+body {
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    margin: 0 2vw;
+
+    border-bottom: solid 1px #e8e8e8;
+}
+
+nav > div {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 40px;
+    margin-right: 2vw;
+}
+
+.navLinks {
+    margin-right: 2vw;
+    text-decoration: none;
+    color: black;
+}
+
+.navLinks:hover {
+    text-decoration: underline;
+}
+
+.navIcons {
+    margin-left: 3vw;
+    height: 30px;
+}
+
+.profileDropdown {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+.profileDropdown .navIcons {
+    position: relative;
+    top: 22px;
+}
+.dropdownContent {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: -120px;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: -15px 15px 17px -10px rgba(0,0,0,0.09);
+    -webkit-box-shadow: -15px 15px 17px -10px rgba(0,0,0,0.09);
+    -moz-box-shadow: -15px 15px 17px -10px rgba(0,0,0,0.09);
+    z-index: 1;
+    border-bottom-left-radius: 20px;
+}
+.profileDropdown:hover .dropdownContent {
+    display: block;
+}
+
+.dropdownLink {
+    padding: 2vh 2vw;
+    width: 200px;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+}
+
+.dropdownLink:last-of-type {
+    border-bottom-left-radius: 20px;
+}
+
+.dropdownLink:hover {
+    background-color: #8AB7BA;
+
+}

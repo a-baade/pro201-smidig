@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FrontPage component should render correctly 1`] = `""`;
+exports[`FrontPage component should render correctly 1`] = `"<a href=\\"/login\\">Login</a>"`;
 
-exports[`FrontPage component should test  div element 1`] = `""`;
+exports[`FrontPage component should test  div element 1`] = `"<div><h1>Meliora Impact</h1><ul><li><a href=\\"/login\\">Login</a></li><li><a href=\\"/pprofile\\">Profile</a></li></ul></div>"`;
 
-exports[`FrontPage component should test link element 1`] = `""`;
+exports[`FrontPage component should test link element 1`] = `"<div><h1>Meliora Impact</h1><ul><li><a href=\\"/login\\">Login</a></li><li><a href=\\"/pprofile\\">Profile</a></li></ul></div>"`;
 
 exports[`FrontPage component should test text in link element 1`] = `/log in/i`;

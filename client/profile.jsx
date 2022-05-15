@@ -7,7 +7,7 @@ export function Profile({ user }) {
       <div>
         <div>
           <h3>Name: {user.google.name}</h3>
-          <h4>Email: {user.google.email}</h4>
+          <h3>Email: {user.google.email}</h3>
         </div>
         <div>
           <img src={user.google.picture} alt="Profile picture" />

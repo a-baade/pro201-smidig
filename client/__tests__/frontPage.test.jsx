@@ -1,27 +1,27 @@
 import { FrontPage } from "../frontPage";
 import React from "react";
 import { Link, MemoryRouter } from "react-router-dom";
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom";
 
 describe("FrontPage component", () => {
   it("should test  div element", async function () {
     const domEl = document.createElement("div");
-    const root = createRoot(domEl);
-    root.render(
+    ReactDOM.render(
       <MemoryRouter>
         <FrontPage />
-      </MemoryRouter>
+      </MemoryRouter>,
+      domEl
     );
     expect(domEl.innerHTML).toMatchSnapshot();
   });
 
   it("should render correctly", function() {
     const linkEl = document.createElement("Link");
-    const root = createRoot(linkEl);
-    root.render(
+    ReactDOM.render(
       <MemoryRouter>
         <Link to={"/login"}>Login</Link>
-      </MemoryRouter>
+      </MemoryRouter>,
+      linkEl
     );
     expect(linkEl.innerHTML).toMatchSnapshot();
   });
@@ -33,11 +33,11 @@ describe("FrontPage component", () => {
 
   it("should test link element", async function () {
     const linkEl = document.createElement("Link");
-    const root = createRoot(linkEl);
-    root.render(
+    ReactDOM.render(
       <MemoryRouter>
         <FrontPage />
-      </MemoryRouter>
+      </MemoryRouter>,
+      linkEl
     );
     expect(linkEl.innerHTML).toMatchSnapshot();
   });

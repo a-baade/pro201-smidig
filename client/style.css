@@ -27,3 +27,7 @@ header > * {
 header .menu-divider {
     flex: 1;
 }
+
+* {
+    font-family: sans-serif;
+}
