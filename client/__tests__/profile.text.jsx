@@ -27,14 +27,14 @@ describe("Profile component", () => {
     await act(async () => {
       ReactDOM.render(
           <MemoryRouter>
-            <Profile value={user}/>
+            <Profile user={user}/>
           </MemoryRouter>,
         divEl
       );
     });
     expect(
       Object.values(divEl.querySelectorAll("h3")).map((e) => e.innerHTML)
-    ).toEqual(["Profile for userinfo ()"]);
+    ).toEqual(["Name: test name", "Email: test email"]);
     expect(divEl.innerHTML).toMatchSnapshot();
     expect.stringContaining("Profile for test name (test email)");
   });

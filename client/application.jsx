@@ -3,9 +3,11 @@ import { FrontPage } from "./frontPage";
 import React, { useContext } from "react";
 import { LoginPage } from "./loginPage";
 import { useLoading } from "./useLoading";
-import {ApiContext} from "./apiContext";
-import {Profile} from "./profile";
+import { ApiContext } from "./apiContext";
+import { Profile } from "./profile";
 import "./style.css";
+import { Charities } from "./charities";
+import Navigation from "./navigation";
 
 
 function UserActions({ user }) {
@@ -37,13 +39,12 @@ export function Application() {
   return (
     <BrowserRouter>
       <header>
-        <Link to={"/"}>Front page</Link>
-        <div className="menu-divider" />
-        <UserActions user={data?.user} />
+        <Navigation></Navigation>
       </header>
       <main>
         <Routes>
           <Route path={"/"} element={<FrontPage />} />
+          <Route path={"/charities"} element={<Charities />}/>
           <Route
             path={"/login/*"}
             element={<LoginPage config={data.config} reload={reload} />}

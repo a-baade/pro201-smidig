@@ -1,13 +1,12 @@
 
 import React from "react";
-import Navigation from "./navigation";
 
 
-export function FrontPage({reload}) {
+export function FrontPage() {
 
     return (
       <div>
-        <Navigation></Navigation>
+       <h1>Front page</h1>
       </div>
     );
 }
