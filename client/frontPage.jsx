@@ -107,7 +107,6 @@ export function FrontPage() {
             </div>
           </div>
         </div>
-        <Footer></Footer>
       </div>
     );
 }

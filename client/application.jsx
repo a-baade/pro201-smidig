@@ -8,6 +8,7 @@ import { Profile } from "./profile";
 import "./style.css";
 import { Charities } from "./charities";
 import Navigation from "./navigation";
+import Footer from "./footer";
 
 
 function UserActions({ user }) {
@@ -53,6 +54,7 @@ export function Application() {
           <Route path={"*"} element={<h1>Not found</h1>} />
         </Routes>
       </main>
+      <Footer></Footer>
     </BrowserRouter>
   );
 }
