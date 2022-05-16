@@ -1,26 +1,6 @@
 
-main {
-    overflow-y: auto;
-    padding: 1em;
-}
-
-body {
-    margin: 0;
-}
-
-header {
-    background-color: aliceblue;
-    padding: 0.5em 1em;
-    display: flex;
-    justify-content: space-between;
-}
-
 header > * {
     padding-inline: 0.5em;
-}
-
-header .menu-divider {
-    flex: 1;
 }
 
 * {
@@ -65,4 +45,87 @@ header .menu-divider {
     margin: 50px;
 }
 
-.card-btn:hover {background: #808080;}
+.card-btn:hover,  .about-us-btn:hover {background: #CCCCCC;}
+
+.front-bg {
+    width: 100%;
+}
+
+.about-us-div {
+    text-align: center;
+    background-color: #95BDC4;
+    font-size: 20px;
+    padding-inline: 0.5em;
+    line-height: 25px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    margin: 80px;
+    border-radius: 5px;
+}
+
+.about-us-btn {
+    padding: 17px 32px;
+    background: #d5e5e6;
+    border: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.category-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+    text-align: center;
+    margin: 80px;
+}
+
+.newsfeed-parent {
+    text-align: center;
+    background-color: #95BDC4;
+    font-size: 20px;
+    padding-inline: 0.5em;
+    line-height: 25px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px #808080;
+    margin: 80px;
+}
+
+.newsfeed-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+    text-align: center;
+    margin: 80px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.newsfeed-item {
+    border: 2px solid white;
+    box-sizing: content-box;
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.read-more-btn {
+    bottom: 0;
+    right: 0;
+}
+
+
+.cat-pic {
+    width: 80%;
+}
+
+.newsfeed-pic {
+    width: 100%;
+}
+
