@@ -45,11 +45,39 @@ header > * {
     margin: 50px;
 }
 
-.card-btn:hover,  .about-us-btn:hover {background: #CCCCCC;}
+.card-btn:hover,  .about-us-btn:hover, .join-us-btn:hover {background: #CCCCCC;}
+.pic-container {
+    position: relative;
+}
 
 .front-bg {
     width: 100%;
 }
+
+.pic-text {
+    color: #FFFFFF;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    font-family: "Mukta Mahee";
+    font-size: 64px;
+}
+
+.join-us-btn {
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    padding: 15px 30px;
+    background: #8AB7BA;
+    border: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    width: 20%;
+}
+
 
 .about-us-div {
     text-align: center;
@@ -61,6 +89,7 @@ header > * {
     box-sizing: border-box;
     margin: 80px;
     border-radius: 5px;
+    font-size: 18px;
 }
 
 .about-us-btn {

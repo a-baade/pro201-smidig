@@ -13,7 +13,9 @@ export function FrontPage() {
 
     return (
       <div>
-       <div>
+       <div className={"pic-container"}>
+         <h1 className={"pic-text"}>Meliora Impact</h1>
+         <button className={"join-us-btn"}>Join us</button>
          <img src={ FrontBg } className={ "front-bg" }/>
        </div>
 
