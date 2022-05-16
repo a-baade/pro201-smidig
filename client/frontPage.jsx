@@ -7,6 +7,7 @@ import Education from "./bg-pictures/img_2.png";
 import NewsImg1 from "./bg-pictures/img_3.png";
 import NewsImg2 from "./bg-pictures/img_4.png";
 import NewsImg3 from "./bg-pictures/img_5.png";
+import Footer from "./footer";
 
 
 export function FrontPage() {
@@ -106,6 +107,7 @@ export function FrontPage() {
             </div>
           </div>
         </div>
+        <Footer></Footer>
       </div>
     );
 }
