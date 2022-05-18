@@ -14,48 +14,6 @@ header > * {
     font-family: sans-serif;
 }
 
-.flex-container{
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.charity-card {
-    background-color: #f1f1f1;
-    margin: 50px 0;
-    font-size: 20px;
-    padding-inline: 0.5em;
-    line-height: 25px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ACCCCE;
-    box-shadow: 2px 2px #808080;
-    border-width: 10ex 0ex 0ex;
-
-}
-
-.buttons {
-    display: flex;
-    ustify-content: space-between;
-}
-
-
-.card-btn {
-    display: inline-block;
-    padding: 17px 32px;
-    background: #ACCCCE;
-    border: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 12px;
-    font-weight: 600;
-    border-radius: 10px;
-    margin: 50px;
-}
-
-.card-btn:hover,  .about-us-btn:hover, .join-us-btn:hover {background: #CCCCCC;}
-.pic-container {
-    position: relative;
-}
 
 .front-bg {
     width: 100%;

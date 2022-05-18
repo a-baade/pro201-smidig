@@ -4,7 +4,7 @@ import { useLoading } from "./useLoading";
 
 function CharityCard({charity: {name, description}}){
   return (
-    <div class="flex-container">
+    <div class="charity-parent-cont">
       <div className={"charity-card"}>
         <h3>{name}</h3>
         <p>{description}</p>
@@ -13,7 +13,6 @@ function CharityCard({charity: {name, description}}){
           <button className="card-btn-right card-btn">Donate</button>
         </div>
       </div>
-
     </div>
   );
 }

@@ -1,0 +1,43 @@
+.parent-container {
+    background-color: #8AB7BA;
+    margin: 20px;
+    padding: 12px 30px;
+    max-width: 70%;
+    max-height: 70%;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.child-container {
+    background-color: white;
+    margin: auto;
+    max-width: 70%;
+    min-width: 70%;
+    align-content: center;
+}
+
+.name-fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cont-btn {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 4px;
+    background-color: #8AB7BA;
+}
+
+.input-form {
+    padding: 12px 100px;
+    margin: 50px;
+    max-width: 60%;
+    min-width: 50%;
+}

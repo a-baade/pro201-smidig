@@ -10,6 +10,7 @@ import { Charities } from "./charities";
 import Navigation from "./navigation";
 import Footer from "./footer";
 import { RegisterNewUser } from "./registerNewUser";
+import { AboutUs } from "./aboutUs";
 
 
 function UserActions({ user }) {
@@ -48,6 +49,7 @@ export function Application() {
           <Route path={"/"} element={<FrontPage />} />
           <Route path={"/charities"} element={<Charities />}/>
           <Route path={"/register"} element={<RegisterNewUser />}/>
+          <Route path={"/about"} element={<AboutUs />}/>
           <Route
             path={"/login/*"}
             element={<LoginPage config={data.config} reload={reload} />}
