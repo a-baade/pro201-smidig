@@ -11,6 +11,8 @@ export default function Footer(){
   return(
     <footer>
       <div className={"footerLinks"}>
+          <Link to={"/"} className={"footerLink"}>Social Media</Link>
+          <p>|</p>
         <Link to={"/"} className={"footerLink"}>Donate</Link>
         <p>|</p>
         <Link to={"/"} className={"footerLink"}>About us</Link>
@@ -19,12 +21,15 @@ export default function Footer(){
       </div>
 
       <div className={ "footerSocial" }>
-        <p><strong>Follow us on our social medias:</strong></p>
-        <a href={"https://www.facebook.com/"}><img src={ Facebook }/> Meliora Impact</a>
-        <a href={"https://www.instagram.com/"}><img src={ Instagram }/> @melioraimpact</a>
-        <a href={"https://www.snapchat.com/"}><img src={ Snapchat }/> melioraimpact</a>
-        <a href={"https://www.tiktok.com/"}><img src={ Tiktok }/> @melioraimpact</a>
+        <a href={"https://www.facebook.com/"}><img src={ Facebook }/> </a>
+        <a href={"https://www.instagram.com/"}><img src={ Instagram }/></a>
+        <a href={"https://www.snapchat.com/"}><img src={ Snapchat }/> </a>
+        <a href={"https://www.tiktok.com/"}><img src={ Tiktok }/></a>
       </div>
+
+        <div className={" footerCopyright "}>
+            <p>Copyright © 2022 Melioria Impact. All rights reserved</p>
+        </div>
 
       <div className={ "footerSubscribe" }>
         <p>Subscribe here for news about our causes</p>

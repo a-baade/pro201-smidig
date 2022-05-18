@@ -168,7 +168,7 @@ header > * {
 footer {
     margin-top: 10vh;
     background-color: #8AB7BA;
-    height: 40vh;
+    height: 30vh;
     padding: 2vh 2vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -234,11 +234,11 @@ footer {
 }
 
 .footerSocial {
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 1 / 2 / 3 / 1;
     align-self: center;
     justify-self: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .footerSocial a {
@@ -247,11 +247,14 @@ footer {
 }
 
 .footerSocial img {
-    height: 30px;
+    height: 60px;
     position: relative;
-    top: 8px;
+    padding: 5px;
 }
 
-
+.footerCopyright {
+    grid-area: 3 / 2 / 3 / 1;
+    font-size: 12px;
+}
 
 
