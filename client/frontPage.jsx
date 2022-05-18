@@ -7,7 +7,7 @@ import Education from "./bg-pictures/img_2.png";
 import NewsImg1 from "./bg-pictures/img_3.png";
 import NewsImg2 from "./bg-pictures/img_4.png";
 import NewsImg3 from "./bg-pictures/img_5.png";
-import Footer from "./footer";
+import { Link } from "react-router-dom";
 
 
 export function FrontPage() {
@@ -16,10 +16,9 @@ export function FrontPage() {
       <div>
        <div className={"pic-container"}>
          <h1 className={"pic-text"}>Meliora Impact</h1>
-         <button className={"join-us-btn"}>Join us</button>
+         <Link to={"/register"}><button className={"join-us-btn"}>Join us</button></Link>
          <img src={ FrontBg } className={ "front-bg" }/>
        </div>
-
         <div className={"about-us-div"}>
           <h1>About us</h1>
           <p>Lorem ipsum dolor sit amet,

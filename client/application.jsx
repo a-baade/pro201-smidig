@@ -9,6 +9,7 @@ import "./style.css";
 import { Charities } from "./charities";
 import Navigation from "./navigation";
 import Footer from "./footer";
+import { RegisterNewUser } from "./registerNewUser";
 
 
 function UserActions({ user }) {
@@ -46,6 +47,7 @@ export function Application() {
         <Routes>
           <Route path={"/"} element={<FrontPage />} />
           <Route path={"/charities"} element={<Charities />}/>
+          <Route path={"/register"} element={<RegisterNewUser />}/>
           <Route
             path={"/login/*"}
             element={<LoginPage config={data.config} reload={reload} />}

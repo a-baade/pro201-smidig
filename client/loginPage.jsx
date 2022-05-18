@@ -143,16 +143,16 @@ function StartLogin({ config }) {
             <div className={"email-field"}>
               <label className={"login-txt"}>Email address</label>
               <img src={Message} className={"message-icon"}/>
-              <input type={"email"} value={"@example.com"} className={"login-txt"}/>
+              <input type={"email"} className={"login-txt"}/>
             </div>
             <div>
               <label className={"login-txt"}>Password</label>
               <img src={Lock} className={"lock-icon"}/>
               <img src={Invisible} className={"invisible-icon"}/>
-              <input type={"password"} value={"exmplepassword"} className={"login-txt"}/>
+              <input type={"password"} className={"login-txt"}/>
             </div>
             <div>
-              <label><input type={"checkbox"} className={"checkbox"}/>I agree to Meliora Impacts’s Terms of Service and Privacy Policy</label>
+              <input type={"checkbox"} className={"checkbox"}/>I agree to Meliora Impacts’s Terms of Service and Privacy Policy
             </div>
            <button className={"sign-in-btn"}>Sign in</button>
             <label className={"sign-up-txt"}>Don´t have an account? Sign up</label>

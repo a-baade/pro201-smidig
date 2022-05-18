@@ -10,7 +10,7 @@
 .login-form {
     width: 100%;
     max-width: 500px;
-    min-width: 400px;
+    min-width: 500px;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -113,7 +113,7 @@ input {
     position: relative;
     width: 100%;
     max-width: 500px;
-    min-width: 400px;
+    min-width: 500px;
 }
 
 .first-layer-img {
