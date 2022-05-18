@@ -13,13 +13,29 @@ export function RegisterNewUser() {
   const [password, setPassword] = useState("");
   const [jobTitle, setJobTitle] = useState("");
 
-  const navigate = useNavigate();
+  async function handleSubmit(event) {
+      event.preventDefault();
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    registerNewOrganization({firstName, lastName,  nrCode, mobileNumber, companyName, email, password, jobtitle});
-    navigate("/");
+      await fetch("api/register/add", {
+          method: "POST",
+          body: new URLSearchParams({
+              firstName,
+              lastName,
+              mobileNumber,
+              companyName,
+              email,
+              password,
+              jobTitle,
+          }),
+      });
+      setCompanyName("");
   }
+
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+  //   registerNewOrganization({firstName, lastName, mobileNumber, companyName, email, password, jobTitle});
+  //   navigate("/");
+  // }
 
 
   return (

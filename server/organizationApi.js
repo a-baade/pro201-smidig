@@ -4,11 +4,22 @@ import { Router } from "express";
 export function OrganizationApi(mongoDatabase) {
   const router = new Router();
 
-  router.post("/", async (req, res) => {
+  router.post("/new", (req, res) => {
+    res.sendStatus(500);
+  });
+
+  router.post("/add", async (req, res) => {
     const {firstName, lastName, mobileNumber, companyName, email, password, jobTitle} = req.body;
-    mongoDatabase
-      .collection("organizations")
-      .insertOne({firstName, lastName, mobileNumber, companyName, email, password, jobTitle});
+    console.log(req.body);
+    mongoDatabase.collection("register").insertOne({
+      firstName,
+      lastName,
+      mobileNumber,
+      companyName,
+      email,
+      password,
+      jobTitle
+    });
     res.sendStatus(200);
   });
 

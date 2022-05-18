@@ -127,36 +127,36 @@ function StartLogin({ config }) {
     <div>
       <div className={"login-container"}>
         <div className={"sidebar"}>
-          <img src={FirstLayer} className={"first-layer-img"}/>
-          <img src={SecondLayer} className={"second-layer-img"}/>
-          <img src={TopCorner} className={"top-corner-img"}/>
-          <img src={BottomCorner} className={"bottom-corner-img"}/>
+          {/*<img src={FirstLayer} className={"first-layer-img"}/>*/}
+          {/*<img src={SecondLayer} className={"second-layer-img"}/>*/}
+          {/*<img src={TopCorner} className={"top-corner-img"}/>*/}
+          {/*<img src={BottomCorner} className={"bottom-corner-img"}/>*/}
         </div>
         <div className={"login-form"}>
           <h1>Get started.</h1>
-          <form>
+
             <LoginButton
-              label={"Sign up with Google"}
+              label={"Sign in with Google"}
               config={config}
               provider={"google"}
             />
             <div className={"email-field"}>
               <label className={"login-txt"}>Email address</label>
               <img src={Message} className={"message-icon"}/>
-              <input type={"email"} className={"login-txt"}/>
+              <input type= "email" placeholder={"email@address.com"} className={"login-txt"}/>
             </div>
             <div>
               <label className={"login-txt"}>Password</label>
               <img src={Lock} className={"lock-icon"}/>
               <img src={Invisible} className={"invisible-icon"}/>
-              <input type={"password"} className={"login-txt"}/>
+              <input type={"password"} className={"login-txt"} placeholder={"*************"}/>
             </div>
             <div>
               <input type={"checkbox"} className={"checkbox"}/>I agree to Meliora Impacts’s Terms of Service and Privacy Policy
             </div>
            <button className={"sign-in-btn"}>Sign in</button>
             <label className={"sign-up-txt"}>Don´t have an account? Sign up</label>
-          </form>
+
         </div>
       </div>
     </div>
