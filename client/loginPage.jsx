@@ -1,7 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Route, Routes, useNavigate, useParams } from "react-router-dom";
+import { Link, Route, Routes, useNavigate, useParams } from "react-router-dom";
 import {ApiContext} from "./apiContext";
 import {randomString} from "./lib/randomString";
+import Google from "./login-pic/img.png";
+import Message from "./login-pic/img_2.png";
+import Invisible from "./login-pic/img_4.png";
+import Lock from "./login-pic/img_3.png";
+import FirstLayer from "./login-pic/login-sidebar/firstlayer.png";
+import SecondLayer from "./login-pic/login-sidebar/secondlayer.png";
+import TopCorner from "./login-pic/login-sidebar/topcorner.png";
+import BottomCorner from "./login-pic/login-sidebar/bottomcorner.png";
+
 
 export function LoginCallback({ reload, config }) {
   const { provider } = useParams();
@@ -106,7 +115,9 @@ function LoginButton({ config, label, provider }) {
 
   return (
     <div>
-      <button onClick={handleLogin}>{label}</button>
+      <img src={Google} className={"google-icon"}/>
+      <button className={"google-login-btn"} onClick={handleLogin}>{label}</button>
+      <h2 className={"line"}>________________________</h2>
     </div>
   );
 }
@@ -114,12 +125,40 @@ function LoginButton({ config, label, provider }) {
 function StartLogin({ config }) {
   return (
     <div>
-      <h1>Login</h1>
-      <LoginButton
-        label={"Login with Google"}
-        config={config}
-        provider={"google"}
-      />
+      <div className={"login-container"}>
+        <div className={"sidebar"}>
+          <img src={FirstLayer} className={"first-layer-img"}/>
+          <img src={SecondLayer} className={"second-layer-img"}/>
+          <img src={TopCorner} className={"top-corner-img"}/>
+          <img src={BottomCorner} className={"bottom-corner-img"}/>
+        </div>
+        <div className={"login-form"}>
+          <h1>Get started.</h1>
+          <form>
+            <LoginButton
+              label={"Sign up with Google"}
+              config={config}
+              provider={"google"}
+            />
+            <div className={"email-field"}>
+              <label className={"login-txt"}>Email address</label>
+              <img src={Message} className={"message-icon"}/>
+              <input type={"email"} value={"@example.com"} className={"login-txt"}/>
+            </div>
+            <div>
+              <label className={"login-txt"}>Password</label>
+              <img src={Lock} className={"lock-icon"}/>
+              <img src={Invisible} className={"invisible-icon"}/>
+              <input type={"password"} value={"exmplepassword"} className={"login-txt"}/>
+            </div>
+            <div>
+              <label><input type={"checkbox"} className={"checkbox"}/>I agree to Meliora Impacts’s Terms of Service and Privacy Policy</label>
+            </div>
+           <button className={"sign-in-btn"}>Sign in</button>
+            <label className={"sign-up-txt"}>Don´t have an account? Sign up</label>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }

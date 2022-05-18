@@ -1,0 +1,156 @@
+.login-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px;
+
+}
+
+
+.login-form {
+    width: 100%;
+    max-width: 500px;
+    min-width: 400px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.google-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 110px;
+    left: 50px;
+}
+
+
+.message-icon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 50px;
+    left: -80px;
+}
+
+.lock-icon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 50px;
+    left: -50px;
+}
+
+.invisible-icon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 50px;
+    left: 300px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 4px;
+
+}
+
+
+.google-login-btn, .sign-in-btn {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 4px;
+}
+
+.sign-in-btn {
+    background-color: #8AB7BA;
+}
+
+
+
+.line {
+    text-align: center;
+}
+
+.login-txt, .container {
+    color: #555555;
+}
+
+.login-txt {
+    text-align: center;
+}
+
+/* Checkbox */
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    margin: 8px;
+}
+
+/* Sidebar */
+
+
+.sidebar {
+    background-color: #66A2AD;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 4px;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-width: 400px;
+}
+
+.first-layer-img {
+    position: relative;
+    z-index: 1;
+    top: 0;
+    right: 200px;
+    width: 958px;
+    height: 552px;
+}
+
+.second-layer-img {
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    left: -150px;
+    width: 735px;
+    height: 422px;
+}
+
+.top-corner-img {
+    position: absolute;
+    top: 0px;
+    left: -100px;
+    width: 424px;
+    height: 158px;
+}
+
+.bottom-corner-img {
+    position: absolute;
+    bottom: 0px;
+    left: 200px;
+    width: 424px;
+    height: 158px;
+}
+
+.sign-up-txt {
+    text-align: center;
+    color: #555555;
+}
