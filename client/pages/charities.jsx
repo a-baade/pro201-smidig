@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { ApiContext } from "./apiContext";
-import { useLoading } from "./useLoading";
+import { ApiContext } from "../apiContext";
+import { useLoading } from "../useLoading";
 
 function CharityCard({charity: {name, description}}){
   return (
