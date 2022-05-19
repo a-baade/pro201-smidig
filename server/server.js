@@ -18,10 +18,10 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 const mongoClient = new MongoClient(process.env.MONGODB_URL);
 mongoClient.connect().then(async () => {
     console.log("Connected to mongodb");
-   /* app.use(
+    app.use(
       "/api/charities",
       CharitiesApi(mongoClient.db(process.env.MONGO_DATABASE || "smidig-prosjekt"))
-    );*/
+    );
 
     app.use("/api/register",
       OrganizationApi(mongoClient.db(process.env.MONGO_DATABASE || "smidig-prosjekt")));

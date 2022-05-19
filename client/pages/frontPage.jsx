@@ -34,7 +34,7 @@ export function FrontPage() {
             Aenean volutpat sollicitudin accumsan. Vestibulum at maximus purus, in hendrerit eros.
             Phasellus id tellus a eros volutpat rutrum et in ligula. Donec quis odio augue.
             Mauris pellentesque feugiat lacus eget ornare.</p>
-          <button className={"about-us-btn"}>Read more</button>
+          <Link to={"/about"}><button className={"about-us-btn"}>Read more</button></Link>
         </div>
 
         <div className={"category-container"}>

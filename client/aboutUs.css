@@ -1,0 +1,103 @@
+.main-bg-pic {
+    width: 100%;
+}
+
+.second-row-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.knowledge-text-box {
+    margin: 10px;
+    width: 500px;
+    height: 600px;
+    line-height: 20px;
+}
+
+.knowledge-power, .action-call {
+    font-family: "Al Bayan";
+    letter-spacing: 2px;
+}
+
+.our-mission {
+    font-size: 14px;
+    color: #95BDC4;
+}
+
+.art-box {
+    position: relative;
+}
+
+
+.first-layer-art {
+    position: relative;
+    top: 0px;
+    left: 150px;
+    max-width: 700px;
+    max-height: 550px;
+    min-width: 400px;
+    min-height: 300px;
+}
+
+.top-layer-art {
+    position: absolute;
+    top: 30px;
+    left: 200px;
+    max-width: 650px;
+    max-height: 450px;
+    min-width: 300px;
+    min-height: 200px;
+}
+
+.action-call {
+    position: relative;
+    bottom: 200px;
+    left: 60px;
+    text-align: left;
+}
+
+.mission {
+    position: relative;
+    bottom: 200px;
+    left: 150px;
+}
+
+.big-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.small-box {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    flex: 0 0 0 33.333333%;
+    margin-left: 70px;
+}
+
+.light {
+    background-color: #B5D9DB;
+}
+
+.dark {
+    background-color: #A4CEC4;
+}
+
+.small-title {
+    font-family: "Al Bayan";
+    font-size: 18px;
+}
+
+.small-txt {
+    font-family: "Al Bayan";
+    font-size: 14px;
+}
+
+.small-txt, .small-title {
+    position: relative;
+    top: 160px;
+    text-align: center;
+    margin: 10px;
+}

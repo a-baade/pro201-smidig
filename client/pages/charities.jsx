@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { ApiContext } from "../apiContext";
-import { useLoading } from "../useLoading";
+import { ApiContext } from "./apiContext";
+import { useLoading } from "./useLoading";
 
 function CharityCard({charity: {name, description}}){
   return (
-    <div className="flex-container">
+    <div class="flex-container">
       <div className={"charity-card"}>
         <h3>{name}</h3>
         <p>{description}</p>

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import { ApiContext } from "../apiContext";
+import { ApiContext } from "./apiContext";
 import { useNavigate } from "react-router-dom";
-import { FormInput } from "../lib/formInput.jsx";
+import { FormInput } from "./lib/formInput.jsx";
 
 export function RegisterNewUser() {
   const {registerNewOrganization} = useContext(ApiContext);
