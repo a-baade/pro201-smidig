@@ -1,14 +1,14 @@
 import React from "react";
-import MainBg from "./about-us-pictures/main-bg.png";
-import FirstLayerArt from "./about-us-pictures/firstLayerArt.png";
-import TopLayerArt from "./about-us-pictures/topLayerArt.png";
-import PovertyFirst from "./about-us-pictures/povertyFirstLayer.png";
+import MainBg from "../pics/about-us-pictures/main-bg.png";
+import FirstLayerArt from "../pics/about-us-pictures/firstLayerArt.png";
+import TopLayerArt from "../pics/about-us-pictures/topLayerArt.png";
+import PovertyFirst from "../pics/about-us-pictures/povertyFirstLayer.png";
 
 export function AboutUs() {
   return (
     <div>
       <div>
-        <img src={MainBg} className={"main-bg-pic"}/>
+        <img src={MainBg} className={"main-bg-pic"} alt={"mainBg"}/>
       </div>
       <div className={"second-row-box"}>
         <div className={"knowledge-text-box"}>
@@ -19,8 +19,8 @@ export function AboutUs() {
           <p> We help implement solid strategies for impactful and sustainable giving, all in line with the UN SDGs.</p>
         </div>
         <div className={"art-box"}>
-          <img src={FirstLayerArt} className={"first-layer-art"}/>
-          <img src={TopLayerArt} className={"top-layer-art"}/>
+          <img src={FirstLayerArt} className={"first-layer-art"} alt={"firstLayer"}/>
+          <img src={TopLayerArt} className={"top-layer-art"} alt={"topLayer"}/>
           <p className={"our-mission mission"}>OUR MISSION</p>
           <h1 className={"action-call"}>A CALL TO ACTION</h1>
         </div>
