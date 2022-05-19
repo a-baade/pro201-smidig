@@ -1,12 +1,12 @@
 
 import React from "react";
-import FrontBg from "./bg-pictures/water-pic.png";
-import Nature from "./bg-pictures/img.png";
-import Welfare from "./bg-pictures/img_1.png";
-import Education from "./bg-pictures/img_2.png";
-import NewsImg1 from "./bg-pictures/img_3.png";
-import NewsImg2 from "./bg-pictures/img_4.png";
-import NewsImg3 from "./bg-pictures/img_5.png";
+import FrontBg from "../pics/bg-pictures/water-pic.png";
+import Nature from "../pics/bg-pictures/img.png";
+import Welfare from "../pics/bg-pictures/img_1.png";
+import Education from "../pics/bg-pictures/img_2.png";
+import NewsImg1 from "../pics/bg-pictures/img_3.png";
+import NewsImg2 from "../pics/bg-pictures/img_4.png";
+import NewsImg3 from "../pics/bg-pictures/img_5.png";
 import { Link } from "react-router-dom";
 
 
@@ -17,7 +17,7 @@ export function FrontPage() {
        <div className={"pic-container"}>
          <h1 className={"pic-text"}>Meliora Impact</h1>
          <Link to={"/register"}><button className={"join-us-btn"}>Join us</button></Link>
-         <img src={ FrontBg } className={ "front-bg" }/>
+         <img src={ FrontBg } className={ "front-bg" } alt={"FrontBg"}/>
        </div>
         <div className={"about-us-div"}>
           <h1>About us</h1>
@@ -41,7 +41,7 @@ export function FrontPage() {
           <div className={"nature"}>
             <h4>Protecting nature</h4>
             <div className={"nature-pic"}>
-              <img src={ Nature } className={ "cat-pic" }/>
+              <img src={ Nature } className={ "cat-pic" } alt={"catPic"}/>
             </div>
             <p>
               Lorem ipsum dolor sit amet,
@@ -56,7 +56,7 @@ export function FrontPage() {
           <div className={"welfare"}>
             <h4>Welfare</h4>
             <div className={"nature-pic"}>
-              <img src={ Welfare } className={ "cat-pic" }/>
+              <img src={ Welfare } className={ "cat-pic" } alt={"catPic"}/>
             </div>
             <p>
               Lorem ipsum dolor sit amet,
@@ -71,7 +71,7 @@ export function FrontPage() {
           <div className={"education"}>
             <h4>Education</h4>
             <div className={"nature-pic"}>
-              <img src={ Education } className={ "cat-pic" }/>
+              <img src={ Education } className={ "cat-pic" } alt={"catPic"}/>
             </div>
             <p>
               Lorem ipsum dolor sit amet,
@@ -88,17 +88,17 @@ export function FrontPage() {
           <h1>NEWSFEED</h1>
           <div className={"newsfeed-child"}>
             <div className={"newsfeed-item"}>
-              <img src={ NewsImg1 } className={ "newsfeed-pic" }/>
+              <img src={ NewsImg1 } className={ "newsfeed-pic" } alt={"newsFeedPic"}/>
               <p>Afghan refugee children enrolling in norwegian nurseries 2 weeks after coming to norway. Prime minister hopes that these efforts will help stabalise the everyday life of the children and that they will integrate quicker.</p>
               <p className={"read-more-btn"}>Read more</p>
             </div>
             <div className={"newsfeed-item"}>
-              <img src={ NewsImg2 } className={ "newsfeed-pic" }/>
+              <img src={ NewsImg2 } className={ "newsfeed-pic" } alt={"newsFeedPic"}/>
               <p>Hunting season has ended, yet people are still hunting animals illegally. Protecting nature is our responsibilty, and make sure that the next generation can enjoy wildnerness like us.</p>
               <p className={"read-more-btn"}>Read more</p>
             </div>
             <div className={"newsfeed-item"}>
-              <img src={ NewsImg3 } className={ "newsfeed-pic" }/>
+              <img src={ NewsImg3 } className={ "newsfeed-pic" } alt={"newsFeedPic"}/>
               <p>Thanks to the support of charities, children like Akeem are able to partake in after school activities.
 
                 Children like Akeem would not be able to afford ...</p>

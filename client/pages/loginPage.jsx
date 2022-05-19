@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, Route, Routes, useNavigate, useParams } from "react-router-dom";
-import {ApiContext} from "./apiContext";
-import {randomString} from "./lib/randomString";
-import Google from "./login-pic/img.png";
-import Message from "./login-pic/img_2.png";
-import Invisible from "./login-pic/img_4.png";
-import Lock from "./login-pic/img_3.png";
-import FirstLayer from "./login-pic/login-sidebar/firstlayer.png";
-import SecondLayer from "./login-pic/login-sidebar/secondlayer.png";
-import TopCorner from "./login-pic/login-sidebar/topcorner.png";
-import BottomCorner from "./login-pic/login-sidebar/bottomcorner.png";
+import { Route, Routes, useNavigate, useParams } from "react-router-dom";
+import {ApiContext} from "../apiContext";
+import {randomString} from "../lib/randomString";
+import Google from "../pics/login-pic/img.png";
+import Message from "../pics/login-pic/img_2.png";
+import Invisible from "../pics/login-pic/img_4.png";
+import Lock from "../pics/login-pic/img_3.png";
+import FirstLayer from "../pics/login-pic/login-sidebar/firstlayer.png";
+import SecondLayer from "../pics/login-pic/login-sidebar/secondlayer.png";
+import TopCorner from "../pics/login-pic/login-sidebar/topcorner.png";
+import BottomCorner from "../pics/login-pic/login-sidebar/bottomcorner.png";
 
 
 export function LoginCallback({ reload, config }) {
@@ -115,7 +115,7 @@ function LoginButton({ config, label, provider }) {
 
   return (
     <div>
-      <img src={Google} className={"google-icon"}/>
+      <img src={Google} className={"google-icon"} alt={"googleIcon"}/>
       <button className={"google-login-btn"} onClick={handleLogin}>{label}</button>
       <h2 className={"line"}>________________________</h2>
     </div>
@@ -142,13 +142,13 @@ function StartLogin({ config }) {
             />
             <div className={"email-field"}>
               <label className={"login-txt"}>Email address</label>
-              <img src={Message} className={"message-icon"}/>
+              <img src={Message} className={"message-icon"} alt={"msgIcon"}/>
               <input type= "email" placeholder={"email@address.com"} className={"login-txt"}/>
             </div>
             <div>
               <label className={"login-txt"}>Password</label>
-              <img src={Lock} className={"lock-icon"}/>
-              <img src={Invisible} className={"invisible-icon"}/>
+              <img src={Lock} className={"lock-icon"} alt={"lockIcon"}/>
+              <img src={Invisible} className={"invisible-icon"} alt={"invisibleIcon"}/>
               <input type={"password"} className={"login-txt"} placeholder={"*************"}/>
             </div>
             <div>

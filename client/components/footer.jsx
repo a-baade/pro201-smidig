@@ -1,7 +1,7 @@
-import Facebook from "./icons/facebook.png";
-import Instagram from "./icons/instagram.png";
-import Snapchat from "./icons/snapchat.png";
-import Tiktok from "./icons/tiktok.png";
+import Facebook from "../pics/icons/facebook.png";
+import Instagram from "../pics/icons/instagram.png";
+import Snapchat from "../pics/icons/snapchat.png";
+import Tiktok from "../pics/icons/tiktok.png";
 import {Link} from "react-router-dom";
 import {useState} from "react";
 
@@ -21,10 +21,10 @@ export default function Footer(){
       </div>
 
       <div className={ "footerSocial" }>
-        <a href={"https://www.facebook.com/"}><img src={ Facebook }/> </a>
-        <a href={"https://www.instagram.com/"}><img src={ Instagram }/></a>
-        <a href={"https://www.snapchat.com/"}><img src={ Snapchat }/> </a>
-        <a href={"https://www.tiktok.com/"}><img src={ Tiktok }/></a>
+        <a href={"https://www.facebook.com/"}><img src={ Facebook } alt={"facebook"}/> </a>
+        <a href={"https://www.instagram.com/"}><img src={ Instagram } alt={"insta"}/></a>
+        <a href={"https://www.snapchat.com/"}><img src={ Snapchat } alt={"snap"}/> </a>
+        <a href={"https://www.tiktok.com/"}><img src={ Tiktok } alt={"tiktok"}/></a>
       </div>
 
         <div className={" footerCopyright "}>

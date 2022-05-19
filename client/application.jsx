@@ -1,15 +1,15 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import { FrontPage } from "./frontPage";
+import { FrontPage } from "./pages/frontPage";
 import React, { useContext } from "react";
-import { LoginPage } from "./loginPage";
+import { LoginPage } from "./pages/loginPage";
 import { useLoading } from "./useLoading";
 import { ApiContext } from "./apiContext";
-import { Profile } from "./profile";
-import "./style.css";
-import { Charities } from "./charities";
-import Navigation from "./navigation";
-import Footer from "./footer";
-import { RegisterNewUser } from "./registerNewUser";
+import { Profile } from "./pages/profile";
+import "./css/style.css";
+import { Charities } from "./pages/charities";
+import Navigation from "./components/navigation";
+import Footer from "./components/footer";
+import { RegisterNewUser } from "./pages/registerNewUser";
 
 
 function UserActions({ user }) {
@@ -41,7 +41,7 @@ export function Application() {
   return (
     <BrowserRouter>
       <header>
-        <Navigation></Navigation>
+        <Navigation/>
       </header>
       <main>
         <Routes>
@@ -56,7 +56,7 @@ export function Application() {
           <Route path={"*"} element={<h1>Not found</h1>} />
         </Routes>
       </main>
-      <Footer></Footer>
+      <Footer/>
     </BrowserRouter>
   );
 }
