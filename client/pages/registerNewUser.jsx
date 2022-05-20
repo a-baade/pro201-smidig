@@ -9,9 +9,18 @@ export function RegisterNewUser() {
   const [lastName, setLastName] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
   const [companyName, setCompanyName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState(() => {
+    const savedEmail = localStorage.getItem("email");
+    const initValueEmail = JSON.parse(savedEmail);
+    return initValueEmail || "";
+  });
+  const [password, setPassword] = useState(() => {
+    const savedPassword = localStorage.getItem("password");
+    const initValuePassword = JSON.parse(savedPassword);
+    return initValuePassword || "";
+  });
   const [jobTitle, setJobTitle] = useState("");
+
 
 
   async function handleSubmit(event) {
@@ -32,7 +41,7 @@ export function RegisterNewUser() {
       setCompanyName("");
   }
 
-  localStorage.setItem("email", email);
+
   // function handleSubmit(e) {
   //   e.preventDefault();
   //   registerNewOrganization({firstName, lastName, mobileNumber, companyName, email, password, jobTitle});
