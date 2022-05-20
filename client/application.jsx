@@ -11,6 +11,7 @@ import Navigation from "./components/navigation";
 import Footer from "./components/footer";
 import { RegisterNewUser } from "./pages/registerNewUser";
 import { AboutUs } from "./pages/aboutUs";
+import { SignUp } from "./pages/signUp";
 
 
 function UserActions({ user }) {
@@ -50,8 +51,13 @@ export function Application() {
           <Route path={"/charities"} element={<Charities />}/>
           <Route path={"/register"} element={<RegisterNewUser />}/>
           <Route path={"/about"} element={<AboutUs/>}/>
+          <Route path={"/signup"} element={<SignUp config={data.config}/>}/>
           <Route
             path={"/login/*"}
+            element={<LoginPage config={data.config} reload={reload} />}
+          />
+          <Route
+            path={"/signup/*"}
             element={<LoginPage config={data.config} reload={reload} />}
           />
           <Route path={"/profile"} element={<Profile user={data?.user} />} />

@@ -1,15 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Route, Routes, useNavigate, useParams } from "react-router-dom";
+import { Link, Route, Routes, useNavigate, useParams } from "react-router-dom";
 import {ApiContext} from "../apiContext";
 import {randomString} from "../lib/randomString";
-import Google from "../pics/login-pic/img.png";
-import Message from "../pics/login-pic/img_2.png";
-import Invisible from "../pics/login-pic/img_4.png";
-import Lock from "../pics/login-pic/img_3.png";
-import FirstLayer from "../pics/login-pic/login-sidebar/firstlayer.png";
-import SecondLayer from "../pics/login-pic/login-sidebar/secondlayer.png";
-import TopCorner from "../pics/login-pic/login-sidebar/topcorner.png";
-import BottomCorner from "../pics/login-pic/login-sidebar/bottomcorner.png";
+import Google from "../pics/sign-up-pic/img.png";
+import Message from "../pics/sign-up-pic/img_2.png";
+import Invisible from "../pics/sign-up-pic/img_4.png";
+import Lock from "../pics/sign-up-pic/img_3.png";
+import { SignUp } from "./signUp";
 
 
 export function LoginCallback({ reload, config }) {
@@ -92,7 +89,7 @@ export function EndSession({ reload }) {
   return <h1>Please wait...</h1>;
 }
 
-function LoginButton({ config, label, provider }) {
+export function LoginButton({ config, label, provider }) {
   async function handleLogin() {
     const { authorization_endpoint, response_type, scope, client_id } =
       config[provider];
@@ -127,13 +124,9 @@ function StartLogin({ config }) {
     <div>
       <div className={"login-container"}>
         <div className={"sidebar"}>
-          {/*<img src={FirstLayer} className={"first-layer-img"}/>*/}
-          {/*<img src={SecondLayer} className={"second-layer-img"}/>*/}
-          {/*<img src={TopCorner} className={"top-corner-img"}/>*/}
-          {/*<img src={BottomCorner} className={"bottom-corner-img"}/>*/}
         </div>
         <div className={"login-form"}>
-          <h1>Get started.</h1>
+          <h1>The future is NOW.</h1>
 
             <LoginButton
               label={"Sign in with Google"}
@@ -151,11 +144,8 @@ function StartLogin({ config }) {
               <img src={Invisible} className={"invisible-icon"} alt={"invisibleIcon"}/>
               <input type={"password"} className={"login-txt"} placeholder={"*************"}/>
             </div>
-            <div>
-              <input type={"checkbox"} className={"checkbox"}/>I agree to Meliora Impacts’s Terms of Service and Privacy Policy
-            </div>
-           <button className={"sign-in-btn"}>Sign in</button>
-            <label className={"sign-up-txt"}>Don´t have an account? Sign up</label>
+           <button className={"sign-in-btn"}>Sign up</button>
+            <label className={"sign-up-txt"}>Don´t have an account? <Link to={"/signup"}>Sign up</Link> </label>
 
         </div>
       </div>
@@ -167,6 +157,7 @@ export function LoginPage({ config, reload }) {
   return (
     <Routes>
       <Route path={"/"} element={<StartLogin config={config} />} />
+      <Route path={"/signup"} element={<SignUp config={config}/> }/>
       <Route
         path={"/:provider/callback"}
         element={<LoginCallback config={config} reload={reload} />}

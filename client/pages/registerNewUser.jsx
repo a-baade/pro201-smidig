@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ApiContext } from "../apiContext";
 import { useNavigate } from "react-router-dom";
 import { FormInput, FormInputPassword } from "../lib/formInput.jsx";
@@ -12,6 +12,7 @@ export function RegisterNewUser() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [jobTitle, setJobTitle] = useState("");
+
 
   async function handleSubmit(event) {
       event.preventDefault();
@@ -31,6 +32,7 @@ export function RegisterNewUser() {
       setCompanyName("");
   }
 
+  localStorage.setItem("email", email);
   // function handleSubmit(e) {
   //   e.preventDefault();
   //   registerNewOrganization({firstName, lastName, mobileNumber, companyName, email, password, jobTitle});

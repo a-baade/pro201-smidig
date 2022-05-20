@@ -104,7 +104,7 @@ input {
 
 
 .sidebar {
-    background-color: #66A2AD;
+    background-color: #FBEADA;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -114,6 +114,10 @@ input {
     width: 100%;
     max-width: 500px;
     min-width: 500px;
+}
+
+.signup-sidebar {
+    background-color: #95BDC4;
 }
 
 .first-layer-img {
