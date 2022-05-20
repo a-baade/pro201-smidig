@@ -9,12 +9,14 @@ export function OrganizationApi(mongoDatabase) {
   });
 
   router.post("/add", async (req, res) => {
-    const {firstName, lastName, mobileNumber, companyName, email, password, jobTitle} = req.body;
+    const {firstName, lastName, mobileNumber, cardType, cardNumber, companyName, email, password, jobTitle} = req.body;
     console.log(req.body);
     mongoDatabase.collection("register").insertOne({
       firstName,
       lastName,
       mobileNumber,
+      cardType,
+      cardNumber,
       companyName,
       email,
       password,

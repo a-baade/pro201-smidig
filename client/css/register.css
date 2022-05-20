@@ -1,21 +1,24 @@
 .parent-container {
     background-color: #8AB7BA;
-    margin: 20px;
     padding: 12px 30px;
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 1000px;
+    max-height: 950px;
+    min-width: 600px;
+    min-height: 400px;
     align-items: center;
-    display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
 .child-container {
+    position: relative;
+    display: block;
     background-color: white;
     margin: auto;
-    max-width: 70%;
-    min-width: 70%;
+    max-width: 700px;
+    min-width: 500px;
     align-content: center;
+    top: -1000px;
 }
 
 .name-fields {
@@ -38,6 +41,39 @@
 .input-form {
     padding: 12px 100px;
     margin: 50px;
-    max-width: 60%;
-    min-width: 50%;
+    max-width: 600px;
+    min-width: 200px;
+}
+
+.first-layer-bg {
+    position: relative;
+    max-width: 1200px;
+    height: 800px;
+    left: -100px;
+}
+
+.red-ball {
+    position: relative;
+    max-width: 600px;
+    height: 200px;
+    top: -800px;
+    left: -50px;
+}
+
+.white-dot {
+    position: relative;
+    max-width: 200px;
+    height: 200px;
+    top: -170px;
+    left: 100px;
+}
+
+
+.input-field {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 4px;
 }
