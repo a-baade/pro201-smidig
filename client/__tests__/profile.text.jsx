@@ -1,4 +1,4 @@
-import { Profile } from "../profile";
+import { Profile } from "../pages/profile";
 import ReactDOM from "react-dom";
 import React from "react";
 import { MemoryRouter } from "react-router-dom";

@@ -1,4 +1,4 @@
-import { FrontPage } from "../frontPage";
+import { FrontPage } from "../pages/frontPage";
 import React from "react";
 import { Link, MemoryRouter } from "react-router-dom";
 import ReactDOM from "react-dom";

@@ -1,7 +1,7 @@
 import { act, Simulate } from "react-dom/test-utils";
 import ReactDOM from "react-dom";
 import React from "react";
-import { LoginPage } from "../loginPage";
+import { LoginPage } from "../pages/loginPage";
 import { MemoryRouter } from "react-router-dom";
 import {ApiContext} from "../apiContext";
 

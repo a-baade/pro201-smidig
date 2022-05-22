@@ -42,6 +42,9 @@
     ]
   },
   "jest": {
+    "moduleNameMapper": {
+      "\\.(css|jpg|png)$": "../lib/empty-module.jsx"
+    },
     "testEnvironment": "jsdom",
     "collectCoverageFrom": [
       "**/*.jsx",
