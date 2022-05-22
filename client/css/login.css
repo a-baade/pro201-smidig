@@ -105,18 +105,40 @@ input {
 
 .sidebar {
     background-color: #FBEADA;
-    padding: 12px 20px;
-    margin: 8px 0;
     box-sizing: border-box;
+    margin: 8px 0;
     border: 2px solid #808080;
     border-radius: 4px;
     position: relative;
-    width: 100%;
     max-width: 500px;
     min-width: 500px;
 }
 
 .signup-sidebar {
     background-color: #95BDC4;
+}
+
+.first-layer-login {
+    position: relative;
+    top: 0px;
+    right: 50px;
+    width: 600px;
+    height: 500px;
+}
+
+.second-layer-login {
+    position: absolute;
+    top: 180px;
+    left: 270px;
+    width: 200px;
+    height: 200px;
+}
+
+.third-layer-login {
+    position: absolute;
+    top: 160px;
+    left: 0px;
+    width: 550px;
+    height: 350px;
 }
 

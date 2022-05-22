@@ -7,6 +7,9 @@ import Message from "../pics/sign-up-pic/img_2.png";
 import Invisible from "../pics/sign-up-pic/img_4.png";
 import Lock from "../pics/sign-up-pic/img_3.png";
 import { SignUp } from "./signUp";
+import FirstLayer from "../pics/sign-in/firstLayer.png";
+import SecondLayer from "../pics/sign-in/secondLayeer.png";
+import ThirdLayer from "../pics/sign-in/thirdLayer.png";
 
 
 
@@ -125,7 +128,9 @@ function StartLogin({ config }) {
     <div>
       <div className={"login-container"}>
         <div className={"sidebar"}>
-
+            <img src={FirstLayer} className={"first-layer-login"} />
+            <img src={SecondLayer} className={"second-layer-login"}/>
+            <img src={ThirdLayer} className={"third-layer-login"}/>
         </div>
         <div className={"login-form"}>
           <h1>The future is NOW.</h1>
