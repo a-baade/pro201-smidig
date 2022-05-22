@@ -5,7 +5,6 @@ import { LoginPage } from "./pages/loginPage";
 import { useLoading } from "./useLoading";
 import { ApiContext } from "./apiContext";
 import { Profile } from "./pages/profile";
-import "./css/style.css";
 import { Charities } from "./pages/charities";
 import Navigation from "./components/navigation";
 import Footer from "./components/footer";
@@ -13,21 +12,6 @@ import { RegisterNewUser } from "./pages/registerNewUser";
 import { AboutUs } from "./pages/aboutUs";
 import { SignUp } from "./pages/signUp";
 
-
-function UserActions({ user }) {
-  if (!user || Object.keys(user).length === 0) {
-    return <Link to={"/login"}>Login</Link>;
-  }
-
-  return (
-    <>
-      <Link to={"/profile"}>
-        {user.google?.name ? `Profile for ${user.google.name}` : "Profile"}
-      </Link>
-      <Link to={"/login/endsession"}>Log out</Link>
-    </>
-  );
-}
 
 export function Application() {
   const { fetchLogin } = useContext(ApiContext);
