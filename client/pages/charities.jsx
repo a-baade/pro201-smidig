@@ -4,9 +4,9 @@ import { useLoading } from "../useLoading";
 
 function CharityCard({charity: {name, description}}){
   return (
-    <div class="flex-container">
+    <div className="flex-container">
       <div className={"charity-card"}>
-        <h3>{name}</h3>
+        <p>{name}</p>
         <p>{description}</p>
         <div className={"card-buttons"}>
           <button className="card-btn-left card-btn">Read more</button>
