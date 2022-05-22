@@ -1,13 +1,48 @@
 
 .signup-sidebar {
     background-color: #95BDC4;
-    padding: 12px 20px;
-    margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid #808080;
     border-radius: 4px;
     position: relative;
-    width: 100%;
     max-width: 500px;
     min-width: 500px;
 }
+
+.first-layer-img {
+    position: relative;
+    top: 0;
+    right: 200px;
+    width: 958px;
+    height: 552px;
+}
+
+.second-layer-img {
+    position: absolute;
+    top: 80px;
+    left: -150px;
+    width: 735px;
+    height: 422px;
+}
+
+.top-corner-img {
+    position: absolute;
+    top: 0px;
+    left: -100px;
+    width: 424px;
+    height: 158px;
+}
+
+.bottom-corner-img {
+    position: absolute;
+    bottom: 0px;
+    left: 200px;
+    width: 424px;
+    height: 158px;
+}
+
+.sign-up-txt {
+    text-align: center;
+    color: #555555;
+}
+

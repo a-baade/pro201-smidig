@@ -9,6 +9,7 @@ import Lock from "../pics/sign-up-pic/img_3.png";
 import { SignUp } from "./signUp";
 
 
+
 export function LoginCallback({ reload, config }) {
   const { provider } = useParams();
   const [error, setError] = useState();
@@ -124,6 +125,7 @@ function StartLogin({ config }) {
     <div>
       <div className={"login-container"}>
         <div className={"sidebar"}>
+
         </div>
         <div className={"login-form"}>
           <h1>The future is NOW.</h1>
@@ -144,7 +146,7 @@ function StartLogin({ config }) {
               <img src={Invisible} className={"invisible-icon"} alt={"invisibleIcon"}/>
               <input type={"password"} className={"login-txt"} placeholder={"*************"}/>
             </div>
-           <button className={"sign-in-btn"}>Sign up</button>
+           <button className={"sign-in-btn"}>Sign in</button>
             <label className={"sign-up-txt"}>Don´t have an account? <Link to={"/signup"}>Sign up</Link> </label>
 
         </div>

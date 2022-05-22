@@ -4,6 +4,10 @@ import Lock from "../pics/sign-up-pic/img_3.png";
 import Invisible from "../pics/sign-up-pic/img_4.png";
 import {LoginButton} from "./loginPage";
 import { Link } from "react-router-dom";
+import FirstLayer from "../pics/sign-up-pic/login-sidebar/firstlayer.png";
+import SecondLayer from "../pics/sign-up-pic/login-sidebar/secondlayer.png";
+import TopCorner from "../pics/sign-up-pic/login-sidebar/topcorner.png";
+import BottomCorner from "../pics/sign-up-pic/login-sidebar/bottomcorner.png";
 
 export function SignUp({ config }) {
 
@@ -23,6 +27,12 @@ export function SignUp({ config }) {
     <div>
       <div className={"login-container"}>
         <div className={"sidebar signup-sidebar"}>
+          <div>
+            <img src={FirstLayer} className={"first-layer-img"}/>
+            <img src={SecondLayer} className={"second-layer-img"}/>
+            <img src={TopCorner} className={"top-corner-img"}/>
+            <img src={BottomCorner} className={"bottom-corner-img"}/>
+          </div>
         </div>
         <div className={"login-form"}>
           <h1>The future is NOW.</h1>
@@ -47,7 +57,7 @@ export function SignUp({ config }) {
             <input type={"checkbox"} className={"checkbox"}/>I agree to Meliora Impacts’s Terms of Service and Privacy Policy
           </div>
           <Link to={"/register"}><button className={"sign-in-btn"}>Sign up</button></Link>
-          <label className={"sign-up-txt"}>Don´t have an account? <Link to={"/login"}>Sign in</Link> </label>
+          <label className={"sign-up-txt"}>Already have an account? <Link to={"/login"}>Sign in</Link> </label>
 
         </div>
       </div>
