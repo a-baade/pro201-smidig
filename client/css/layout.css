@@ -49,9 +49,9 @@ nav > div {
     display: none;
     position: absolute;
     top: 76px;
-    left: -120px;
+    left: -75px;
     background-color: white;
-    min-width: 120px;
+    min-width: 300px;
     box-shadow: -15px 15px 17px -10px rgba(0,0,0,0.09);
     -webkit-box-shadow: -15px 15px 17px -10px rgba(0,0,0,0.09);
     -moz-box-shadow: -15px 15px 17px -10px rgba(0,0,0,0.09);
@@ -68,6 +68,7 @@ nav > div {
     text-decoration: none;
     color: black;
     margin: 0;
+
 }
 
 .dropdownLink:last-of-type {
