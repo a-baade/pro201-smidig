@@ -5,5 +5,3 @@ exports[`Application component should test Route 1`] = `"<div><div class=\\"pic-
 exports[`Application component should test div element 1`] = `"<div>Please wait...</div>"`;
 
 exports[`Application component should test header 1`] = `"<div>Please wait...</div>"`;
-
-exports[`Application component should test navigation 1`] = `"<nav><div><a href=\\"/\\"><img src=\\"[object Object]\\" class=\\"logo\\"></a><a class=\\"navLinks\\" href=\\"/charities\\">Charities</a><a class=\\"navLinks\\" href=\\"/about\\">About us</a><p class=\\"navLinks\\">Contact</p><p class=\\"navLinks\\">Other</p></div><div><img src=\\"[object Object]\\" class=\\"navIcons\\"><div class=\\"profileDropdown\\"><img src=\\"[object Object]\\" class=\\"navIcons\\"><div class=\\"dropdownContent\\"><ul><a class=\\"dropdownLink\\" href=\\"/login\\">Log in</a></ul><ul><a class=\\"dropdownLink\\" href=\\"/profile\\">Profile</a></ul><ul><p class=\\"dropdownLink\\">My dashboard</p></ul><ul><a class=\\"dropdownLink\\" href=\\"/login/endsession\\">Log out</a></ul></div></div></div></nav>"`;

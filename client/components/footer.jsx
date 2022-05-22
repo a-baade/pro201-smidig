@@ -4,6 +4,7 @@ import Snapchat from "../pics/icons/snapchat.png";
 import Tiktok from "../pics/icons/tiktok.png";
 import {Link} from "react-router-dom";
 import {useState} from "react";
+import React from "react";
 
 export default function Footer(){
   const [email, setEmail] = useState("");
