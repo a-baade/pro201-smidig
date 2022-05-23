@@ -9,7 +9,7 @@
 }
 
 .child-container {
-    position: fixed;
+    position: relative;
     display: block;
     background-color: white;
     margin: auto;
