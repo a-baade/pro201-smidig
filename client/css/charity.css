@@ -1,28 +1,57 @@
 /* Charity style */
 
-
 .charity-parent-cont{
+    width: 100%;
+    padding: 0;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .charity-card {
-    background-color: #f1f1f1;
-    margin: 50px;
+    /*background-color: #f1f1f1;*/
+    max-width: 35vw;
+    min-width: 450px;
+    margin-top: 10vh;
     font-size: 20px;
-    padding-inline: 0.5em;
     line-height: 25px;
-    padding: 20px;
     box-sizing: border-box;
     border: 2px solid #ACCCCE;
-    box-shadow: 2px 2px #808080;
-    border-width: 10ex 0ex 0ex;
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     text-align: center;
 
 }
 
+.charity-background {
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+}
+
+.charity-img {
+    top: 120px;
+    position: relative;
+    height: auto;
+    width: 170px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+    object-fit: cover;
+}
+
+.charity-card-content {
+    margin-top: 65px;
+    padding: 20px;
+}
 .card-buttons {
     display: flex;
     flex-direction: row;
@@ -37,12 +66,20 @@
     letter-spacing: 1px;
     font-size: 12px;
     font-weight: 600;
-    margin: 50px;
-    width: 30%;
+    margin: 20px 50px;
+    width: 50vw;
+    min-width: 150px;
     border-radius: 10px;
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
 }
 
-.card-btn:hover,  .about-us-btn:hover, .join-us-btn:hover {background: #CCCCCC;}
+.card-btn:hover,  .about-us-btn:hover, .join-us-btn:hover {
+    background: #CCCCCC;
+    cursor: pointer;
+}
+
 .pic-container {
     position: relative;
 }

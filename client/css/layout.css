@@ -63,6 +63,7 @@ nav > div {
 }
 
 .dropdownLink {
+    display: block;
     padding: 2vh 2vw;
     width: 200px;
     text-decoration: none;
