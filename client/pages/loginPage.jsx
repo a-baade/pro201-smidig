@@ -118,7 +118,7 @@ export function LoginButton({ config, label, provider }) {
     <div>
       <img src={Google} className={"google-icon"} alt={"googleIcon"}/>
       <button className={"google-login-btn"} onClick={handleLogin}>{label}</button>
-      <h2 className={"line"}>________________________</h2>
+      <h2 className={"line"}></h2>
     </div>
   );
 }
@@ -148,7 +148,6 @@ function StartLogin({ config }) {
             <div>
               <label className={"login-txt"}>Password</label>
               <img src={Lock} className={"lock-icon"} alt={"lockIcon"}/>
-              <img src={Invisible} className={"invisible-icon"} alt={"invisibleIcon"}/>
               <input type={"password"} className={"login-txt"} placeholder={"*************"}/>
             </div>
            <button className={"sign-in-btn"}>Sign in</button>

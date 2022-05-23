@@ -50,7 +50,6 @@ export function SignUp({ config }) {
           <div>
             <label className={"login-txt"}>Password</label>
             <img src={Lock} className={"lock-icon"} alt={"lockIcon"}/>
-            <img src={Invisible} className={"invisible-icon"} alt={"invisibleIcon"}/>
             <input type={"password"} className={"login-txt"} placeholder={"*************"} value={password} onChange={(e) => setPassword(e.target.value)}/>
           </div>
           <div>
