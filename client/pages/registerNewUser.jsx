@@ -71,7 +71,7 @@ export function RegisterNewUser() {
               <FormInput label={"Last name:"} value={lastName} onChangeValue={setLastName}/>
             </div>
             <FormInput label={"Mobile number:"} value={mobileNumber} onChangeValue={setMobileNumber}/>
-            <label className={"input-label"}>Card type</label>
+            <label>Card type</label>
             <select className={"input-field"} value={cardType} onChange={(e) => setCardType(e.target.value)}>
               <option>Visa</option>
               <option>Master</option>

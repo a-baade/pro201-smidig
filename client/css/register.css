@@ -2,16 +2,14 @@
     background-color: #8AB7BA;
     padding: 12px 30px;
     max-width: 1000px;
-    max-height: 950px;
     min-width: 600px;
+    max-height: 1000px;
     min-height: 400px;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .child-container {
-    position: relative;
+    position: fixed;
     display: block;
     background-color: white;
     margin: auto;

@@ -87,7 +87,7 @@ input {
     border-radius: 5px;
 }
 
-.login-txt, .container {
+.login-txt, .container, label {
     color: #555555;
 }
 
