@@ -13,9 +13,9 @@ Veldedighetsplatform for Meliora Impact
 ## Front-end
 
 * [x] Lage React prosjekt
-* [ ] Lage navbar
-* [ ] Lage footer
-* [ ] Legge til logo som tab icon
+* [x] Lage navbar
+* [x] Lage footer
+* [x] Legge til logo som tab icon
 * [ ] Implementere design og farger
 
 ### Forside
@@ -26,8 +26,8 @@ Veldedighetsplatform for Meliora Impact
 
 ### Veldedigheter
 
-* [ ] Hente liste over veldedigheter gjennom API
-* [ ] Lage gjenbrukbar card komponent for å vise fram alle veldedighetene
+* [x] Hente liste over veldedigheter gjennom API
+* [x] Lage gjenbrukbar card komponent for å vise fram alle veldedighetene
 * [ ] Filtrere etter kategori
 * [ ] Lage gjenbrukbar side med all informasjon om en valgt veldedighet 
 
