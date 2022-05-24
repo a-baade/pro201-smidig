@@ -1,0 +1,51 @@
+.wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.main-card {
+    height: 47em;
+    width: 100%;
+    max-width: 47em;
+    border: 3px solid #35656f;
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.color-block {
+    height: 7em;
+    position: relative;
+    background-color: #35656f;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+}
+
+.mock-image{
+    width: 120px;
+    height: 120px;
+    background-color: grey;
+    border-radius: 100%;
+}
+
+.first-row{
+    display: flex;
+}
+
+.img-btn{
+    display: flex;
+    flex-direction: column;
+}
+
+.second-row{
+    display: flex;
+    text-align: center;
+}
+
+.third-row{
+    display: flex;
+    flex-direction: column;
+}
