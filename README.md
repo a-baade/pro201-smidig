@@ -20,9 +20,9 @@ Veldedighetsplatform for Meliora Impact
 
 ### Forside
 
-* [ ] Vise en liten oppsummering av About us
-* [ ] Vise informasjon om fokuserte temaer
-* [ ] Vise utvalgte nyheter
+* [x] Vise en liten oppsummering av About us
+* [x] Vise informasjon om fokuserte temaer
+* [x] Vise utvalgte nyheter
 
 ### Veldedigheter
 
@@ -39,7 +39,7 @@ Logg inn:
 * [ ] Logg inn med Active Directory (Microsoft) ?
 
 Registrer ny bruker:
-* [ ] Registrer ny bruker form
+* [x] Registrer ny bruker form
 * [ ] Registrer gjennom Google
 * [ ] Registrer gjennim Active Directory ?
 
@@ -57,13 +57,27 @@ Registrer ny bruker:
 
 ### About us
 
-* [ ] Fyll siden med informasjon om Meliora Impact
+* [x] Fyll siden med informasjon om Meliora Impact
 
 ### Contact us
 
 * [ ] Lage kontaktskjema
 
 ### Tester for front-end
+
+* [x] charity component test
+* [x] about us component test
+* [x] application component test
+* [x] front page test
+* [x] login page component test
+* [ ] login another components
+* [x] navigation og footer test
+* [x] profile test
+* [x] register new user   
+* [ ] dashbord test
+* [ ] sign up test
+
+### Tester for back-end
 
 Legg til punkter her
 
@@ -73,7 +87,7 @@ Legg til punkter her
 
 ### Databaser
 
-* [ ] Sette opp Mongodb
+* [x] Sette opp Mongodb
 * [ ] Lage database for veldedigheter
 * [ ] Lage database for brukere
 * [ ] Lage database for donasjoner ?
