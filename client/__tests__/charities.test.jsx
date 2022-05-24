@@ -46,13 +46,17 @@ describe("Charities component", () => {
       );
     });
     expect(
-      Array.from(divElement.querySelectorAll("p")).map((e) => e.innerHTML)
+      Array.from(divElement.querySelectorAll("h3")).map((e) => e.innerHTML)
     ).toEqual([
       "Charity 1",
-      "Test description 1",
       "Charity 2",
-      "Test description 2",
       "Charity 3",
+    ]);
+    expect(
+      Array.from(divElement.querySelectorAll("p")).map((e) => e.innerHTML)
+    ).toEqual([
+      "Test description 1",
+      "Test description 2",
       "Test description 3",
     ]);
     expect(divElement.innerHTML).toMatchSnapshot();
