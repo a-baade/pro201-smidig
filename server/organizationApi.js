@@ -21,5 +21,32 @@ export function OrganizationApi(mongoDatabase) {
     res.sendStatus(200);
   });
 
+  router.get("/", async (req, res) => {
+    const organizations = await mongoDatabase
+      .collection("register")
+      .find()
+      .map(({firstName,
+              lastName,
+              mobileNumber,
+              cardType,
+              cardNumber,
+              companyName,
+              email,
+              password,
+              jobTitle}) => ({
+        firstName,
+        lastName,
+        mobileNumber,
+        cardType,
+        cardNumber,
+        companyName,
+        email,
+        password,
+        jobTitle
+      }))
+      .toArray();
+    res.json(organizations);
+  })
+
   return router;
 }
