@@ -8,3 +8,4 @@ node_modules/
 dist/
 /server/.env
 /client/coverage/
+/server/coverage/
