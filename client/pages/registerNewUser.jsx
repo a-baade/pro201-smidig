@@ -32,7 +32,7 @@ export function RegisterNewUser() {
   async function handleSubmit(event) {
       event.preventDefault();
 
-      await fetch("api/register/add", {
+      await fetch("api/register", {
           method: "POST",
           body: new URLSearchParams({
               firstName,
