@@ -8,7 +8,8 @@ export function Profile({ user }) {
           <div className={"color-block"}></div>
           <div className={"first-row"}>
               <div className={"img-btn"}>
-                  <div className={"mock-image"}></div>
+
+                  <img src={user.google.picture} alt="Profile picture" className={"pfp"}/>
                   <button>Upload photo</button>
               </div>
               <h2>Dyrevernalliansen</h2>
@@ -16,15 +17,14 @@ export function Profile({ user }) {
           <div className={"second-row"}>
               <div className={"company-contact"}>
                   <h3>company contact</h3>
-                  <p>Kari</p>
-                  <p>Nordmann</p>
+                  <p>{user.google.name}</p>
                   <p>+47 95262419</p>
+                  <p>{user.google.email}</p>
                   <p>ceo assistant</p>
               </div>
               <div className={"payment-details"}>
                   <h3>payment details</h3>
-                  <p>Kari</p>
-                  <p>Nordmann</p>
+                  <p>{user.google.name}</p>
                   <p>12345667890</p>
                   <p>1234 4567 4567 6789</p>
               </div>

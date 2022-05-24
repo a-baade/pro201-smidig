@@ -24,10 +24,9 @@
     border-top-right-radius: 1vh;
 }
 
-.mock-image{
+.pfp{
     width: 120px;
     height: 120px;
-    background-color: grey;
     border-radius: 100%;
 }
 
