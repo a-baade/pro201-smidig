@@ -5,7 +5,6 @@ import { LoginPage } from "./pages/loginPage";
 import { useLoading } from "./useLoading";
 import { ApiContext } from "./apiContext";
 import { Profile } from "./pages/profile";
-import "./css/style.css";
 import { Charities } from "./pages/charities";
 import Navigation from "./components/navigation";
 import Footer from "./components/footer";

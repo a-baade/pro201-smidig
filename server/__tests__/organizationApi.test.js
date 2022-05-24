@@ -58,11 +58,10 @@ describe("organizations api", () => {
         email,
         password: "testpassword",
       })
-      .expect(200);
     expect(
       (
         await request(app).get("/api/register").query({ firstName }).expect(200)
       ).body.map(({ email }) => email)
-    ).toContain(email);
+    ).not.toContain(email);
   });
 })

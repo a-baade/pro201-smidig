@@ -84,7 +84,7 @@ export function RegisterNewUser() {
             <FormInput label={"Job title:"} value={jobTitle} onChangeValue={setJobTitle}/>
             <FormInput label={"Email:"} value={email} onChangeValue={setEmail}/>
             <FormInputPassword label={"Password"} value={password} onChangeValue={setPassword}/>
-            <button className={"cont-btn"}>Continue</button>
+            <button className={"sign-in-btn"}>Continue</button>
           </form>
         </div>
       </div>

@@ -76,10 +76,26 @@ input {
 }
 
 .sign-in-btn {
-    background-color: #8AB7BA;
+    padding: 17px 32px;
+    background: #ACCCCE;
+    border: 2px solid #808080;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 8px 0;
+    width: 100%;
+    min-width: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
 }
 
-
+.sign-in-btn:hover {
+    background: #CCCCCC;
+    cursor: pointer;
+}
 
 .line {
     text-align: center;
