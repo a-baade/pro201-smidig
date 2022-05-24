@@ -8,11 +8,12 @@ export function OrganizationApi(mongoDatabase) {
   const router = new Router();
 
   router.post("/", async (req, res) => {
-    const {firstName, lastName, mobileNumber, cardType, cardNumber, companyName, email, password, jobTitle} = req.body;
+    const {firstName, lastName, mobileNumber, cardType, cardNumber, companyName, email, password, jobTitle, img} = req.body;
 
     try {
-      const hashed = await bcrypt.hash(req.body.password, saltRounds);
+      const password = await bcrypt.hash(req.body.password, saltRounds);
       mongoDatabase.collection("register").insertOne({
+        img,
         firstName,
         lastName,
         mobileNumber,
@@ -20,7 +21,7 @@ export function OrganizationApi(mongoDatabase) {
         cardNumber,
         companyName,
         email,
-        hashed,
+        password,
         jobTitle
       });
       res.sendStatus(200);

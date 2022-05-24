@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 export function RegisterNewUser() {
   const {registerNewOrganization} = useContext(ApiContext);
+  const [img, setImg] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
@@ -27,7 +28,11 @@ export function RegisterNewUser() {
   const [jobTitle, setJobTitle] = useState("");
   const navigate = useNavigate();
 
+  useEffect(() => {
+    localStorage.setItem("img", JSON.stringify(img));
+  }, [img]);
 
+const imageData = localStorage.getItem("img");
 
   async function handleSubmit(event) {
       event.preventDefault();
@@ -35,6 +40,7 @@ export function RegisterNewUser() {
       await fetch("api/register", {
           method: "POST",
           body: new URLSearchParams({
+            img,
               firstName,
               lastName,
               mobileNumber,
@@ -69,6 +75,9 @@ export function RegisterNewUser() {
         <div className={"child-container"}>
           <form className={"input-form"} onSubmit={handleSubmit}>
             <h1>Register your organization</h1>
+            <div>
+              <input type={"file"} name={"img"} value={img} onChange={(e) => setImg(e.target.value)}/>
+            </div>
             <div className={"name-fields"}>
               <FormInput label={"First name:"} value={firstName} onChangeValue={setFirstName}/>
               <FormInput label={"Last name:"} value={lastName} onChangeValue={setLastName}/>
