@@ -27,7 +27,7 @@ nav > div {
 }
 
 .navLinks:hover {
-    text-decoration: underline;
+    color: #8AB7BA;
 }
 
 .navIcons {
@@ -51,7 +51,7 @@ nav > div {
     top: 76px;
     left: -120px;
     background-color: white;
-    min-width: 120px;
+    min-width: 300px;
     box-shadow: -15px 15px 17px -10px rgba(0,0,0,0.09);
     -webkit-box-shadow: -15px 15px 17px -10px rgba(0,0,0,0.09);
     -moz-box-shadow: -15px 15px 17px -10px rgba(0,0,0,0.09);
@@ -68,7 +68,7 @@ nav > div {
     width: 200px;
     text-decoration: none;
     color: black;
-    margin: 0;
+
 }
 
 .dropdownLink:last-of-type {
@@ -77,5 +77,46 @@ nav > div {
 
 .dropdownLink:hover {
     background-color: #8AB7BA;
+}
 
+.search-box {
+    position: static;
+    height: 40px;
+}
+
+.search-box:hover > .search-text{
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-btn{
+    color: black;
+
+}
+
+.search-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+.search-btn > img {
+    height: 30px;
+}
+
+.search-text {
+    border: none;
+    outline: none;
+    background: none;
+    float: left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0;
 }
