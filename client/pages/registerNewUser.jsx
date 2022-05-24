@@ -4,6 +4,7 @@ import { FormInput, FormInputPassword } from "../lib/formInput.jsx";
 import FirstLayer from "../pics/register-pics/register-bg.png";
 import RedBall from "../pics/register-pics/redBall.png";
 import WhiteDot from "../pics/register-pics/whiteDot.png";
+import { useNavigate } from "react-router-dom";
 
 export function RegisterNewUser() {
   const {registerNewOrganization} = useContext(ApiContext);
@@ -24,6 +25,7 @@ export function RegisterNewUser() {
     return initValuePassword || "";
   });
   const [jobTitle, setJobTitle] = useState("");
+  const navigate = useNavigate();
 
 
 
@@ -45,6 +47,7 @@ export function RegisterNewUser() {
           }),
       });
       setCompanyName("");
+      navigate("/");
   }
 
 
