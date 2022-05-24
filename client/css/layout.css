@@ -7,7 +7,8 @@ nav {
     justify-content: space-between;
     font-size: 24px;
     margin: 0 2vw;
-
+    position: sticky;
+    top: 0;
     border-bottom: solid 1px #e8e8e8;
 }
 
@@ -48,14 +49,14 @@ nav > div {
 .dropdownContent {
     display: none;
     position: absolute;
-    top: 76px;
+    top: 75px;
     left: -120px;
     background-color: white;
     min-width: 300px;
     box-shadow: -15px 15px 17px -10px rgba(0,0,0,0.09);
     -webkit-box-shadow: -15px 15px 17px -10px rgba(0,0,0,0.09);
     -moz-box-shadow: -15px 15px 17px -10px rgba(0,0,0,0.09);
-    z-index: 1;
+    z-index: 100;
     border-bottom-left-radius: 20px;
 }
 .profileDropdown:hover .dropdownContent {
