@@ -12,6 +12,20 @@ import { RegisterNewUser } from "./pages/registerNewUser";
 import { AboutUs } from "./pages/aboutUs";
 import { SignUp } from "./pages/signUp";
 
+function UserActions({ user }) {
+  if (!user || Object.keys(user).length === 0) {
+    return <Link to={"/login"}>Login</Link>;
+  }
+
+  return (
+    <>
+      <Link to={"/profile"}>
+        {user.google?.name ? `Profile for ${user.google.name}` : "Profile"}
+      </Link>
+      <Link to={"/login/endsession"}>Log out</Link>
+    </>
+  );
+}
 
 export function Application() {
   const { fetchLogin } = useContext(ApiContext);
