@@ -10,8 +10,8 @@
 .login-form {
     width: 100%;
     max-width: 500px;
-    min-width: 500px;
-    padding: 12px 20px;
+    min-width: 340px;
+    padding: 12px 30px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid #808080;
@@ -45,6 +45,7 @@
     top: 50px;
     left: -50px;
 }
+
 
 .invisible-icon {
     width: 30px;
@@ -82,9 +83,11 @@ input {
 
 .line {
     text-align: center;
+    border-top: 3px solid #555555;
+    border-radius: 5px;
 }
 
-.login-txt, .container {
+.login-txt, .container, label {
     color: #555555;
 }
 
@@ -105,13 +108,11 @@ input {
 
 .sidebar {
     background-color: #FBEADA;
-    padding: 12px 20px;
-    margin: 8px 0;
     box-sizing: border-box;
+    margin: 8px 8px;
     border: 2px solid #808080;
     border-radius: 4px;
     position: relative;
-    width: 100%;
     max-width: 500px;
     min-width: 500px;
 }
@@ -120,41 +121,30 @@ input {
     background-color: #95BDC4;
 }
 
-.first-layer-img {
+.first-layer-login {
     position: relative;
-    z-index: 1;
-    top: 0;
-    right: 200px;
-    width: 958px;
-    height: 552px;
-}
-
-.second-layer-img {
-    position: absolute;
-    z-index: 2;
-    top: 80px;
-    left: -150px;
-    width: 735px;
-    height: 422px;
-}
-
-.top-corner-img {
-    position: absolute;
     top: 0px;
-    left: -100px;
-    width: 424px;
-    height: 158px;
+    right: 50px;
+    max-width: 600px;
+    min-width: 400px;
+    height: 500px;
 }
 
-.bottom-corner-img {
+.second-layer-login {
     position: absolute;
-    bottom: 0px;
-    left: 200px;
-    width: 424px;
-    height: 158px;
+    top: 180px;
+    left: 270px;
+    max-width: 200px;
+    min-width: 150px;
+    height: 200px;
 }
 
-.sign-up-txt {
-    text-align: center;
-    color: #555555;
+.third-layer-login {
+    position: absolute;
+    top: 160px;
+    left: 0px;
+    max-width: 550px;
+    min-width: 350px;
+    height: 350px;
 }
+

@@ -2,8 +2,8 @@
     background-color: #8AB7BA;
     padding: 12px 30px;
     max-width: 1000px;
+    min-width: 700px;
     max-height: 950px;
-    min-width: 600px;
     min-height: 400px;
     align-items: center;
     margin-left: auto;
@@ -30,12 +30,21 @@
 
 .cont-btn {
     width: 100%;
-    padding: 12px 20px;
+    padding: 15px 28px;
     margin: 8px 0;
-    box-sizing: border-box;
+    text-align: center;
     border: 2px solid #808080;
     border-radius: 4px;
     background-color: #8AB7BA;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.cont-btn:hover {
+    background-color: #808080;
+    color: white;
 }
 
 .input-form {
