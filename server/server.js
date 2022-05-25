@@ -7,6 +7,7 @@ import {LoginApi} from "./loginApi.js";
 import { MongoClient } from "mongodb";
 import { CharitiesApi } from "./charitiesApi.js";
 import { OrganizationApi } from "./organizationApi.js";
+import { LocalLoginApi } from "./localLoginApi.js";
 
 dotenv.config();
 const app = express();
@@ -25,6 +26,8 @@ mongoClient.connect().then(async () => {
 
     app.use("/api/register",
       OrganizationApi(mongoClient.db(process.env.MONGO_DATABASE || "smidig-prosjekt")));
+    app.use("/api/login",
+      LocalLoginApi(mongoClient.db(process.env.MONGO_DATABASE || "smidig-prosjekt")));
 });
 
 app.use("/api/login", LoginApi());
