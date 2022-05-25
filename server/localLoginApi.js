@@ -48,9 +48,9 @@ export function LocalLoginApi(mongoDatabase){
 
     const organization = organizations.find(org => org.email === email);
     const checkPass = organization.password;
-    const verified = bcrypt.compareSync(checkPass, password);
+    const verified = bcrypt.compareSync(password, checkPass);
 
-    if (organization && bcrypt.compareSync(password, checkPass) === true) {
+    if (organization && verified === true) {
 
       res.cookie("email", email, {signed: true});
       res.sendStatus(200);
@@ -63,6 +63,7 @@ export function LocalLoginApi(mongoDatabase){
     console.log("Test login")
     console.log(checkPass)
     console.log(password)
+    console.log(verified)
 
   });
 

@@ -30,7 +30,7 @@ export function RegisterNewUser() {
 
   useEffect(() => {
     localStorage.setItem("img", JSON.stringify(img));
-  }, [img]);
+  }, []);
 
 const imageData = localStorage.getItem("img");
 
@@ -40,7 +40,7 @@ const imageData = localStorage.getItem("img");
       await fetch("api/register", {
           method: "POST",
           body: new URLSearchParams({
-            img,
+            imageData,
               firstName,
               lastName,
               mobileNumber,
