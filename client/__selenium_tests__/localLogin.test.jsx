@@ -50,11 +50,7 @@ describe("localLogin", function () {
                                     .manage()
                                     .window()
                                     .setRect({ width: 1323, height: 797 });
-                                  driver.sleep(20000).then(function () {
-                                    return driver
-                                      .findElement(By.css(".sign-in-btn"))
-                                      .click();
-                                  });
+                                  driver.sleep(20000);
                                 });
                             });
                         });
