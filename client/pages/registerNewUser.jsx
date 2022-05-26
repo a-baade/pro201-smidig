@@ -7,7 +7,7 @@ import WhiteDot from "../pics/register-pics/whiteDot.png";
 import { useNavigate } from "react-router-dom";
 
 export function RegisterNewUser() {
-  const {registerNewOrganization} = useContext(ApiContext);
+  const { registerNewOrganization } = useContext(ApiContext);
   const [img, setImg] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -32,30 +32,42 @@ export function RegisterNewUser() {
     localStorage.setItem("img", JSON.stringify(img));
   }, []);
 
-const imageData = localStorage.getItem("img");
+  const imageData = localStorage.getItem("img");
 
   async function handleSubmit(event) {
-      event.preventDefault();
+    event.preventDefault();
 
-      await fetch("api/register", {
-          method: "POST",
-          body: new URLSearchParams({
-            imageData,
-              firstName,
-              lastName,
-              mobileNumber,
-              cardType,
-              cardNumber,
-              companyName,
-              email,
-              password,
-              jobTitle,
-          }),
-      });
-      setCompanyName("");
-      navigate("/");
+    const formData = new FormData();
+    formData.append("img", event.target["img"].files[0]);
+    console.log(event.target["img"].files[0]);
+    let image = "";
+    for (let pair of formData.entries()) {
+      console.log(pair[0] + ", " + pair[1].name);
+      image = pair[1].name;
+    }
+
+    await fetch("api/register", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        "enc-type": "multipart/form-data",
+      },
+      body: JSON.stringify({
+        image,
+        firstName,
+        lastName,
+        mobileNumber,
+        cardType,
+        cardNumber,
+        companyName,
+        jobTitle,
+        email,
+        password,
+      }),
+    });
+    setCompanyName("");
+    navigate("/");
   }
-
 
   // function handleSubmit(e) {
   //   e.preventDefault();
@@ -63,36 +75,80 @@ const imageData = localStorage.getItem("img");
   //   navigate("/");
   // }
 
-
   return (
     <div>
       <div className={"parent-container"}>
         <div>
-          <img src={FirstLayer} className={"first-layer-bg"}/>
-          <img src={RedBall} className={"red-ball"}/>
-          <img src={WhiteDot} className={"white-dot"}/>
+          <img src={FirstLayer} className={"first-layer-bg"} />
+          <img src={RedBall} className={"red-ball"} />
+          <img src={WhiteDot} className={"white-dot"} />
         </div>
         <div className={"child-container"}>
-          <form className={"input-form"} onSubmit={handleSubmit}>
+          <form
+            className={"input-form"}
+            onSubmit={handleSubmit}
+            encType={"multipart/form-data"}
+          >
             <h1>Register your organization</h1>
             <div>
-              <input type={"file"} name={"img"} value={img} onChange={(e) => setImg(e.target.value)}/>
+              <input
+                type={"file"}
+                name={"img"}
+                value={img}
+                onChange={(e) => setImg(e.target.value)}
+              />
             </div>
             <div className={"name-fields"}>
-              <FormInput label={"First name:"} value={firstName} onChangeValue={setFirstName}/>
-              <FormInput label={"Last name:"} value={lastName} onChangeValue={setLastName}/>
+              <FormInput
+                label={"First name:"}
+                value={firstName}
+                onChangeValue={setFirstName}
+              />
+              <FormInput
+                label={"Last name:"}
+                value={lastName}
+                onChangeValue={setLastName}
+              />
             </div>
-            <FormInput label={"Mobile number:"} value={mobileNumber} onChangeValue={setMobileNumber}/>
+            <FormInput
+              label={"Mobile number:"}
+              value={mobileNumber}
+              onChangeValue={setMobileNumber}
+            />
             <label>Card type</label>
-            <select className={"input-field"} value={cardType} onChange={(e) => setCardType(e.target.value)}>
+            <select
+              className={"input-field"}
+              value={cardType}
+              onChange={(e) => setCardType(e.target.value)}
+            >
               <option>Visa</option>
               <option>Master</option>
             </select>
-            <FormInput label={"Card number"} value={cardNumber} onChangeValue={setCardNumber}/>
-            <FormInput label={"Company name:"} value={companyName} onChangeValue={setCompanyName}/>
-            <FormInput label={"Job title:"} value={jobTitle} onChangeValue={setJobTitle}/>
-            <FormInput label={"Email:"} value={email} onChangeValue={setEmail}/>
-            <FormInputPassword label={"Password"} value={password} onChangeValue={setPassword}/>
+            <FormInput
+              label={"Card number"}
+              value={cardNumber}
+              onChangeValue={setCardNumber}
+            />
+            <FormInput
+              label={"Company name:"}
+              value={companyName}
+              onChangeValue={setCompanyName}
+            />
+            <FormInput
+              label={"Job title:"}
+              value={jobTitle}
+              onChangeValue={setJobTitle}
+            />
+            <FormInput
+              label={"Email:"}
+              value={email}
+              onChangeValue={setEmail}
+            />
+            <FormInputPassword
+              label={"Password"}
+              value={password}
+              onChangeValue={setPassword}
+            />
             <button className={"sign-in-btn"}>Continue</button>
           </form>
         </div>

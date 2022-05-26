@@ -8,7 +8,17 @@ export function OrganizationApi(mongoDatabase) {
   const router = new Router();
 
   router.post("/", async (req, res) => {
-    const {firstName, lastName, mobileNumber, cardType, cardNumber, companyName, email, password, jobTitle, img} = req.body;
+    const {
+      firstName,
+      lastName,
+      mobileNumber,
+      cardType,
+      cardNumber,
+      companyName,
+      email,
+      jobTitle,
+    } = req.body;
+    const img = req.body.image;
 
     try {
       const password = await bcrypt.hash(req.body.password, saltRounds);
@@ -22,10 +32,10 @@ export function OrganizationApi(mongoDatabase) {
         companyName,
         email,
         password,
-        jobTitle
+        jobTitle,
       });
       res.sendStatus(200);
-    } catch (error){
+    } catch (error) {
       console.log(error);
     }
 
@@ -36,28 +46,32 @@ export function OrganizationApi(mongoDatabase) {
     const organizations = await mongoDatabase
       .collection("register")
       .find()
-      .map(({firstName,
-              lastName,
-              mobileNumber,
-              cardType,
-              cardNumber,
-              companyName,
-              email,
-              password,
-              jobTitle}) => ({
-        firstName,
-        lastName,
-        mobileNumber,
-        cardType,
-        cardNumber,
-        companyName,
-        email,
-        password,
-        jobTitle
-      }))
+      .map(
+        ({
+          firstName,
+          lastName,
+          mobileNumber,
+          cardType,
+          cardNumber,
+          companyName,
+          email,
+          password,
+          jobTitle,
+        }) => ({
+          firstName,
+          lastName,
+          mobileNumber,
+          cardType,
+          cardNumber,
+          companyName,
+          email,
+          password,
+          jobTitle,
+        })
+      )
       .toArray();
     res.json(organizations);
-  })
+  });
 
   return router;
 }
