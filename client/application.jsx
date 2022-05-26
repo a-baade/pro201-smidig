@@ -12,6 +12,7 @@ import Footer from "./components/footer";
 import { RegisterNewUser } from "./pages/registerNewUser";
 import { AboutUs } from "./pages/aboutUs";
 import { SignUp } from "./pages/signUp";
+import { Contact } from "./pages/contact";
 
 
 function UserActions({ user }) {
@@ -51,6 +52,7 @@ export function Application() {
           <Route path={"/charities"} element={<Charities />}/>
           <Route path={"/register"} element={<RegisterNewUser />}/>
           <Route path={"/about"} element={<AboutUs/>}/>
+            <Route path={"/contact"} element={<Contact />}/>
           <Route path={"/signup"} element={<SignUp config={data.config}/>}/>
           <Route
             path={"/login/*"}

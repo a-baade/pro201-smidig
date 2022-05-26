@@ -1,0 +1,92 @@
+.contact-form{
+    width: 100%;
+    max-width: 650px;
+    min-width: 500px;
+    padding: 1em 4em 3em 4em;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.contact-sidebar{
+    width: 100%;
+    max-width: 500px;
+    min-width: 500px;
+    background-color: #95bdc4;
+    margin: 8px 0;
+    padding: 2.2em 5.5em 0 5.5em;
+    box-sizing: border-box;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 2em;
+    position: relative;
+    z-index: 2;
+}
+
+.sidebar-title{
+    position: relative;
+    z-index: 2;
+}
+
+.contact-icon{
+    height: 1.4em;
+    margin-top: 1.3vh;
+    margin-right: 1vh;
+}
+
+.contact-input-field{
+    margin-top: 2vh;
+}
+
+.contact-input{
+    background-color: #e5e5e5;
+}
+
+.contact-textarea{
+    height: 10em;
+}
+
+.submit-btn{
+    margin-top: 1.5vh;
+    font-weight: bold;
+}
+
+/* Background images */
+
+.pink{
+    position: absolute;
+    margin-top: -24em;
+    margin-left: -17em;
+    opacity: 0.7;
+}
+
+.blue{
+    width: 32em;
+    position: absolute;
+    margin-top: -31em;
+    margin-left: -12em;
+    z-index: 1;
+    opacity: 0.25;
+}
+
+.person{
+    position: absolute;
+    width: 28em;
+    margin-top: -0.6em;
+    margin-left: -12em;
+}
