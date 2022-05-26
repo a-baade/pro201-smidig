@@ -5,10 +5,11 @@ import FirstLayer from "../pics/register-pics/register-bg.png";
 import RedBall from "../pics/register-pics/redBall.png";
 import WhiteDot from "../pics/register-pics/whiteDot.png";
 import { useNavigate } from "react-router-dom";
+import FileBase64 from "react-file-base64";
 
 export function RegisterNewUser() {
   const { registerNewOrganization } = useContext(ApiContext);
-  const [img, setImg] = useState("");
+  const [img, setImg] = useState({ image: "" });
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
@@ -28,15 +29,10 @@ export function RegisterNewUser() {
   const [jobTitle, setJobTitle] = useState("");
   const navigate = useNavigate();
 
-  useEffect(() => {
-    localStorage.setItem("img", JSON.stringify(img));
-  }, []);
-
-  const imageData = localStorage.getItem("img");
-
   async function handleSubmit(event) {
     event.preventDefault();
 
+    /*
     const formData = new FormData();
     formData.append("img", event.target["img"].files[0]);
     console.log(event.target["img"].files[0]);
@@ -46,6 +42,8 @@ export function RegisterNewUser() {
       image = pair[1].name;
     }
 
+     */
+
     await fetch("api/register", {
       method: "POST",
       headers: {
@@ -53,7 +51,7 @@ export function RegisterNewUser() {
         "enc-type": "multipart/form-data",
       },
       body: JSON.stringify({
-        image,
+        img,
         firstName,
         lastName,
         mobileNumber,
@@ -91,11 +89,9 @@ export function RegisterNewUser() {
           >
             <h1>Register your organization</h1>
             <div>
-              <input
-                type={"file"}
-                name={"img"}
-                value={img}
-                onChange={(e) => setImg(e.target.value)}
+              <FileBase64
+                multiple={false}
+                onDone={({ base64 }) => setImg({ ...img, image: base64 })}
               />
             </div>
             <div className={"name-fields"}>

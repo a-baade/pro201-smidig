@@ -18,7 +18,8 @@ export function OrganizationApi(mongoDatabase) {
       email,
       jobTitle,
     } = req.body;
-    const img = req.body.image;
+    const image = req.body;
+    const img = image.img;
 
     try {
       const password = await bcrypt.hash(req.body.password, saltRounds);
