@@ -1,10 +1,10 @@
 .parent-container {
     background-color: #8AB7BA;
     padding: 12px 30px;
-    max-width: 1000px;
-    min-width: 700px;
+    max-width: 70%;
+    min-width: 800px;
     max-height: 950px;
-    min-height: 400px;
+    min-height: 700px;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
