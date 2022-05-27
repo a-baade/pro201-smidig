@@ -18,8 +18,7 @@ export function OrganizationApi(mongoDatabase) {
       email,
       jobTitle,
     } = req.body;
-    const image = req.body;
-    const img = image.img;
+    const img = req.body.img;
 
     try {
       const password = await bcrypt.hash(req.body.password, saltRounds);
@@ -41,6 +40,7 @@ export function OrganizationApi(mongoDatabase) {
     }
 
     console.log(req.body);
+    console.log(req.body.img);
   });
 
   router.get("/", async (req, res) => {
