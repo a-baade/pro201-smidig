@@ -8,16 +8,8 @@ export function OrganizationApi(mongoDatabase) {
   const router = new Router();
 
   router.post("/", async (req, res) => {
-    const {
-      firstName,
-      lastName,
-      mobileNumber,
-      cardType,
-      cardNumber,
-      companyName,
-      email,
-      jobTitle,
-    } = req.body;
+    const { firstName, lastName, mobileNumber, companyName, email, jobTitle } =
+      req.body;
     const img = req.body.img;
 
     try {
@@ -27,8 +19,6 @@ export function OrganizationApi(mongoDatabase) {
         firstName,
         lastName,
         mobileNumber,
-        cardType,
-        cardNumber,
         companyName,
         email,
         password,
@@ -40,7 +30,6 @@ export function OrganizationApi(mongoDatabase) {
     }
 
     console.log(req.body);
-    console.log(req.body.img);
   });
 
   router.get("/", async (req, res) => {
@@ -52,8 +41,6 @@ export function OrganizationApi(mongoDatabase) {
           firstName,
           lastName,
           mobileNumber,
-          cardType,
-          cardNumber,
           companyName,
           email,
           password,
@@ -62,8 +49,6 @@ export function OrganizationApi(mongoDatabase) {
           firstName,
           lastName,
           mobileNumber,
-          cardType,
-          cardNumber,
           companyName,
           email,
           password,

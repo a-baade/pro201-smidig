@@ -13,8 +13,6 @@ export function RegisterNewUser() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
-  const [cardType, setCardType] = useState("");
-  const [cardNumber, setCardNumber] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [email, setEmail] = useState(() => {
     const savedEmail = localStorage.getItem("email");
@@ -110,20 +108,6 @@ export function RegisterNewUser() {
               label={"Mobile number:"}
               value={mobileNumber}
               onChangeValue={setMobileNumber}
-            />
-            <label>Card type</label>
-            <select
-              className={"input-field"}
-              value={cardType}
-              onChange={(e) => setCardType(e.target.value)}
-            >
-              <option>Visa</option>
-              <option>Master</option>
-            </select>
-            <FormInput
-              label={"Card number"}
-              value={cardNumber}
-              onChangeValue={setCardNumber}
             />
             <FormInput
               label={"Company name:"}
