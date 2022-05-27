@@ -1,5 +1,6 @@
 import React from "react";
-import MainBg from "../pics/about-us-pictures/main-bg.png";
+import Edit from "../pics/icons/edit.png";
+import Pink from "../pics/contact-pics/pink-squiggle.png";
 
 export function Profile({ user }) {
   return (
@@ -21,11 +22,22 @@ export function Profile({ user }) {
                   <p>{user.google.email}</p>
                   <p>ceo assistant</p>
               </div>
+              <div className={"edit-icons"}>
+                  <img src={Edit} className={"edit"} alt={"editIcon"}/>
+                  <img src={Edit} className={"edit"} alt={"editIcon"}/>
+                  <img src={Edit} className={"edit"} alt={"editIcon"}/>
+                  <img src={Edit} className={"edit"} alt={"editIcon"}/>
+              </div>
               <div className={"payment-details"}>
                   <h3>payment details</h3>
                   <p>{user.google.name}</p>
                   <p>12345667890</p>
                   <p>1234 4567 4567 6789</p>
+              </div>
+              <div className={"edit-icons"}>
+                  <img src={Edit} className={"edit"} alt={"editIcon"}/>
+                  <img src={Edit} className={"edit"} alt={"editIcon"}/>
+                  <img src={Edit} className={"edit"} alt={"editIcon"}/>
               </div>
           </div>
           <div className={"third-row"}>

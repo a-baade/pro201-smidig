@@ -51,6 +51,11 @@
     margin-top: 0.5em;
 }
 
+.photo-upload-btn:hover{
+    background-color: #b3b3b3;
+    cursor: pointer;
+}
+
 .company-name{
     margin-right: 6em;
     margin-top: 1.5em;
@@ -69,6 +74,22 @@
 
 .payment-details{
     margin-right: 1em;
+}
+
+.edit-icons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.4em;
+    margin-left: -8em;
+}
+
+.edit{
+    height: 1.2em;
+    margin-top: 1em;
+}
+
+.edit:hover{
+    cursor: pointer;
 }
 
 .third-row{
@@ -93,4 +114,9 @@
 
     background: #a0cfd2;
     box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.25);
+}
+
+.profile-btn:hover{
+    background-color: #8ac1c4;
+    cursor: pointer;
 }
