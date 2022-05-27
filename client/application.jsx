@@ -11,6 +11,7 @@ import Footer from "./components/footer";
 import { RegisterNewUser } from "./pages/registerNewUser";
 import { AboutUs } from "./pages/aboutUs";
 import { SignUp } from "./pages/signUp";
+import CharityPage from "./pages/charityPage";
 
 
 
@@ -35,6 +36,7 @@ export function Application() {
         <Routes>
           <Route path={"/"} element={<FrontPage />} />
           <Route path={"/charities"} element={<Charities />}/>
+          <Route path={"/charities/charity/:id"} element={<CharityPage />}/>
           <Route path={"/register"} element={<RegisterNewUser />}/>
           <Route path={"/about"} element={<AboutUs/>}/>
           <Route path={"/signup"} element={<SignUp config={data.config}/>}/>
