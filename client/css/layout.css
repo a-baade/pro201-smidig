@@ -2,13 +2,22 @@ body {
     margin: auto;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    /*
+    -webkit-box-shadow: 0px 5px 10px 14px #FFFFFF;
+    box-shadow: 0px 5px 10px 14px #FFFFFF;*/
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     font-size: 24px;
     margin: 0 2vw;
-    position: sticky;
-    top: 0;
+
     border-bottom: solid 1px #e8e8e8;
 }
 
