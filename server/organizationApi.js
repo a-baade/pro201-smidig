@@ -38,6 +38,7 @@ export function OrganizationApi(mongoDatabase) {
       .find()
       .map(
         ({
+          img,
           firstName,
           lastName,
           mobileNumber,
@@ -46,6 +47,7 @@ export function OrganizationApi(mongoDatabase) {
           password,
           jobTitle,
         }) => ({
+          img,
           firstName,
           lastName,
           mobileNumber,
@@ -56,7 +58,9 @@ export function OrganizationApi(mongoDatabase) {
         })
       )
       .toArray();
+    const response = organizations.find((org) => org.img);
     res.json(organizations);
+    console.log(res);
   });
 
   return router;

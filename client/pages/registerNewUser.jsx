@@ -53,8 +53,6 @@ export function RegisterNewUser() {
         firstName,
         lastName,
         mobileNumber,
-        cardType,
-        cardNumber,
         companyName,
         jobTitle,
         email,
