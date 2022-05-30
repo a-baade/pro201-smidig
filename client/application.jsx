@@ -11,7 +11,7 @@ import Footer from "./components/footer";
 import { RegisterNewUser } from "./pages/registerNewUser";
 import { AboutUs } from "./pages/aboutUs";
 import { SignUp } from "./pages/signUp";
-import { ListOrganizations } from "./listOrganizations";
+import { ListUsers } from "./pages/listUsers";
 
 export function Application() {
   const { fetchLogin } = useContext(ApiContext);
@@ -35,6 +35,7 @@ export function Application() {
           <Route path={"/charities"} element={<Charities />} />
           <Route path={"/register"} element={<RegisterNewUser />} />
           <Route path={"/about"} element={<AboutUs />} />
+          <Route path={"/listusers"} element={<ListUsers />} />
           <Route path={"/signup"} element={<SignUp config={data.config} />} />
           <Route
             path={"/login/*"}
