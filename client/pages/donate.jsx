@@ -1,5 +1,8 @@
+
+import {ApiContext} from "../apiContext";
+import {useLoading} from "../useLoading";
 import React, {useContext} from "react";
-import {useSearchParams} from "react-router-dom";
+import {Link, useSearchParams} from "react-router-dom";
 import PlaceholderBackground from "../pics/bg-pictures/charities-placeholder.jpg";
 import PlaceholderLogo from "../pics/bg-pictures/charities-logo-placeholder.png";
 
