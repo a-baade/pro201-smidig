@@ -1,18 +1,13 @@
+import React, {useContext} from "react";
 import {useSearchParams} from "react-router-dom";
-import React, {useContext} from "react";
-import {ApiContext} from "../apiContext";
-import {useLoading} from "../useLoading";
-
-import {ApiContext} from "../apiContext";
-import {useLoading} from "../useLoading";
-import React, {useContext} from "react";
-import {Link, useSearchParams} from "react-router-dom";
 import PlaceholderBackground from "../pics/bg-pictures/charities-placeholder.jpg";
 import PlaceholderLogo from "../pics/bg-pictures/charities-logo-placeholder.png";
 
 function DonateModule({charity: {name}}){
 
     // Replace placeholders with actual charities images
+
+    // Add form functionality?
     return (
         <div className={"donate-page"}>
             <div className={"donate-page-top"}>
