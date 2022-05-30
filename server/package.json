@@ -47,7 +47,8 @@
     "collectCoverageFrom": [
       "**/*.js",
       "!server.js",
-      "!coverage/**"
+      "!coverage/**",
+      "!loginApi.js"
     ]
   }
 }
