@@ -16,7 +16,7 @@ import WWW from "../pics/icons/world-wide-web.png";
 
 import Arrow from "../pics/icons/arrow.png";
 
-function Charity({charity: {name, description}}){
+function Charity({charity: { _id, name, description}}){
 
     // Replace placeholders with actual charities images
     return (
@@ -38,7 +38,7 @@ function Charity({charity: {name, description}}){
                     </div>
                 </div>
                 <div className={"charity-page-side"}>
-                    <Link to={"/"}>
+                    <Link to={{ pathname: "/charities/donate/id?id=" +_id }}>
                         <button className={"charity-page-donate-button"}>Donate</button>
                     </Link>
                     <a href={"https://www.google.com/"} className={"charity-social-links"}><img src={WWW}/> examplecharity.com</a>

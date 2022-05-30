@@ -25,9 +25,10 @@ export function CharitiesApi(db){
     const charities = await db
         .collection("charities")
         .find({ _id: { $in: [ObjectId({id})] }})
-        .map(({name, description}) => ({
-          name,
-          description,
+        .map(({ _id, name, description}) => ({
+            _id,
+            name,
+            description,
         }))
         .limit(1).toArray();
     if (!charities){
@@ -35,6 +36,21 @@ export function CharitiesApi(db){
     }
     res.json(charities);
   });
+
+    router.get("/donate/id", async (req, res) => {
+        let id = req.query.id;
+        const charities = await db
+            .collection("charities")
+            .find({ _id: { $in: [ObjectId({id})] }})
+            .map(({name, description}) => ({
+                name,
+            }))
+            .limit(1).toArray();
+        if (!charities){
+            res.sendStatus(404);
+        }
+        res.json(charities);
+    });
 
 
 
