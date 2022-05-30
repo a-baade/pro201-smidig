@@ -14,7 +14,9 @@ import WWW from "../pics/icons/world-wide-web.png";
 
 import Arrow from "../pics/icons/arrow.png";
 
-function Charity({ charity: { name, description, bgImage, charityLogo } }) {
+export function Charity({
+  charity: { name, description, bgImage, charityLogo },
+}) {
   // Replace placeholders with actual charities images
   return (
     <div>
@@ -127,7 +129,7 @@ function Charity({ charity: { name, description, bgImage, charityLogo } }) {
   );
 }
 
-export default function charityPage() {
+export default function CharityPage() {
   let [searchParams, setSearchParams] = useSearchParams();
   const id = searchParams.get("id");
 

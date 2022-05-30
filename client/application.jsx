@@ -37,14 +37,14 @@ export function Application() {
           <Route path={"/charities/charity/:id"} element={<CharityPage />} />
           <Route path={"/register"} element={<RegisterNewUser />} />
           <Route path={"/about"} element={<AboutUs />} />
-          <Route path={"/signup"} element={<SignUp config={data.config} />} />
+          <Route path={"/signup"} element={<SignUp config={data?.config} />} />
           <Route
             path={"/login/*"}
-            element={<LoginPage config={data.config} reload={reload} />}
+            element={<LoginPage config={data?.config} reload={reload} />}
           />
           <Route
             path={"/signup/*"}
-            element={<LoginPage config={data.config} reload={reload} />}
+            element={<LoginPage config={data?.config} reload={reload} />}
           />
           <Route path={"/profile"} element={<Profile user={data?.user} />} />
           <Route path={"*"} element={<h1>Not found</h1>} />
