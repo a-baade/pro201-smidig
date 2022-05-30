@@ -1,5 +1,5 @@
 import express from "express";
-import { MongoClient, ObjectId, ObjectID } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import { CharitiesApi } from "../charitiesApi.js";
@@ -36,19 +36,17 @@ describe("charities api", () => {
 
   it("should redirect to charity page by id", async function () {
     const name = "Charity 1";
-    const id = "628136d0c23c5bceb2297a7";
+    let _id = new ObjectId("628136d0c23c5bceb2297a7");
     await request(app).post("/api/charities/").send({
-      id,
+      _id,
       name,
       description: "Test description",
     });
     expect(200);
     expect(
-      (
-        await request(app).get(
-          "/api/charities/charity/id?id=628136d0c23c5bceb2297a7"
-        )
-      ).body.map(({ name }) => name)
+      request(app)
+        .get("/api/charities/charity/id?id=628136d0c23c5bceb2297a7")
+        .body.map(({ name }) => name)
     ).toContain(name);
   });
 });
