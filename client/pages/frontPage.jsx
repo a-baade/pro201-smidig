@@ -9,8 +9,9 @@ import NewsImg3 from "../pics/bg-pictures/img_5.png";
 import { Link } from "react-router-dom";
 
 export function FrontPage() {
+
   return (
-    <div>
+    <div className={"page-margin"}>
       <div>
         <h1 className={"pic-text"}>Meliora Impact</h1>
         <Link to={"/signup"}>
@@ -40,6 +41,7 @@ export function FrontPage() {
           <button className={"about-us-btn"}>Read more</button>
         </Link>
       </div>
+
 
       <div className={"category-container"}>
         <div className={"nature"}>
