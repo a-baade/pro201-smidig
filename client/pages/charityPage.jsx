@@ -14,7 +14,7 @@ import WWW from "../pics/icons/world-wide-web.png";
 
 import Arrow from "../pics/icons/arrow.png";
 
-function Charity({ charity: { name, description, bgImage, charityLogo } }) {
+function Charity({ charity: { _id, name, description, bgImage, charityLogo } }) {
   // Replace placeholders with actual charities images
   return (
     <div>
@@ -41,7 +41,7 @@ function Charity({ charity: { name, description, bgImage, charityLogo } }) {
           </div>
         </div>
         <div className={"charity-page-side"}>
-          <Link to={"/"}>
+          <Link to={{ pathname: "/charities/donate/id?id=" +_id }}>
             <button className={"charity-page-donate-button"}>Donate</button>
           </Link>
           <a
@@ -119,6 +119,7 @@ function Charity({ charity: { name, description, bgImage, charityLogo } }) {
                 </p>
                 <p className={"read-more-btn"}>Read more</p>
               </div>
+
             </div>
           </div>
         </div>

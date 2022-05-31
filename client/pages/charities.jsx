@@ -27,7 +27,7 @@ function CharityCard({
           <Link to={{ pathname: "/charities/charity/id?id=" + _id }}>
             <button className="card-btn-left card-btn">Read more</button>
           </Link>
-          <Link to={"/"}>
+          <Link to={{ pathname: "/charities/donate/id?id=" +_id }}>
             <button className="card-btn-right card-btn">Donate</button>
           </Link>
         </div>

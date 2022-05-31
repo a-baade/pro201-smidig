@@ -28,6 +28,7 @@ header > * {
 
 .join-us-btn {
     position: absolute;
+    z-index: 1000;
     top: 70%;
     left: 40%;
     padding: 15px 30px;
