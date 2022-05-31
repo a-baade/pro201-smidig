@@ -77,9 +77,18 @@ Registrer ny bruker:
 * [ ] dashbord test
 * [ ] sign up test
 
+### Selenium tester
+
+* [x] frontPage - aboutUs page
+* [x] localLogin test
+* [x] google login test
+* [x] sign up test
+
 ### Tester for back-end
 
-Legg til punkter her
+* [x] charitiesApi test
+* [x] organizationsApi test
+* [ ] localLoginApi test
 
 ## Back-end
 
@@ -88,13 +97,13 @@ Legg til punkter her
 ### Databaser
 
 * [x] Sette opp Mongodb
-* [ ] Lage database for veldedigheter
+* [x] Lage database for veldedigheter
 * [ ] Lage database for brukere
 * [ ] Lage database for donasjoner ?
 
 ### Logg inn API
 
-* [ ] `POST` registrere ny bruker
+* [x] `POST` registrere ny bruker
 * [x] `POST` logge inn en bruker
 
 ### Bruker API

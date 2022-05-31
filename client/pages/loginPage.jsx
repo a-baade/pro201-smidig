@@ -10,6 +10,7 @@ import { SignUp } from "./signUp";
 import FirstLayer from "../pics/sign-in/firstLayer.png";
 import SecondLayer from "../pics/sign-in/secondLayeer.png";
 import ThirdLayer from "../pics/sign-in/thirdLayer.png";
+import { fetchJSON } from "../lib/fetchJSON";
 
 
 
@@ -124,6 +125,27 @@ export function LoginButton({ config, label, provider }) {
 }
 
 function StartLogin({ config }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState();
+  const navigate = useNavigate();
+
+ async function handleSubmit(e) {
+   e.preventDefault();
+   const result = await fetch("/api/login", {
+     method: "POST",
+     body: JSON.stringify({ email, password }),
+     headers: {
+       "content-type": "application/json",
+     },
+   });
+   if (result.ok) {
+     navigate("/");
+   }else {
+     setError("Login failed");
+   }
+ }
+
   return (
     <div>
       <div className={"login-container"}>
@@ -140,18 +162,23 @@ function StartLogin({ config }) {
               config={config}
               provider={"google"}
             />
+          <form onSubmit={handleSubmit}>
             <div className={"email-field"}>
               <label className={"login-txt"}>Email address</label>
               <img src={Message} className={"message-icon"} alt={"msgIcon"}/>
-              <input type= "email" placeholder={"email@address.com"} className={"login-txt"}/>
+              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={"email@address.com"} className={"login-txt"} name={"email"}/>
             </div>
             <div>
               <label className={"login-txt"}>Password</label>
               <img src={Lock} className={"lock-icon"} alt={"lockIcon"}/>
-              <input type={"password"} className={"login-txt"} placeholder={"*************"}/>
+              <input type={"password"} value={password} onChange={(e) => setPassword(e.target.value)} className={"login-txt"} placeholder={"*************"} name={"password"}/>
             </div>
-           <button className={"sign-in-btn"}>Sign in</button>
+            <div>
+              {error && <div>{error}</div>}
+            </div>
+            <button className={"sign-in-btn"}>Sign in</button>
             <label className={"sign-up-txt"}>Don´t have an account? <Link to={"/signup"}>Sign up</Link> </label>
+          </form>
 
         </div>
       </div>
