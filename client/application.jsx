@@ -44,7 +44,7 @@ export function Application() {
           <Route path={"/about"} element={<AboutUs />} />
           <Route path={"/contact"} element={<Contact />}/>
           <Route path={"/signup"} element={<SignUp config={data.config} />} />
-          <Route path={"/dashboard"} element={<Dashboard />}/>
+          <Route path={"/dashboard"} element={<Dashboard user={data?.user} />}/>
 
           <Route
             path={"/login/*"}
