@@ -63,5 +63,40 @@ export function OrganizationApi(mongoDatabase) {
     console.log(response);
   });
 
+  router.get("/search/*", async (req, res) => {
+    const companyName = req.query.companyName;
+
+    const organizations = await mongoDatabase
+      .collection("register")
+      .find({
+        companyName: new RegExp(companyName, "i"),
+      })
+      .map(
+        ({
+          img,
+          firstName,
+          lastName,
+          mobileNumber,
+          companyName,
+          email,
+          password,
+          jobTitle,
+        }) => ({
+          img,
+          firstName,
+          lastName,
+          mobileNumber,
+          companyName,
+          email,
+          password,
+          jobTitle,
+        })
+      )
+      .toArray();
+    const response = organizations.find((org) => org.img);
+    res.json(organizations);
+    console.log(organizations);
+  });
+
   return router;
 }
