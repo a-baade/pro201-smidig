@@ -1,0 +1,146 @@
+.dashboard-page{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #e5e5e5;
+}
+
+/*Code for sidebar*/
+.dashboard-sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: #35656f;
+    padding: 2em;
+    color: #ffffff;
+}
+
+.dashboard-pfp-name{
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-pfp{
+    border-radius: 100%;
+    width: 7em;
+}
+
+/*Code for main*/
+.dashboard-main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4em;
+}
+
+/*Code for top row (boxes with information)*/
+.dashboard-top-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.dashboard-info-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 10em;
+    height: 5em;
+    border-radius: 1em;
+    font-size: 25px;
+    background-color: #8ab7ba;
+}
+
+/*Code for second row (Chart with donations over time)*/
+.dashboard-row-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1em 1em 1em;
+    margin-top: 1em;
+
+    background-color: #ffffff;
+    border-radius: 1em;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.chart2-sidebar{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.chart2-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-text: center;
+    background-color: #fbe8da;
+    border-radius: 100%;
+    width: 10em;
+    height: 10em
+}
+
+/*Code for third row (Donation chart compared to other organizations)*/
+.dashboard-row-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1em 1em 1em;
+    margin-top: 1em;
+
+    background-color: #66a2ad;
+    color: #ffffff;
+    border-radius: 1em;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.chart1-circle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ffffff;
+    color: #35656f;
+    border: 0.5em solid #35656f;
+    border-radius: 100%;
+    width: 10em;
+    height: 10em;
+}
+
+.percent-txt{
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.chart1-circle-txt{
+    margin-top: 0;
+    border-top: 2px solid #35656f;
+}
+
+.chart1-textbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #35656f;
+    width: 11em;
+    height: 3em;
+}
+
+.chart-wrap{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
