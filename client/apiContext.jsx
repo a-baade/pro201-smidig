@@ -7,8 +7,8 @@ export const ApiContext = React.createContext({
     return await fetchJSON("/api/login");
   },
 
-  async allCharities() {
-    return await fetchJSON("/api/charities");
+  async allCharities(query) {
+    return await fetchJSON("/api/charities?" + new URLSearchParams(query));
   },
 
   async allOrganizations() {
