@@ -5,3 +5,5 @@ exports[`Charities component should show all charities 1`] = `"<div><div><ul cla
 exports[`Charities component should show error message 1`] = `"<div><h1>Error</h1><div id=\\"error-text\\">Error: Failed to load</div></div>"`;
 
 exports[`Charities component should show loading screen 1`] = `"<div>Loading...</div>"`;
+
+exports[`Charities component should test charityPage 1`] = `"<div><h1>Error</h1><div id=\\"error-text\\">ReferenceError: fetch is not defined</div></div>"`;

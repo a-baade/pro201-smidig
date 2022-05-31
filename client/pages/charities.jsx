@@ -61,7 +61,7 @@ export function Charities() {
     <div>
       <div>
         <ul className={"charity-parent-cont"}>
-          {data.map((charity, index) => (
+          {data?.map((charity, index) => (
             <CharityCard key={index} charity={charity} />
           ))}
         </ul>

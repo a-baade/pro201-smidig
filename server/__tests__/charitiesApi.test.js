@@ -1,9 +1,8 @@
-
 import express from "express";
-import {MongoClient} from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
-import {CharitiesApi} from "../charitiesApi.js";
+import { CharitiesApi } from "../charitiesApi.js";
 import request from "supertest";
 
 dotenv.config();
@@ -22,19 +21,32 @@ afterAll(() => {
 });
 
 describe("charities api", () => {
-  it("should list charities", async function() {
+  it("should list charities", async function () {
     const name = ["Charity 1", "Charity 2", "Charity 3", "Charity 4"];
-    await request(app)
-      .post("/api/charities")
-      .send({
+    await request(app).post("/api/charities").send({
       name,
       description: "Test description",
-    })
+    });
     expect(200);
 
     expect(
-      (await request(app).get("/api/charities")).body.map(({name}) => name)
+      (await request(app).get("/api/charities")).body.map(({ name }) => name)
     ).toContain("Charity 1");
   });
 
+  it("should redirect to charity page by id", async function () {
+    const name = "Charity 1";
+    let _id = new ObjectId("628136d0c23c5bceb2297a7");
+    await request(app).post("/api/charities/").send({
+      _id,
+      name,
+      description: "Test description",
+    });
+    expect(200);
+    expect(
+      request(app)
+        .get("/api/charities/charity/id?id=628136d0c23c5bceb2297a7")
+        .body.map(({ name }) => name)
+    ).toContain(name);
+  });
 });
