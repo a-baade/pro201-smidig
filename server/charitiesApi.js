@@ -36,7 +36,6 @@ export function CharitiesApi(db) {
       .limit(1)
       .toArray();
     if (!charities) {
-
       res.sendStatus(404);
     }
     res.json(charities);
