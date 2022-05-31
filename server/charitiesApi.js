@@ -20,6 +20,7 @@ export function CharitiesApi(db) {
       res.sendStatus(404);
     }
     res.json(charities);
+    console.log(charities);
   });
 
   router.get("/charity/id", async (req, res) => {
@@ -39,6 +40,7 @@ export function CharitiesApi(db) {
       res.sendStatus(404);
     }
     res.json(charities);
+    console.log(charities);
   });
 
     router.get("/donate/id", async (req, res) => {
