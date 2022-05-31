@@ -147,7 +147,7 @@ function StartLogin({ config }) {
  }
 
   return (
-    <div>
+    <div className={"page-margin"}>
       <div className={"login-container"}>
         <div className={"sidebar"}>
             <img src={FirstLayer} className={"first-layer-login"} />

@@ -153,7 +153,7 @@ export default function charityPage() {
   }
 
   return (
-    <div>
+    <div className={"page-margin"}>
       <ul className={"charity-page-container"}>
         {data.map((charity, index) => (
           <Charity key={index} charity={charity} />

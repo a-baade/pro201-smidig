@@ -12,7 +12,7 @@ function DonateModule({charity: {name}}){
 
     // Add form functionality?
     return (
-        <div className={"donate-page"}>
+        <div className={"donate-page page-margin"}>
             <div className={"donate-page-top"}>
                 <img src={PlaceholderBackground}/>
             </div>
