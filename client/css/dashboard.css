@@ -36,6 +36,12 @@
     padding: 4em;
 }
 
+.chart-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 /*Code for top row (boxes with information)*/
 .dashboard-top-row{
     display: flex;
@@ -72,6 +78,19 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-left: 0em;
+    margin-top: 4em;
+}
+
+#months{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    height: 3em;
+
+    background-color: #c0cfc8;
+    border: none;
 }
 
 .chart2-circle{
@@ -79,10 +98,15 @@
     justify-content: center;
     align-items: center;
     align-text: center;
+    margin-top: 1em;
     background-color: #fbe8da;
     border-radius: 100%;
-    width: 10em;
-    height: 10em
+    width: 11em;
+    height: 11em;
+}
+
+.chart2{
+    margin-right: 3em;
 }
 
 /*Code for third row (Donation chart compared to other organizations)*/
@@ -97,6 +121,10 @@
     color: #ffffff;
     border-radius: 1em;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.chart1-sidebar{
+    margin-top: 3em;
 }
 
 .chart1-circle{
@@ -130,15 +158,19 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #35656f;
+    margin-top: 1em;
     width: 11em;
     height: 3em;
+
+    background-color: #35656f;
+    border-radius: 0.5em;
 }
 
-.chart-wrap{
-    display: flex;
-    flex-direction: row;
+.chart1{
+    margin-right: 3em;
 }
+
+
 
 
 

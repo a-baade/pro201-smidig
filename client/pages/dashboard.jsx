@@ -30,12 +30,15 @@ export function Dashboard({ user }) {
                   <h2>Donation over time</h2>
                   <div className={"chart-wrap"}>
                       <div className={"chart2"}>
-                          <div>
-                              <Chart2/>
-                          </div>
+                          <Chart2/>
                       </div>
                       <div className={"chart2-sidebar"}>
-                          <button>Month</button>
+                          <select name="months" id="months">
+                              <option value="january">January</option>
+                              <option value="february">February</option>
+                              <option value="march">March</option>
+                              <option value="april">April</option>
+                          </select>
                           <div className={"chart2-circle"}>
                               <p>192 351 <br/> Avg per month</p>
                           </div>
@@ -46,7 +49,7 @@ export function Dashboard({ user }) {
                   <h2>Donasjoner</h2>
                   <h4>sammenlignet med lignende bedrifter</h4>
                   <div className={"chart-wrap"}>
-                      <div className={"donations-chart"}>
+                      <div className={"chart1"}>
                           <Chart1/>
                       </div>
                       <div className={"chart1-sidebar"}>

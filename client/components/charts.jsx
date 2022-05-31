@@ -10,14 +10,21 @@ export const data1 = [
 
 export const options1 = {
     title: "Donations from similar sized organizations",
-    chartArea: { width: "50%" },
+    titleTextStyle: {color: "#ffffff"},
+    chartArea: {
+        width: "50%",
+        backgroundColor: "#66a2ad"
+    },
+    backgroundColor: "#66a2ad",
     colors: ["#35656f"],
     hAxis: {
         title: "Donated",
+        titleTextStyle: {color: "#ffffff"},
         minValue: 0,
     },
     vAxis: {
         title: "Organization",
+        titleTextStyle: {color: "#ffffff"},
     },
 };
 
