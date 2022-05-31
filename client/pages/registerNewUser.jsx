@@ -70,7 +70,7 @@ export function RegisterNewUser() {
   // }
 
   return (
-    <div>
+    <div className={"page-margin"}>
       <div className={"parent-container"}>
         <div>
           <img src={FirstLayer} className={"first-layer-bg"} />

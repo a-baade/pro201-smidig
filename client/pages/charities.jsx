@@ -58,7 +58,7 @@ export function Charities() {
 
   // Add category filter
   return (
-    <div>
+    <div className={"page-margin"}>
       <div>
         <ul className={"charity-parent-cont"}>
           {data.map((charity, index) => (
