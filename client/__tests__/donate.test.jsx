@@ -17,7 +17,11 @@ describe("contact component", () => {
   });
 
   it("should test donate module", async function () {
-    const charities = { name: "Charity 1", description: "Test description 1" };
+    const charities = {
+      _id: 1,
+      name: "Charity 1",
+      description: "Test description 1",
+    };
     const element = document.createElement("div");
     await act(async () => {
       ReactDOM.render(
