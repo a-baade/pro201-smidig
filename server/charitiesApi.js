@@ -27,11 +27,12 @@ export function CharitiesApi(db) {
     const charities = await db
       .collection("charities")
       .find({ _id: { $in: [ObjectId({ id })] } })
-      .map(({ name, description, bgImage, charityLogo }) => ({
+      .map(({ name, description, bgImage, charityLogo, _id }) => ({
         name,
         description,
         bgImage,
         charityLogo,
+          _id
       }))
       .limit(1)
       .toArray();
@@ -47,8 +48,9 @@ export function CharitiesApi(db) {
         const charities = await db
             .collection("charities")
             .find({ _id: { $in: [ObjectId({id})] }})
-            .map(({name, description}) => ({
+            .map(({name, _id}) => ({
                 name,
+                _id
             }))
             .limit(1).toArray();
         if (!charities){
