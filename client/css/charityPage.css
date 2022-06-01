@@ -1,0 +1,93 @@
+/* style for charityPage.jsx */
+
+.charity-page-container {
+    margin: auto;
+    padding: 0;
+}
+
+.charity-page-background {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.charity-page-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 5vh 5vw;
+}
+
+.charity-page-description {
+    grid-area: 1 / 1 / 2 / 3;
+    min-height: 450px;
+    height: fit-content;
+    margin-left: 80px;
+}
+
+.charity-page-side {
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 450px;
+    height: fit-content;
+}
+
+.charity-description-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.charity-description-logo {
+    border-radius: 50%;
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+}
+
+.charity-description-top > h2 {
+    margin-left: 2.5vw;
+    font-size: 40px;
+}
+
+.charity-description-text {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.charity-page-donate-button {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 600;
+    width: 15vw;
+    min-width: 200px;
+    margin-bottom: 50px;
+    padding: 17px 32px;
+    background: #ACCCCE;
+    border: 0;
+    border-radius: 10px;
+}
+
+.charity-social-links {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2.5vh;
+    min-width: 250px;
+}
+
+.charity-social-links img {
+    position: relative;
+    top: -3px;
+    height: 30px;
+    margin-right: 10px;
+}

@@ -1,16 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-
-.page-margin {
-    margin-bottom: 10vh;
-}
-
 * {
     font-family: 'Roboto', sans-serif;
 }
 
 body {
     margin: auto;
+}
+
+.page-margin {
+    margin-bottom: 10vh;
+}
+
+.custom-shadow {
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+}
+
+.custom-shadow-button {
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+}
+
+.custom-shadow-button:hover {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    background: #CCCCCC;
+    cursor: pointer;
+}
+
+.back-button {
+    position: fixed;
+    border-radius: 50%;
+    top: 120px;
+    left: 40px;
+    padding: 15px;
+    background-color: #95BDC4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-button img {
+    filter: brightness(0) invert(1);
+    height: 30px;
+}
+
+.charity-page-news {
+    grid-area: 2 / 1 / 3 / 4;
+}
+
+.charity-page-news > .newsfeed-parent {
+    margin-top: 0;
 }
 
 header > * {
