@@ -129,7 +129,7 @@ function Charity({
   );
 }
 
-export default function charityPage() {
+export default function CharityPage() {
   let [searchParams, setSearchParams] = useSearchParams();
   const id = searchParams.get("id");
 

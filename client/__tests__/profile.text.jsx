@@ -6,11 +6,11 @@ import { act } from "react-dom/test-utils";
 
 describe("Profile component", () => {
   it("should test div element", async function () {
-    const user = {google: { name: "test name", email: "test email" }};
+    const user = { google: { name: "test name", email: "test email" } };
     const divEl = document.createElement("div");
     ReactDOM.render(
       <MemoryRouter>
-        <Profile user={user}/>
+        <Profile user={user} />
       </MemoryRouter>,
       divEl
     );
@@ -23,19 +23,32 @@ describe("Profile component", () => {
   });
 
   it("should show demo profile", async function () {
-    const user = {google: { name: "test name", email: "test email" }};
+    const user = {
+      google: {
+        name: "test name",
+        email: "test email",
+      },
+    };
     const divEl = document.createElement("div");
     await act(async () => {
       ReactDOM.render(
-          <MemoryRouter>
-            <Profile user={user}/>
-          </MemoryRouter>,
+        <MemoryRouter>
+          <Profile user={user} />
+        </MemoryRouter>,
         divEl
       );
     });
     expect(
-      Object.values(divEl.querySelectorAll("h3")).map((e) => e.innerHTML)
-    ).toEqual(["Name: test name", "Email: test email"]);
+      Object.values(divEl.querySelectorAll("p")).map((e) => e.innerHTML)
+    ).toEqual([
+      "test name",
+      "+47 95262419",
+      "test email",
+      "ceo assistant",
+      "test name",
+      "12345667890",
+      "1234 4567 4567 6789",
+    ]);
     expect(divEl.innerHTML).toMatchSnapshot();
     expect.stringContaining("Profile for test name (test email)");
   });
