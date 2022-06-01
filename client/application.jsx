@@ -15,6 +15,7 @@ import CharityPage from "./pages/charityPage";
 import Donate from "./pages/donate";
 import { Contact } from "./pages/contact";
 import {Dashboard} from "./pages/dashboard";
+import Donate from "./pages/donate";
 
 export function Application() {
   const { fetchLogin } = useContext(ApiContext);
