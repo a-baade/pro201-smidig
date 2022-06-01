@@ -11,7 +11,6 @@ import Footer from "./components/footer";
 import { RegisterNewUser } from "./pages/registerNewUser";
 import { AboutUs } from "./pages/aboutUs";
 import { SignUp } from "./pages/signUp";
-import { ListOrganizations } from "./listOrganizations";
 import CharityPage from "./pages/charityPage";
 import Donate from "./pages/donate";
 import { Contact } from "./pages/contact";
