@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ApiContext } from "../apiContext";
 import { FormInput, FormInputPassword } from "../lib/formInput.jsx";
 import FirstLayer from "../pics/register-pics/register-bg.png";
 import RedBall from "../pics/register-pics/redBall.png";
@@ -8,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 import FileBase64 from "react-file-base64";
 
 export function RegisterNewUser() {
-  const { registerNewOrganization } = useContext(ApiContext);
   const [img, setImg] = useState({ image: "" });
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
