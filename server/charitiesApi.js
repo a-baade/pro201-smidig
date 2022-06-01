@@ -27,7 +27,7 @@ export function CharitiesApi(db) {
     let id = req.query.id;
     const charities = await db
       .collection("charities")
-      .find({ _id: { $in: [ObjectId({ id })] } })
+      .find({ _id: { $in: [new ObjectId({ id })] } })
       .map(({ name, description, bgImage, charityLogo, _id }) => ({
         name,
         description,

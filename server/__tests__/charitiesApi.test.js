@@ -1,4 +1,4 @@
-import express from "express";
+import express, { response } from "express";
 import { MongoClient, ObjectId } from "mongodb";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
@@ -34,9 +34,55 @@ describe("charities api", () => {
     ).toContain("Charity 1");
   });
 
+  it("should not redirect to charity page by id", async function () {
+    const name = ["Charity 1", "Charity 2", "Charity 3", "Charity 4"];
+    //const _id = new ObjectId("628136d0c23c");
+    await request(app).post("/api/charities/").send({
+      name,
+      description: "Test description",
+    });
+    expect(404);
+    expect(
+      (
+        await request(app).get("/api/charities/charity/id?id=628136d0c23c")
+      ).body.map(({ name }) => name)
+    ).not.toContain("Charity 1");
+  });
+
   it("should redirect to charity page by id", async function () {
-    const name = "Charity 1";
-    let _id = new ObjectId("628136d0c23c5bceb2297a7");
+    const name = ["Charity 1", "Charity 2", "Charity 3", "Charity 4"];
+    const _id = new ObjectId("628136d0c23c");
+    await request(app).post("/api/charities/").send({
+      _id,
+      name,
+      description: "Test description",
+    });
+    expect(404);
+    expect(
+      (
+        await request(app).get("/api/charities/charity/id?id=628136d0c23c")
+      ).body.map(({ name }) => name)
+    ).toContain("Charity 1");
+  });
+
+  it("should not redirect to donate page by charity id", async function () {
+    const name = ["Charity 1", "Charity 2", "Charity 3", "Charity 4"];
+    //const _id = new ObjectId("628136d0c23c");
+    await request(app).post("/api/charities/").send({
+      name,
+      description: "Test description",
+    });
+    expect(404);
+    expect(
+      (
+        await request(app).get("/api/charities/donate/id?id=628136d0c23c")
+      ).body.map(({ name }) => name)
+    ).not.toContain("Charity 1");
+  });
+
+  it("should redirect to donate page by charity id", async function () {
+    const name = ["Charity 1", "Charity 2", "Charity 3", "Charity 4"];
+    const _id = new ObjectId("628136d0c23c");
     await request(app).post("/api/charities/").send({
       _id,
       name,
@@ -44,9 +90,9 @@ describe("charities api", () => {
     });
     expect(200);
     expect(
-      request(app)
-        .get("/api/charities/charity/id?id=628136d0c23c5bceb2297a7")
-        .body.map(({ name }) => name)
-    ).toContain(name);
+      (
+        await request(app).get("/api/charities/donate/id?id=628136d0c23c")
+      ).body.map(({ name }) => name)
+    ).toContain("Charity 1");
   });
 });
