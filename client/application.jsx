@@ -13,6 +13,7 @@ import { AboutUs } from "./pages/aboutUs";
 import { SignUp } from "./pages/signUp";
 import CharityPage from "./pages/charityPage";
 import { Contact } from "./pages/contact";
+import {Dashboard} from "./pages/dashboard";
 
 export function Application() {
   const { fetchLogin } = useContext(ApiContext);
@@ -37,8 +38,10 @@ export function Application() {
           <Route path={"/charities/charity/:id"} element={<CharityPage />} />
           <Route path={"/register"} element={<RegisterNewUser />} />
           <Route path={"/about"} element={<AboutUs />} />
-          <Route path={"/contact"} element={<Contact />} />
-          <Route path={"/signup"} element={<SignUp config={data?.config} />} />
+          <Route path={"/contact"} element={<Contact />}/>
+          <Route path={"/signup"} element={<SignUp config={data.config} />} />
+          <Route path={"/dashboard"} element={<Dashboard user={data?.user} />}/>
+
           <Route
             path={"/login/*"}
             element={<LoginPage config={data?.config} reload={reload} />}

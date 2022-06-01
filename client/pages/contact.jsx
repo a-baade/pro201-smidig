@@ -8,7 +8,7 @@ import Person from "../pics/contact-pics/person-flowers.png";
 
 export function Contact() {
     return (
-        <div className={"login-container"}>
+        <div className={"login-container page-margin"}>
             <div className={"contact-sidebar"}>
                 <h1 className={"sidebar-title"}>We'd love to <br/> hear from you</h1>
                 <div>
