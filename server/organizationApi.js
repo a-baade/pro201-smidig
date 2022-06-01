@@ -29,7 +29,7 @@ export function OrganizationApi(mongoDatabase) {
       console.log(error);
     }
 
-    console.log(req.body);
+    //console.log(req.body);
   });
 
   router.get("/", async (req, res) => {
@@ -60,7 +60,7 @@ export function OrganizationApi(mongoDatabase) {
       .toArray();
     const response = organizations.find((org) => org.img);
     res.json(organizations);
-    console.log(response);
+    //console.log(response);
   });
 
   return router;

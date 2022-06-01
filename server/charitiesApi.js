@@ -20,7 +20,7 @@ export function CharitiesApi(db) {
       res.sendStatus(404);
     }
     res.json(charities);
-    console.log(charities);
+    //console.log(charities);
   });
 
   router.get("/charity/id", async (req, res) => {
@@ -33,7 +33,7 @@ export function CharitiesApi(db) {
         description,
         bgImage,
         charityLogo,
-          _id
+        _id,
       }))
       .limit(1)
       .toArray();
@@ -41,24 +41,25 @@ export function CharitiesApi(db) {
       res.sendStatus(404);
     }
     res.json(charities);
-    console.log(charities);
+    //console.log(charities);
   });
 
-    router.get("/donate/id", async (req, res) => {
-        let id = req.query.id;
-        const charities = await db
-            .collection("charities")
-            .find({ _id: { $in: [ObjectId({id})] }})
-            .map(({name, _id}) => ({
-                name,
-                _id
-            }))
-            .limit(1).toArray();
-        if (!charities){
-            res.sendStatus(404);
-        }
-        res.json(charities);
-    });
+  router.get("/donate/id", async (req, res) => {
+    let id = req.query.id;
+    const charities = await db
+      .collection("charities")
+      .find({ _id: { $in: [ObjectId({ id })] } })
+      .map(({ name, _id }) => ({
+        name,
+        _id,
+      }))
+      .limit(1)
+      .toArray();
+    if (!charities) {
+      res.sendStatus(404);
+    }
+    res.json(charities);
+  });
 
   return router;
 }
