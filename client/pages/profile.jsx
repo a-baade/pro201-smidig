@@ -4,7 +4,7 @@ import Pink from "../pics/contact-pics/pink-squiggle.png";
 
 export function Profile({ user }) {
   return (
-    <div className={"wrap"}>
+    <div className={"wrap page-margin"}>
       <div className={"main-card"}>
           <div className={"color-block"}></div>
           <div className={"first-row"}>

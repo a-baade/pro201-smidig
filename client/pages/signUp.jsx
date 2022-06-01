@@ -24,7 +24,7 @@ export function SignUp({ config }) {
 
 
   return (
-    <div>
+    <div className={"page-margin"}>
       <div className={"login-container"}>
         <div className={"sidebar signup-sidebar"}>
           <div>

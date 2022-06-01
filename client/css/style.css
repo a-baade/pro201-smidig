@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+
+.page-margin {
+    margin-bottom: 10vh;
+}
+
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -125,7 +130,7 @@ header > * {
 }
 
 footer {
-    margin-top: 10vh;
+    /* margin-top: 10vh;*/
     background-color: #8AB7BA;
     height: 30vh;
     padding: 2vh 2vw;
