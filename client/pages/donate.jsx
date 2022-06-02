@@ -1,27 +1,32 @@
-import { ApiContext } from "../apiContext";
-import { useLoading } from "../useLoading";
-import React, { useContext } from "react";
-import { useSearchParams } from "react-router-dom";
-import PlaceholderBackground from "../pics/bg-pictures/charities-placeholder.jpg";
-import PlaceholderLogo from "../pics/bg-pictures/charities-logo-placeholder.png";
+import React, {useContext} from "react";
+import {Link, useSearchParams} from "react-router-dom";
+import {ApiContext} from "../apiContext";
+import {useLoading} from "../useLoading";
+import Arrow from "../pics/icons/arrow.png";
 
-export function DonateModule({ charity: { name, _id } }) {
-  // Replace placeholders with actual charities images
+export function DonateModule({ charity:
+    { name, _id, bgImage, charityLogo }
+}) {
 
-  // Add form functionality?
+  // Not functional
   return (
-    <div className={"donate-page page-margin"}>
+    <div className={"donate-page page-margin custom-shadow"}>
+      <Link to={"/charities"}>
+        <div className={"back-button custom-shadow-button"}>
+          <img src={Arrow} />
+        </div>
+      </Link>
       <div className={"donate-page-top"}>
-        <img src={PlaceholderBackground} />
+        <img src={bgImage} />
       </div>
       <div className={"donate-page-content"}>
-        <img src={PlaceholderLogo} className={"donate-logo"} />
+        <img src={charityLogo} className={"donate-logo custom-shadow"} />
         <h2>Donate to {name}</h2>
         <p>Select amount (minimum $ 10.00)</p>
         <div className={"donate-form-amount"}>
-          <button>$ 100.00</button>
-          <button>$ 50.00</button>
-          <button>$ 25.00</button>
+          <button className={"custom-shadow-button"}>$ 100.00</button>
+          <button className={"custom-shadow-button"}>$ 50.00</button>
+          <button className={"custom-shadow-button"}>$ 25.00</button>
           <input type={"text"} placeholder={"Other amount"} />
         </div>
         <div className={"donate-text-div"}>
@@ -77,7 +82,7 @@ export function DonateModule({ charity: { name, _id } }) {
           Donate $ XXXX to {name} every XX month(s)
         </p>
         <div>
-          <button className={"donate-page-button"}>
+          <button className={"donate-page-button custom-shadow-button"}>
             Donate with Debit or Credit Card
           </button>
         </div>
@@ -90,8 +95,8 @@ export default function donate() {
   let [searchParams, setSearchParams] = useSearchParams();
   const id = searchParams.get("id");
 
-  const { donateCharity } = useContext(ApiContext);
-  const { loading, error, data } = useLoading(
+  const {donateCharity} = useContext(ApiContext);
+  const {loading, error, data} = useLoading(
     async () => await donateCharity(id),
     []
   );

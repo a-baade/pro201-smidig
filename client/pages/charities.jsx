@@ -1,22 +1,22 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { ApiContext } from "../apiContext";
 import { useLoading } from "../useLoading";
 
-import { Link } from "react-router-dom";
-
-function CharityCard({
-  charity: { _id, name, description, bgImage, charityLogo },
+function CharityCard({charity:
+    { _id, name, description, bgImage, charityLogo }
 }) {
-  // Replace placeholders with actual charities images
+
+  // Charity card with button to donate or charity page
   return (
-    <div className={"charity-card"}>
+    <div className={"charity-card custom-shadow"}>
       <div
         className={"charity-background"}
         style={{ backgroundImage: `url( data:image/png;base64${bgImage} )` }}
       >
         <img
           src={`data:image/png;base64${charityLogo}`}
-          className={"charity-img"}
+          className={"charity-img custom-shadow"}
         />
       </div>
 
@@ -25,10 +25,10 @@ function CharityCard({
         <p>{description}</p>
         <div className={"card-buttons"}>
           <Link to={{ pathname: "/charities/charity/id?id=" + _id }}>
-            <button className="card-btn-left card-btn">Read more</button>
+            <button className="card-button custom-shadow-button">Read more</button>
           </Link>
           <Link to={{ pathname: "/charities/donate/id?id=" +_id }}>
-            <button className="card-btn-right card-btn">Donate</button>
+            <button className="card-button custom-shadow-button">Donate</button>
           </Link>
         </div>
       </div>
@@ -37,8 +37,8 @@ function CharityCard({
 }
 
 export function Charities() {
-  const { allCharities } = useContext(ApiContext);
-  const { loading, error, data } = useLoading(
+  const {allCharities} = useContext(ApiContext);
+  const {loading, error, data} = useLoading(
     async () => await allCharities(),
     []
   );
@@ -60,7 +60,7 @@ export function Charities() {
   return (
     <div className={"page-margin"}>
       <div>
-        <ul className={"charity-parent-cont"}>
+        <ul className={"charity-cards-container"}>
           {data?.map((charity, index) => (
             <CharityCard key={index} charity={charity} />
           ))}

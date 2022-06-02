@@ -1,27 +1,26 @@
+import React, { useContext } from "react";
+import { Link, useSearchParams} from "react-router-dom";
 import { ApiContext } from "../apiContext";
 import { useLoading } from "../useLoading";
-import React, { useContext } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import Arrow from "../pics/icons/arrow.png";
 import NewsImg1 from "../pics/bg-pictures/img_3.png";
 import NewsImg2 from "../pics/bg-pictures/img_4.png";
 import NewsImg3 from "../pics/bg-pictures/img_5.png";
-
 import Facebook from "../pics/icons/facebook.png";
 import Instagram from "../pics/icons/instagram.png";
 import Snapchat from "../pics/icons/snapchat.png";
 import Tiktok from "../pics/icons/tiktok.png";
 import WWW from "../pics/icons/world-wide-web.png";
 
-import Arrow from "../pics/icons/arrow.png";
-
-function Charity({
-  charity: { _id, name, description, bgImage, charityLogo },
+function Charity({charity:
+    { _id, name, description, bgImage, charityLogo }
 }) {
-  // Replace placeholders with actual charities images
+
+  // Charity page
   return (
     <div>
       <Link to={"/charities"}>
-        <div className={"charity-back-button"}>
+        <div className={"back-button custom-shadow-button"}>
           <img src={Arrow} />
         </div>
       </Link>
@@ -44,7 +43,7 @@ function Charity({
         </div>
         <div className={"charity-page-side"}>
           <Link to={{ pathname: "/charities/donate/id?id=" + _id }}>
-            <button className={"charity-page-donate-button"}>Donate</button>
+            <button className={"charity-page-donate-button custom-shadow-button"}>Donate</button>
           </Link>
           <a
             href={"https://www.google.com/"}
@@ -133,8 +132,8 @@ export default function CharityPage() {
   let [searchParams, setSearchParams] = useSearchParams();
   const id = searchParams.get("id");
 
-  const { oneCharity } = useContext(ApiContext);
-  const { loading, error, data } = useLoading(
+  const {oneCharity} = useContext(ApiContext);
+  const {loading, error, data} = useLoading(
     async () => await oneCharity(id),
     []
   );

@@ -4,6 +4,7 @@ import { ObjectId } from "mongodb";
 export function CharitiesApi(db) {
   const router = new Router();
 
+  // Get all charities
   router.get("/", async (req, res) => {
     const charities = await db
       .collection("charities")
@@ -20,9 +21,9 @@ export function CharitiesApi(db) {
       res.sendStatus(404);
     }
     res.json(charities);
-    //console.log(charities);
   });
 
+    // Get one specific charity
   router.get("/charity/id", async (req, res) => {
     let id = req.query.id;
     const charities = await db
@@ -41,17 +42,19 @@ export function CharitiesApi(db) {
       res.sendStatus(404);
     }
     res.json(charities);
-    //console.log(charities);
   });
 
+    // Get one specific charity
   router.get("/donate/id", async (req, res) => {
     let id = req.query.id;
     const charities = await db
       .collection("charities")
       .find({ _id: { $in: [ObjectId({ id })] } })
-      .map(({ name, _id }) => ({
+      .map(({ name, _id, bgImage, charityLogo }) => ({
         name,
         _id,
+          bgImage,
+          charityLogo,
       }))
       .limit(1)
       .toArray();
