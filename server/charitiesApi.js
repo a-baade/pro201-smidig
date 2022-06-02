@@ -64,5 +64,24 @@ export function CharitiesApi(db) {
     res.json(charities);
   });
 
+    router.get("/search/*", async (req, res) => {
+        const name = req.query.name;
+        const charities = await db
+            .collection("charities")
+            .find({
+                name: new RegExp(name, "i"),
+            })
+            .map(
+                ({_id, name, description, bgImage, charityLogo
+                 }) => ({
+                    _id, name, description, bgImage, charityLogo
+                })
+            )
+            .toArray();
+        const response = charities.find((org) => org.img);
+        res.json(charities);
+        console.log(charities);
+    });
+
   return router;
 }

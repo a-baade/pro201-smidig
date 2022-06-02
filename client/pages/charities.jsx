@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import { ApiContext } from "../apiContext";
 import { useLoading } from "../useLoading";
+import {fetchJSON} from "../lib/fetchJSON";
 
 function CharityCard({charity:
     { _id, name, description, bgImage, charityLogo }
@@ -38,10 +39,37 @@ function CharityCard({charity:
 
 export function Charities() {
   const {allCharities} = useContext(ApiContext);
-  const {loading, error, data} = useLoading(
-    async () => await allCharities(),
-    []
+  const {category, setCategory} = useState("");
+  const {categoryQuery, setCategoryQuery} = useState("");
+  const [search, setSearch] = useState("");
+  const [data, setData] = useState([]);
+  const {loading, error} = useLoading(
+    async () => await allCharities({ category }),
+    [category]
   );
+
+    useEffect(() => {
+        if (search === "") {
+            fetchJSON("/api/charities").then((jsonData) => {
+                setData(jsonData);
+            });
+        } else {
+            fetchJSON(`/api/charities/search/?name=${search}`).then(
+                (jsonData) => {
+                    setData(jsonData);
+                }
+            );
+        }
+    }, [search]);
+
+    function handleSubmitQuery(e) {
+        e.preventDefault();
+        setCategory(categoryQuery);
+    }
+
+    async function handleSearch(event) {
+        await setSearch(event);
+    }
 
   if (loading) {
     return <div>Loading...</div>;
@@ -59,7 +87,19 @@ export function Charities() {
   // Add category filter
   return (
     <div className={"page-margin"}>
-      <div>
+        <div>
+            <input value={search} onChange={(e) => handleSearch(e.target.value)} />
+            {search && <div>Results for {search}</div>}
+            <form onSubmit={handleSubmitQuery}>
+                    <button  id={"category-query"}
+                             value={categoryQuery}
+                             onChange={(e) => setCategoryQuery(e.target.value)}>Water</button>
+                    <button  id={"category-query"}
+                         value={categoryQuery}
+                         onChange={(e) => setCategoryQuery(e.target.value)}>Knowledge</button>
+            </form>
+        </div>
+            <div>
         <ul className={"charity-cards-container"}>
           {data?.map((charity, index) => (
             <CharityCard key={index} charity={charity} />
