@@ -22,7 +22,7 @@ export function AboutUs() {
       <div className={"second-row-box"}>
         <div className={"knowledge-text-box"}>
           <p className={"our-mission"}>OUR MISSION</p>
-          <h1 className={"knowledge-power"}>KNOWLEDGE = POWER</h1>
+          <h1 className={"knowledge-power custom-font-knowledge"}>KNOWLEDGE = POWER</h1>
           <div className={"power-text"}>
             <p>
               We're a Norwegian female-founded startup changing corporate giving
@@ -48,7 +48,7 @@ export function AboutUs() {
           />
           <img src={TopLayerArt} className={"top-layer-art"} alt={"topLayer"} />
           <p className={"our-mission mission"}>OUR MISSION</p>
-          <h1 className={"action-call"}>A CALL TO ACTION</h1>
+          <h1 className={"action-call custom-font-knowledge"}>A CALL TO ACTION</h1>
         </div>
       </div>
       <div className={"big-container"}>
