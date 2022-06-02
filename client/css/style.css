@@ -64,6 +64,7 @@ header > * {
 
 .front-bg {
     width: 100%;
+    min-width: 1000px;
 }
 
 .pic-text {
@@ -73,6 +74,7 @@ header > * {
     left: 35%;
     font-family: "Mukta Mahee";
     font-size: 64px;
+    min-width: 500px;
 }
 
 .join-us-btn {
@@ -89,6 +91,7 @@ header > * {
     font-weight: 500;
     border-radius: 10px;
     width: 20%;
+    min-width: 150px;
 }
 
 

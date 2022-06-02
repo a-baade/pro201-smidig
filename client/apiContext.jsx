@@ -12,15 +12,11 @@ export const ApiContext = React.createContext({
   },
 
   async oneCharity(id) {
-    return await fetchJSON("/api/charities/charity/id?id="+id);
+    return await fetchJSON("/api/charities/charity/id?id=" + id);
   },
 
   async donateCharity(id) {
-    return await fetchJSON("/api/charities/donate/id?id="+id);
-  },
-
-  async registerNewOrganization(organization) {
-    return await postJSON("/api/register", organization);
+    return await fetchJSON("/api/charities/donate/id?id=" + id);
   },
 
   async registerLogin(provider, login) {
