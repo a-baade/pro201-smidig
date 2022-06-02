@@ -28,7 +28,7 @@ body {
     -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
 }
 
-.custom-shadow-button:hover {
+.custom-shadow-button:hover, .join-us-btn:hover, .about-us-btn:hover {
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -99,10 +99,10 @@ header > * {
 }
 
 
+
 .about-us-div {
     text-align: center;
     background-color: #95BDC4;
-    font-size: 20px;
     padding-inline: 0.5em;
     line-height: 25px;
     padding: 12px 20px;
