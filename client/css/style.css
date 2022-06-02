@@ -254,17 +254,17 @@ footer {
     justify-self: center;
     display: flex;
     flex-direction: row;
+
 }
 
 .footerSocial a {
     text-decoration: none;
-    font-size: 18px;
 }
 
 .footerSocial img {
     height: 60px;
     position: relative;
-    padding: 5px;
+    padding: 10px;
 }
 
 .footerCopyright {

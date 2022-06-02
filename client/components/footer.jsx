@@ -1,7 +1,7 @@
 import Facebook from "../pics/icons/facebook.png";
 import Instagram from "../pics/icons/instagram.png";
 import Snapchat from "../pics/icons/snapchat.png";
-import Tiktok from "../pics/icons/tiktok.png";
+import Linkedin from "../pics/icons/linkedin.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
@@ -36,12 +36,13 @@ export default function Footer() {
         <a href={"https://www.instagram.com/"}>
           <img src={Instagram} alt={"insta"} />
         </a>
+        <a href={"https://www.linkedin.com/"}>
+          <img src={Linkedin} alt={"linkedin"} />
+        </a>
         <a href={"https://www.snapchat.com/"}>
           <img src={Snapchat} alt={"snap"} />{" "}
         </a>
-        <a href={"https://www.tiktok.com/"}>
-          <img src={Tiktok} alt={"tiktok"} />
-        </a>
+
       </div>
 
       <div className={" footerCopyright "}>
