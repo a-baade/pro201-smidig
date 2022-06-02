@@ -3,7 +3,6 @@ import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import request from "supertest";
-import { CharitiesApi } from "../charitiesApi.js";
 import { OrganizationApi } from "../organizationApi.js";
 
 dotenv.config();
