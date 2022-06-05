@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ApiContext } from "../apiContext";
 import { useLoading } from "../useLoading";
 import {fetchJSON} from "../lib/fetchJSON";
+import Search from "../pics/icons/search.png";
 
 function CharityCard({charity:
     { _id, name, description, bgImage, charityLogo }
@@ -87,19 +88,22 @@ export function Charities() {
   // Add category filter
   return (
     <div className={"page-margin"}>
+        <div className= "container-charities">
             <div className='search-charities'>
-            <input /*className="search-text" */placeholder="Search Charities" value={search} onChange={(e) => handleSearch(e.target.value)} />
-            {search && <div>Results for {search}</div>}
+                <input className="search-input-charities" placeholder="Search Charities" value={search} onChange={(e) => handleSearch(e.target.value)} />
+                {search && <div className={"charity-results"}>Results for {search}</div>}
             </div>
-        <div>
-        <form onSubmit={handleSubmitQuery}>
-            <button  id={"category-query"}
-                     value={categoryQuery}
-                     onChange={(e) => setCategoryQuery(e.target.value)}>Water</button>
-            <button  id={"category-query"}
-                     value={categoryQuery}
-                     onChange={(e) => setCategoryQuery(e.target.value)}>Knowledge</button>
-        </form>
+            <div>
+        </div>
+
+        {/*<form onSubmit={handleSubmitQuery}>*/}
+        {/*    <button  id={"category-query"}*/}
+        {/*             value={categoryQuery}*/}
+        {/*             onChange={(e) => setCategoryQuery(e.target.value)}>Water</button>*/}
+        {/*    <button  id={"category-query"}*/}
+        {/*             value={categoryQuery}*/}
+        {/*             onChange={(e) => setCategoryQuery(e.target.value)}>Knowledge</button>*/}
+        {/*</form>*/}
         </div>
             <div>
         <ul className={"charity-cards-container"}>

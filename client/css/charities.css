@@ -64,6 +64,37 @@
     width: 170px;
 }
 
+
+.search-charities {
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    box-shadow: -15px 15px 17px -10px rgba(0,10,10,0);
+}
+.search-input-charities{
+    width: 100%;
+    padding: 9px;
+    border-radius:10px 10px 1px 10px;
+
+    outline: none;
+    font-size: 20px;
+    background: none;
+}
+.charity-results {
+    position: absolute;
+    padding-top: 63px ;
+    padding-left: 23px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.container-charities{
+    width: 35%;
+    left: 40%;
+    top: 40%;
+}
+
 /* ? */
 .pic-container {
     position: relative;
