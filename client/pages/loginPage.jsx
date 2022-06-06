@@ -9,6 +9,7 @@ import { SignUp } from "./signUp";
 import FirstLayer from "../pics/sign-in/firstLayer.png";
 import SecondLayer from "../pics/sign-in/secondLayeer.png";
 import ThirdLayer from "../pics/sign-in/thirdLayer.png";
+import LoadingWheel from "../components/loadingSpinner";
 
 export function LoginCallback({ reload, config }) {
   const { provider } = useParams();
@@ -76,7 +77,7 @@ export function LoginCallback({ reload, config }) {
     );
   }
 
-  return <h1>Please wait...</h1>;
+  return <LoadingWheel/>;
 }
 
 export function EndSession({ reload }) {
@@ -87,7 +88,7 @@ export function EndSession({ reload }) {
     reload();
     navigate("/");
   });
-  return <h1>Please wait...</h1>;
+  return <LoadingWheel/>;
 }
 
 export function LoginButton({ config, label, provider }) {
