@@ -11,6 +11,7 @@ import Instagram from "../pics/icons/instagram.png";
 import Snapchat from "../pics/icons/snapchat.png";
 import Tiktok from "../pics/icons/tiktok.png";
 import WWW from "../pics/icons/world-wide-web.png";
+import LoadingWheel from "../components/loadingSpinner";
 
 function Charity({charity:
     { _id, name, description, bgImage, charityLogo }
@@ -139,7 +140,7 @@ export default function CharityPage() {
   );
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <LoadingWheel/>;;
   }
 
   if (error) {

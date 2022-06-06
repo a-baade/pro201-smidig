@@ -16,6 +16,7 @@ import Donate from "./pages/donate";
 import { Contact } from "./pages/contact";
 import {Dashboard} from "./pages/dashboard";
 import Donate from "./pages/donate";
+import LoadingWheel from "./components/loadingSpinner";
 
 export function Application() {
   const { fetchLogin } = useContext(ApiContext);
@@ -25,7 +26,7 @@ export function Application() {
     return <div>Error: {error.toString()}</div>;
   }
   if (loading) {
-    return <div>Please wait...</div>;
+    return <LoadingWheel/>;
   }
 
   return (

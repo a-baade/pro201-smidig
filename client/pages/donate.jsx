@@ -3,6 +3,7 @@ import {Link, useSearchParams} from "react-router-dom";
 import {ApiContext} from "../apiContext";
 import {useLoading} from "../useLoading";
 import Arrow from "../pics/icons/arrow.png";
+import LoadingWheel from "../components/loadingSpinner";
 
 export function DonateModule({ charity:
     { name, _id, bgImage, charityLogo }
@@ -102,7 +103,7 @@ export default function donate() {
   );
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <LoadingWheel/>;;
   }
 
   if (error) {
