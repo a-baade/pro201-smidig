@@ -16,7 +16,7 @@ Veldedighetsplatform for Meliora Impact
 * [x] Lage navbar
 * [x] Lage footer
 * [x] Legge til logo som tab icon
-* [ ] Implementere design og farger
+* [x] Implementere design og farger
 
 ### Forside
 
@@ -29,7 +29,7 @@ Veldedighetsplatform for Meliora Impact
 * [x] Hente liste over veldedigheter gjennom API
 * [x] Lage gjenbrukbar card komponent for å vise fram alle veldedighetene
 * [ ] Filtrere etter kategori
-* [ ] Lage gjenbrukbar side med all informasjon om en valgt veldedighet 
+* [x] Lage gjenbrukbar side med all informasjon om en valgt veldedighet 
 
 ### Logg inn
 
@@ -40,20 +40,18 @@ Logg inn:
 
 Registrer ny bruker:
 * [x] Registrer ny bruker form
-* [ ] Registrer gjennom Google
-* [ ] Registrer gjennim Active Directory ?
+* [x] Registrer gjennom Google
 
 ### Dashboard
 
-* [ ] Lage sidebar
-* [ ] Vise statistikk for donasjoner
+* [x] Lage sidebar
+* [x] Vise statistikk for donasjoner
 * [ ] Bruker kan endre informasjonen på på profilen sin
 * [ ] Bruker kan slette profilen sin
 
 ### Donasjonsside
 
-* [ ] Bruker kan velge hvor mye og hvor ofte de vil donere
-* [ ] Koble til betalingstjenester
+* [x] Bruker kan velge hvor mye og hvor ofte de vil donere
 
 ### About us
 
@@ -61,7 +59,7 @@ Registrer ny bruker:
 
 ### Contact us
 
-* [ ] Lage kontaktskjema
+* [x] Lage kontaktskjema
 
 ### Tester for front-end
 
@@ -114,8 +112,8 @@ Registrer ny bruker:
 
 ### Veldedigheter API
 
-* [ ] `GET` hente ut liste over veldedigheter
-* [ ] `GET` hente ut all informasjon om en spesifikk veldedighet
+* [x] `GET` hente ut liste over veldedigheter
+* [x] `GET` hente ut all informasjon om en spesifikk veldedighet
 
 ### Tester for back-end
 
