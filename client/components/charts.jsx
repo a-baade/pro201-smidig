@@ -1,4 +1,4 @@
-import { Chart } from "react-google-charts";
+import {Chart} from "react-google-charts";
 import React from "react";
 
 export const data1 = [

@@ -1,0 +1,142 @@
+/* Style for frontPage.jsx */
+
+.front-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    background-position: top;
+}
+
+.front-image-text {
+    text-align: center;
+    font-size: 64px;
+    text-shadow: 0 0 10px #333232;
+    color: white;
+    margin-bottom: 10vh;
+}
+
+.front-image-button {
+    z-index: 99;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #8AB7BA;
+    border-radius: 10px;
+    border: 0;
+    min-width: 150px;
+    width: 20vw;
+    padding: 15px 30px;
+    margin-bottom: 25vh;
+}
+
+.about-us-div {
+    margin: 80px;
+    padding: 12px 20px;
+    padding-inline: 0.5em;
+    background-color: #95BDC4;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.about-us-button {
+    margin: 10px;
+    padding: 17px 32px;
+    border-radius: 10px;
+    border: 0;
+    background: #d5e5e6;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.topic-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 50px;
+    text-align: center;
+    margin: 80px;
+}
+
+.topic h4 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.topic-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.topic p {
+    width: 100%;
+    min-width: 320px;
+    max-width: 400px;
+}
+
+.newsfeed-container {
+    background-color: #95BDC4;
+    margin: 80px;
+    padding: 12px 20px;
+    padding-inline: 0.5em;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.newsfeed-items-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 80px 40px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+}
+
+.newsfeed-item {
+    box-sizing: content-box;
+    background-color: white;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    width: 30%;
+    min-width: 250px;
+    height: auto;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsfeed-image {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.newsfeed-item p {
+    margin: 5px;
+}
+
+.read-more {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: end;
+    text-decoration: underline;
+    text-align: center;
+    cursor: pointer;
+}
