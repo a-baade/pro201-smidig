@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ApiContext } from "../apiContext";
 import { useLoading } from "../useLoading";
 import {fetchJSON} from "../lib/fetchJSON";
-import Search from "../pics/icons/search.png";
+import LoadingWheel from "../components/loadingSpinner";
 
 function CharityCard({charity:
     { _id, name, description, bgImage, charityLogo }
@@ -73,7 +73,7 @@ export function Charities() {
     }
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <LoadingWheel/>;
   }
 
   if (error) {
