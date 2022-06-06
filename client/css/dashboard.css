@@ -116,7 +116,7 @@
 }
 
 /*Code for third row (Donation chart compared to other organizations)*/
-.dashboard-row-3{
+.dashboard-row-3, .dashboard-row-4{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,6 +176,142 @@
     margin-right: 3em;
 }
 
+/*Code for row 4 (My subscriptions)*/
+
+.carousel-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-wrapper {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-content-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-content {
+    display: flex;
+    transition: all 250ms linear;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.carousel-content::-webkit-scrollbar, .carousel-content::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-content > * {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.left-arrow, .right-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.left-arrow {
+    left: -5em;
+}
+
+.right-arrow {
+    right: -2.5em;
+}
+
+.carousel-content.show-2 > * {
+    width: 50%;
+}
+
+.carousel-content.show-3 > * {
+    width: calc(100% / 3);
+}
+
+.carousel-content.show-4 > * {
+    width: calc(100% / 4);
+}
+
+.card-wrap{
+    padding: 0.5em;
+}
+
+.dash-carousel-wrapper{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*card styling*/
+.carousel-card{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: relative;
+    width: 20em;
+    height: 20em;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    margin-bottom: 2em;
+}
+
+.card-header{
+    background-color: #35656f;
+    height: 5em;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    position: static;
+}
+
+.pfp-placeholder{
+    position: absolute;
+    border-radius: 100%;
+    height: 7em;
+    width: 7em;
+    margin-left: 6.5em;
+    margin-top: 1.7em;
+}
+
+.carousel-card-text{
+    text-align: center;
+    margin-top: 4em;
+    font-size: 1em;
+    color: #000000;
+    padding: 0.5em 1.5em 0em 1.5em;
+}
+
+.cc-btn-wrap{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.3em 0.5em;
+}
+
+.cc-btn{
+    background-color: #66a2ad;
+    border: none;
+    color: white;
+    font-size: 1.3em;
+    border-radius: 0.3em;
+    width: 5em;
+    height: 1.5em;
+}
 
 
 

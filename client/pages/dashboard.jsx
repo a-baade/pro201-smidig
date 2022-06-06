@@ -1,7 +1,8 @@
 import React from "react";
 import { Chart2 } from "../components/charts";
 import { Chart1 } from "../components/charts";
-
+import Carousel from "../components/carousel";
+import {CarouselCard} from "../components/carousel";
 
 export function Dashboard({ user }) {
   return (
@@ -61,6 +62,40 @@ export function Dashboard({ user }) {
                               <p>Basert på firma <br/> sin omsetning</p>
                           </div>
                       </div>
+                  </div>
+              </div>
+              <div className={"dashboard-row-4"}>
+                  <h2>My subscriptions</h2>
+
+                  <div className={"dash-carousel-wrapper"}>
+                      <Carousel show={3}>
+
+                          <div>
+                              <div className={"card-wrap"}>
+                                  <CarouselCard/>
+                              </div>
+                          </div>
+                          <div>
+                              <div className={"card-wrap"}>
+                                  <CarouselCard/>
+                              </div>
+                          </div>
+                          <div>
+                              <div className={"card-wrap"}>
+                                  <CarouselCard/>
+                              </div>
+                          </div>
+                          <div>
+                              <div className={"card-wrap"}>
+                                  <CarouselCard/>
+                              </div>
+                          </div>
+                          <div>
+                              <div className={"card-wrap"}>
+                                  <CarouselCard/>
+                              </div>
+                          </div>
+                      </Carousel>
                   </div>
               </div>
           </div>
