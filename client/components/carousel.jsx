@@ -4,12 +4,26 @@ export function CarouselCard(){
     return(
         <div className={"carousel-card"}>
             <div className={"card-header"}></div>
-            <img src="https://dummyimage.com/300.png/09f/fff" alt="placeholder" className={"pfp-placeholder"}/>
+            <img src="https://i.pinimg.com/originals/24/bb/38/24bb38268caffa8a18fdede24fd5dff9.png" alt="placeholder" className={"pfp-placeholder"}/>
             <p className={"carousel-card-text"}>Thank you for your generous gift to us! We are thrilled to have your support.
             <br/> <br/>You truly make the difference for us, and we are extremely grateful.</p>
             <div className={"cc-btn-wrap"}>
                 <button className={"cc-btn"}>info</button>
                 <button className={"cc-btn"}>cancel</button>
+            </div>
+        </div>
+    );
+}
+
+export function DonationsCard(){
+    return(
+        <div className={"carousel-card"}>
+            <div className={"card-header"}></div>
+            <img src="https://i.pinimg.com/originals/24/bb/38/24bb38268caffa8a18fdede24fd5dff9.png" alt="placeholder" className={"pfp-placeholder"}/>
+            <p className={"carousel-card-text"}>Thank you for your generous gift to us! We are thrilled to have your support.
+                <br/> <br/>You truly make the difference for us, and we are extremely grateful.</p>
+            <div className={"dc-btn-wrap"}>
+                <button className={"cc-btn"}>info</button>
             </div>
         </div>
     );

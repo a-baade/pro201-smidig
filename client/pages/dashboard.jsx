@@ -2,7 +2,7 @@ import React from "react";
 import { Chart2 } from "../components/charts";
 import { Chart1 } from "../components/charts";
 import Carousel from "../components/carousel";
-import {CarouselCard} from "../components/carousel";
+import {CarouselCard, DonationsCard} from "../components/carousel";
 
 export function Dashboard({ user }) {
   return (
@@ -12,8 +12,8 @@ export function Dashboard({ user }) {
                   <img src={user.google.picture} alt="Profile picture" className={"dashboard-pfp"}/>
                   <p>{user.google.name}</p>
               </div>
-              <p>My donations</p>
-              <p>My subscriptions</p>
+              <a href="#subscriptions-a" className={"dash-link"}>My Subscriptions</a>
+              <a href="#donations-a" className={"dash-link"}>My Donations</a>
           </div>
           <div className={"dashboard-main"}>
               <div className={"dashboard-top-row"}>
@@ -64,12 +64,12 @@ export function Dashboard({ user }) {
                       </div>
                   </div>
               </div>
+              <a id={"subscriptions-a"}></a>
               <div className={"dashboard-row-4"}>
                   <h2>My subscriptions</h2>
 
                   <div className={"dash-carousel-wrapper"}>
                       <Carousel show={3}>
-
                           <div>
                               <div className={"card-wrap"}>
                                   <CarouselCard/>
@@ -93,6 +93,44 @@ export function Dashboard({ user }) {
                           <div>
                               <div className={"card-wrap"}>
                                   <CarouselCard/>
+                              </div>
+                          </div>
+                      </Carousel>
+                  </div>
+              </div>
+              <a id={"donations-a"}></a>
+              <div className={"dashboard-row-5"}>
+                  <h2>Previous donations</h2>
+                  <div className={"dash-carousel-wrapper"}>
+                      <Carousel show={3}>
+                          <div>
+                              <div className={"card-wrap"}>
+                                  <DonationsCard/>
+                              </div>
+                          </div>
+                          <div>
+                              <div className={"card-wrap"}>
+                                  <DonationsCard/>
+                              </div>
+                          </div>
+                          <div>
+                              <div className={"card-wrap"}>
+                                  <DonationsCard/>
+                              </div>
+                          </div>
+                          <div>
+                              <div className={"card-wrap"}>
+                                  <DonationsCard/>
+                              </div>
+                          </div>
+                          <div>
+                              <div className={"card-wrap"}>
+                                  <DonationsCard/>
+                              </div>
+                          </div>
+                          <div>
+                              <div className={"card-wrap"}>
+                                  <DonationsCard/>
                               </div>
                           </div>
                       </Carousel>

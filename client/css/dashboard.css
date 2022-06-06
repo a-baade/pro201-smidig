@@ -13,7 +13,6 @@
     background-color: #35656f;
     padding: 2em;
     color: #ffffff;
-    padding-bottom: 10vh;
 }
 
 .dashboard-pfp-name{
@@ -25,6 +24,13 @@
 .dashboard-pfp{
     border-radius: 100%;
     width: 7em;
+}
+
+.dash-link{
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 0.8em;
+    font-size: 0.9em;
 }
 
 /*Code for main*/
@@ -116,7 +122,7 @@
 }
 
 /*Code for third row (Donation chart compared to other organizations)*/
-.dashboard-row-3, .dashboard-row-4{
+.dashboard-row-3, .dashboard-row-4, .dashboard-row-5{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -311,6 +317,12 @@
     border-radius: 0.3em;
     width: 5em;
     height: 1.5em;
+}
+
+.dc-btn-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 
