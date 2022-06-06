@@ -1,6 +1,6 @@
 import React from "react";
 import Edit from "../pics/icons/edit.png";
-import Pink from "../pics/contact-pics/pink-squiggle.png";
+import {Link} from "react-router-dom";
 
 export function Profile({ user }) {
   return (
@@ -42,7 +42,9 @@ export function Profile({ user }) {
           </div>
           <div className={"third-row"}>
               <div><button className={"profile-btn"}>Update</button></div>
-              <div><button className={"profile-btn"}>Sign out</button></div>
+              <Link to={"/login/endsession"}>
+                  <button className={"profile-btn"}>Sign out</button>
+              </Link>
           </div>
       </div>
     </div>
