@@ -22,7 +22,12 @@ afterAll(() => {
 
 describe("charities api", () => {
   it("should list charities", async function () {
-    const name = ["Charity 1", "Charity 2", "Charity 3", "Charity 4"];
+    const name = [
+      "The Lorem Ipsum Foundation",
+      "Well Spring",
+      "Edukate",
+      "Oceania",
+    ];
     await request(app).post("/api/charities").send({
       name,
       description: "Test description",
@@ -31,7 +36,7 @@ describe("charities api", () => {
 
     expect(
       (await request(app).get("/api/charities")).body.map(({ name }) => name)
-    ).toContain("Charity 1");
+    ).toContain("The Lorem Ipsum Foundation");
   });
 
   it("should not redirect to charity page by id", async function () {
@@ -64,7 +69,7 @@ describe("charities api", () => {
           "/api/charities/charity/id?id=628136d0c23c5bceb2297a7f"
         )
       ).body.map(({ name }) => name)
-    ).toContain("Charity 1");
+    ).toContain("The Lorem Ipsum Foundation");
   });
 
   it("should not redirect to donate page by charity id", async function () {
@@ -97,6 +102,6 @@ describe("charities api", () => {
           "/api/charities/donate/id?id=628136d0c23c5bceb2297a7f"
         )
       ).body.map(({ name }) => name)
-    ).toContain("Charity 1");
+    ).toContain("The Lorem Ipsum Foundation");
   });
 });

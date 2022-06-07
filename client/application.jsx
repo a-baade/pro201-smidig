@@ -12,9 +12,8 @@ import { RegisterNewUser } from "./pages/registerNewUser";
 import { AboutUs } from "./pages/aboutUs";
 import { SignUp } from "./pages/signUp";
 import CharityPage from "./pages/charityPage";
-import Donate from "./pages/donate";
 import { Contact } from "./pages/contact";
-import {Dashboard} from "./pages/dashboard";
+import { Dashboard } from "./pages/dashboard";
 import Donate from "./pages/donate";
 import LoadingWheel from "./components/loadingSpinner";
 
@@ -26,7 +25,7 @@ export function Application() {
     return <div>Error: {error.toString()}</div>;
   }
   if (loading) {
-    return <LoadingWheel/>;
+    return <LoadingWheel />;
   }
 
   return (
@@ -43,9 +42,12 @@ export function Application() {
           <Route path={"/charities/donate/:id"} element={<Donate />} />
           <Route path={"/register"} element={<RegisterNewUser />} />
           <Route path={"/about"} element={<AboutUs />} />
-          <Route path={"/contact"} element={<Contact />}/>
+          <Route path={"/contact"} element={<Contact />} />
           <Route path={"/signup"} element={<SignUp config={data.config} />} />
-          <Route path={"/dashboard"} element={<Dashboard user={data?.user} />}/>
+          <Route
+            path={"/dashboard"}
+            element={<Dashboard user={data?.user} />}
+          />
 
           <Route
             path={"/login/*"}
