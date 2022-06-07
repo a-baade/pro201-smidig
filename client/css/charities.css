@@ -66,9 +66,10 @@
 
 
 .search-charities {
-    margin-left: 30px;
-    margin-top: 30px;
+    margin-left: 600px;
+    margin-top: 50px;
     width: 100%;
+    justify-content: center;
     position: relative;
     display: flex;
     box-shadow: -15px 15px 17px -10px rgba(0,10,10,0);
@@ -76,8 +77,7 @@
 .search-input-charities{
     width: 100%;
     padding: 9px;
-    border-radius:10px 10px 1px 10px;
-
+    border-radius:10px 10px 10px 10px;
     outline: none;
     font-size: 20px;
     background: none;

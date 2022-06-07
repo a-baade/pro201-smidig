@@ -77,51 +77,49 @@ function Charity({charity:
             <img src={Snapchat} /> examplecharity
           </a>
         </div>
-        <div className={"charity-page-news"}>
-          <div className={"newsfeed-parent"}>
-            <h1>NEWSFEED</h1>
-            <div className={"newsfeed-child"}>
-              <div className={"newsfeed-item"}>
-                <img
-                  src={NewsImg1}
-                  className={"newsfeed-pic"}
-                  alt={"newsFeedPic"}
-                />
-                <p>
-                  Afghan refugee children enrolling in norwegian nurseries 2
-                  weeks after coming to norway. Prime minister hopes that these
-                  efforts will help stabalise the everyday life of the children
-                  and that they will integrate quicker.
-                </p>
-                <p className={"read-more-btn"}>Read more</p>
-              </div>
-              <div className={"newsfeed-item"}>
-                <img
-                  src={NewsImg2}
-                  className={"newsfeed-pic"}
-                  alt={"newsFeedPic"}
-                />
-                <p>
-                  Hunting season has ended, yet people are still hunting animals
-                  illegally. Protecting nature is our responsibilty, and make
-                  sure that the next generation can enjoy wildnerness like us.
-                </p>
-                <p className={"read-more-btn"}>Read more</p>
-              </div>
-              <div className={"newsfeed-item"}>
-                <img
-                  src={NewsImg3}
-                  className={"newsfeed-pic"}
-                  alt={"newsFeedPic"}
-                />
-                <p>
-                  Thanks to the support of charities, children like Akeem are
-                  able to partake in after school activities. Children like
-                  Akeem would not be able to afford ...
-                </p>
-                <p className={"read-more-btn"}>Read more</p>
-              </div>
-            </div>
+      </div>
+      <div className={"newsfeed-container custom-shadow"}>
+        <h1>NEWSFEED</h1>
+        <div className={"newsfeed-items-container"}>
+          <div className={"newsfeed-item custom-shadow"}>
+            <img
+                src={NewsImg1}
+                className={"newsfeed-image"}
+                alt={"Afghan children in school"}
+            />
+            <p>
+              Afghan refugee children enrolling in norwegian nurseries 2 weeks
+              after coming to norway. Prime minister hopes that these efforts
+              will help stabilize the everyday life of the children and that
+              they will integrate quicker.
+            </p>
+            <p className={"read-more"}>Read more</p>
+          </div>
+          <div className={"newsfeed-item custom-shadow"}>
+            <img
+                src={NewsImg2}
+                className={"newsfeed-image"}
+                alt={"Deers in nature"}
+            />
+            <p>
+              Hunting season has ended, yet people are still hunting animals
+              illegally. Protecting nature is our responsibility, and make sure
+              that the next generation can enjoy wilderness like us.
+            </p>
+            <p className={"read-more"}>Read more</p>
+          </div>
+          <div className={"newsfeed-item custom-shadow"}>
+            <img
+                src={NewsImg3}
+                className={"newsfeed-image"}
+                alt={"Akeem in karate training"}
+            />
+            <p>
+              Thanks to the support of charities, children like Akeem are able
+              to partake in after school activities. Children like Akeem would
+              not be able to afford ...
+            </p>
+            <p className={"read-more"}>Read more</p>
           </div>
         </div>
       </div>

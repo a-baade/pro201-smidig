@@ -20,8 +20,11 @@ export function FrontPage() {
           <button className={"front-image-button custom-shadow-button"}>Join us</button>
         </Link>
       </div>
+
       <div className={"about-us-div"}>
-        <h1>About us</h1>
+        <div className={"about-us-title"}>
+          <h1>About us</h1>
+        </div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
           viverra, eros at luctus molestie, dolor risus convallis orci, ut
