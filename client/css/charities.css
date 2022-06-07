@@ -12,7 +12,7 @@
 .charity-card {
     max-width: 35vw;
     min-width: 450px;
-    margin-top: 10vh;
+    margin: 10vh 1vh 10vh 1vh;
     line-height: 25px;
     font-size: 20px;
     text-align: center;
@@ -66,7 +66,7 @@
 
 
 .search-charities {
-    margin-left: 600px;
+    margin-left: 100%;
     margin-top: 50px;
     width: 100%;
     justify-content: center;

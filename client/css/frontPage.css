@@ -6,6 +6,7 @@
     align-items: center;
     flex-direction: column;
     height: 90vh;
+    max-width: 100%;
     background-position: top;
 }
 
@@ -31,6 +32,7 @@
     padding: 15px 30px;
     margin-bottom: 25vh;
 }
+
 .about-us-title {
     text-align: center;
 }
@@ -47,6 +49,7 @@
     line-height: 25px;
     font-size: 18px;
 }
+
 .about-us-div h1 {
     margin-bottom: 5vh;
 }

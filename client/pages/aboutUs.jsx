@@ -15,7 +15,7 @@ export function AboutUs() {
     return (
         <div>
             <div>
-                <img src={MainBg} className={"main-bg-pic"} alt={"mainBg"} />
+                <img src={MainBg} className={"main-bg-pic"} alt={"mainBg"}/>
             </div>
             <div className={"second-row-box"}>
                 <div className={"knowledge-text-box custom-shadow"}>
@@ -51,12 +51,14 @@ export function AboutUs() {
                     />
                 </div>
             </div>
-            <p className={"our-mission mission"}>OUR MISSION</p>
-            <h1 className={"action-call custom-font-knowledge"}>A CALL TO ACTION</h1>
+            <div className={"ourMission-txt"}>
+                <p className={"our-mission mission"}>OUR MISSION</p>
+                <h1 className={"action-call custom-font-knowledge"}>A CALL TO ACTION</h1>
+            </div>
             <div className={"big-container"}>
                 <a href={"https://sdgs.un.org/goals/goal4"} className={"un-link"}>
                     <div className={"small-box light custom-shadow"}>
-                        <img src={Book} className={"graphics"} />
+                        <img src={Book} alt="book" className={"graphics"}/>
                         <p className={"small-title "}>Quality education</p>
                         <p className={"small-txt"}>
                             Ensure inclusive and equitable quality education and promote
@@ -65,8 +67,8 @@ export function AboutUs() {
                     </div>
                 </a>
                 <a href={"https://sdgs.un.org/goals/goal6"} className={"un-link"}>
-                    <div className={"small-box light custom-shadow"}>
-                        <img src={Water} className={"graphics"} />
+                    <div className={"small-box dark custom-shadow"}>
+                        <img src={Water} alt="water" className={"graphics"}/>
                         <p className={"small-title "}>Clean water & sanitation</p>
                         <p className={"small-txt"}>
                             Ensure availability and sustainable management of water and
@@ -76,7 +78,7 @@ export function AboutUs() {
                 </a>
                 <a href={"https://sdgs.un.org/goals/goal11"} className={"un-link"}>
                     <div className={"small-box light custom-shadow"}>
-                        <img src={Sustainability} className={"graphics"} />
+                        <img src={Sustainability} alt="sustainability" className={"graphics"}/>
                         <p className={"small-title "}>Sustainable cities & communities</p>
                         <p className={"small-txt"}>
                             Make cities and human settlements inclusive, safe, resilient and
@@ -86,7 +88,7 @@ export function AboutUs() {
                 </a>
                 <a href={"https://sdgs.un.org/goals/goal12"} className={"un-link"}>
                     <div className={"small-box dark custom-shadow"}>
-                        <img src={Consumption} className={"graphics"} />
+                        <img src={Consumption} alt="consumption" className={"graphics"}/>
                         <p className={"small-title "}>Responsible consumption & production</p>
                         <p className={"small-txt"}>
                             Ensure sustainable consumption and production patterns
@@ -95,7 +97,7 @@ export function AboutUs() {
                 </a>
                 <a href={"https://sdgs.un.org/goals/goal13"} className={"un-link"}>
                     <div className={"small-box light custom-shadow"}>
-                        <img src={ClimateAction} className={"graphics"} />
+                        <img src={ClimateAction} alt="climateAction" className={"graphics"}/>
                         <p className={"small-title "}>Climate action</p>
                         <p className={"small-txt"}>
                             Take urgent action to combat climate change and its impacts
@@ -104,7 +106,7 @@ export function AboutUs() {
                 </a>
                 <a href={"https://sdgs.un.org/goals/goal14"} className={"un-link"}>
                     <div className={"small-box dark custom-shadow"}>
-                        <img src={Whale} className={"graphics"} />
+                        <img src={Whale} alt="whale" className={"graphics"}/>
                         <p className={"small-title "}>Life below water</p>
                         <p className={"small-txt"}>
                             Conserve and sustainably use the oceans, seas and marine resources
@@ -114,7 +116,7 @@ export function AboutUs() {
                 </a>
                 <a href={"https://sdgs.un.org/goals/goal15"} className={"un-link"}>
                     <div className={"small-box light custom-shadow"}>
-                        <img src={Cow} className={"graphics"} />
+                        <img src={Cow} alt="cow" className={"graphics"}/>
                         <p className={"small-title "}>Life on land</p>
                         <p className={"small-txt"}>
                             Protect, restore and promote sustainable use of terrestrial
@@ -125,7 +127,7 @@ export function AboutUs() {
                 </a>
                 <a href={"https://sdgs.un.org/goals"} className={"un-link"}>
                     <div className={"small-box dark custom-shadow"}>
-                        <img src={Flower} className={"graphics"} />
+                        <img src={Flower} alt="flower" className={"graphics"}/>
                         <p className={"small-title"}>THE UN SDG GOALS</p>
                     </div>
                 </a>
