@@ -31,15 +31,19 @@
     padding: 15px 30px;
     margin-bottom: 25vh;
 }
+.about-us-title {
+    text-align: center;
+}
 
 .about-us-div {
+    position: relative;
     margin: 80px;
-    padding: 12px 20px;
+    padding: 12px 25px;
     padding-inline: 0.5em;
     background-color: #95BDC4;
     border-radius: 5px;
     box-sizing: border-box;
-    text-align: center;
+    text-align: left;
     line-height: 25px;
     font-size: 18px;
 }
@@ -47,7 +51,13 @@
     margin-bottom: 5vh;
 }
 
+.about-us-div p {
+    padding: 35px;
+}
+
 .about-us-button {
+    position: relative;
+    left: 45%;
     margin: 3vh 10px 10px 10px;
     padding: 17px 32px;
     border-radius: 10px;
@@ -57,6 +67,7 @@
     letter-spacing: 2px;
     font-size: 12px;
     font-weight: 600;
+
 }
 
 .topic-container {
@@ -69,8 +80,9 @@
 }
 
 .topic h4 {
+    padding: 10px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 27px;
 }
 
 .topic-image img {
@@ -131,6 +143,8 @@
 
 .newsfeed-item p {
     margin: 5px;
+    text-align: left;
+    padding: 15px;
 }
 
 .read-more {
@@ -139,6 +153,7 @@
     width: 100%;
     justify-content: center;
     align-items: end;
+    font-weight: bold;
     text-decoration: underline;
     text-align: center;
     cursor: pointer;
