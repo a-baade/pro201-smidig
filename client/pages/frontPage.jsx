@@ -5,7 +5,7 @@ import Welfare from "../pics/bg-pictures/img_1.png";
 import Education from "../pics/bg-pictures/img_2.png";
 import NewsImg1 from "../pics/bg-pictures/img_3.png";
 import NewsImg2 from "../pics/bg-pictures/img_4.png";
-import NewsImg3 from "../pics/bg-pictures/img_5.png";
+import NewsImg3 from "../pics/bg-pictures/img_5.jpg";
 import {Link} from "react-router-dom";
 
 export function FrontPage() {

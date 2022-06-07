@@ -5,7 +5,7 @@ import { useLoading } from "../useLoading";
 import Arrow from "../pics/icons/arrow.png";
 import NewsImg1 from "../pics/bg-pictures/img_3.png";
 import NewsImg2 from "../pics/bg-pictures/img_4.png";
-import NewsImg3 from "../pics/bg-pictures/img_5.png";
+import NewsImg3 from "../pics/bg-pictures/img_5.jpg";
 import Facebook from "../pics/icons/facebook.png";
 import Instagram from "../pics/icons/instagram.png";
 import Snapchat from "../pics/icons/snapchat.png";
