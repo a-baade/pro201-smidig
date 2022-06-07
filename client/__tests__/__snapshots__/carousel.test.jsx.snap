@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel component should test carousel component 1`] = `"<div class=\\"carousel-card\\"><div class=\\"card-header\\"></div><img src=\\"https://i.pinimg.com/originals/24/bb/38/24bb38268caffa8a18fdede24fd5dff9.png\\" alt=\\"placeholder\\" class=\\"pfp-placeholder\\"><p class=\\"carousel-card-text\\">Thank you for your generous gift to us! We are thrilled to have your support.<br> <br>You truly make the difference for us, and we are extremely grateful.</p><div class=\\"cc-btn-wrap\\"><button class=\\"cc-btn\\">info</button><button class=\\"cc-btn\\">cancel</button></div></div>"`;

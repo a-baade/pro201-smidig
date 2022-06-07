@@ -1,14 +1,13 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ApiContext } from "../apiContext";
 import { useLoading } from "../useLoading";
-import {fetchJSON} from "../lib/fetchJSON";
+import { fetchJSON } from "../lib/fetchJSON";
 import LoadingWheel from "../components/loadingSpinner";
 
-function CharityCard({charity:
-    { _id, name, description, bgImage, charityLogo }
+function CharityCard({
+  charity: { _id, name, description, bgImage, charityLogo },
 }) {
-
   // Charity card with button to donate or charity page
   return (
     <div className={"charity-card custom-shadow"}>
@@ -27,9 +26,11 @@ function CharityCard({charity:
         <p>{description}</p>
         <div className={"card-buttons"}>
           <Link to={{ pathname: "/charities/charity/id?id=" + _id }}>
-            <button className="card-button custom-shadow-button">Read more</button>
+            <button className="card-button custom-shadow-button">
+              Read more
+            </button>
           </Link>
-          <Link to={{ pathname: "/charities/donate/id?id=" +_id }}>
+          <Link to={{ pathname: "/charities/donate/id?id=" + _id }}>
             <button className="card-button custom-shadow-button">Donate</button>
           </Link>
         </div>
@@ -39,41 +40,41 @@ function CharityCard({charity:
 }
 
 export function Charities() {
-  const {allCharities} = useContext(ApiContext);
-  const {category, setCategory} = useState("");
-  const {categoryQuery, setCategoryQuery} = useState("");
+  const { allCharities } = useContext(ApiContext);
+  const { category, setCategory } = useState("");
+  const { categoryQuery, setCategoryQuery } = useState("");
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
-  const {loading, error} = useLoading(
+  const { loading, error } = useLoading(
     async () => await allCharities({ category }),
     [category]
   );
 
-    useEffect(() => {
-        if (search === "") {
-            fetchJSON("/api/charities").then((jsonData) => {
-                setData(jsonData);
-            });
-        } else {
-            fetchJSON(`/api/charities/search/?name=${search}`).then(
-                (jsonData) => {
-                    setData(jsonData);
-                }
-            );
+  useEffect(async () => {
+    if (search === "") {
+      await fetchJSON("/api/charities").then((jsonData) => {
+        setData(jsonData);
+      });
+    } else {
+      await fetchJSON(`/api/charities/search/?name=${search}`).then(
+        (jsonData) => {
+          setData(jsonData);
         }
-    }, [search]);
-
-    function handleSubmitQuery(e) {
-        e.preventDefault();
-        setCategory(categoryQuery);
+      );
     }
+  }, [search]);
 
-    async function handleSearch(event) {
-        await setSearch(event);
-    }
+  function handleSubmitQuery(e) {
+    e.preventDefault();
+    setCategory(categoryQuery);
+  }
+
+  async function handleSearch(event) {
+    await setSearch(event);
+  }
 
   if (loading) {
-    return <LoadingWheel/>;
+    return <LoadingWheel />;
   }
 
   if (error) {
@@ -88,13 +89,19 @@ export function Charities() {
   // Add category filter
   return (
     <div className={"page-margin"}>
-        <div className= "container-charities">
-            <div className='search-charities'>
-                <input className="search-input-charities" placeholder="Search Charities" value={search} onChange={(e) => handleSearch(e.target.value)} />
-                {search && <div className={"charity-results"}>Results for {search}</div>}
-            </div>
-            <div>
+      <div className="container-charities">
+        <div className="search-charities">
+          <input
+            className="search-input-charities"
+            placeholder="Search Charities"
+            value={search}
+            onChange={(e) => handleSearch(e.target.value)}
+          />
+          {search && (
+            <div className={"charity-results"}>Results for {search}</div>
+          )}
         </div>
+        <div></div>
 
         {/*<form onSubmit={handleSubmitQuery}>*/}
         {/*    <button  id={"category-query"}*/}
@@ -104,8 +111,8 @@ export function Charities() {
         {/*             value={categoryQuery}*/}
         {/*             onChange={(e) => setCategoryQuery(e.target.value)}>Knowledge</button>*/}
         {/*</form>*/}
-        </div>
-            <div>
+      </div>
+      <div>
         <ul className={"charity-cards-container"}>
           {data?.map((charity, index) => (
             <CharityCard key={index} charity={charity} />
