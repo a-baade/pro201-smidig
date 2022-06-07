@@ -1,10 +1,12 @@
 .main-bg-pic {
     width: 100%;
+    margin-bottom: 5vh;
 }
 
 .second-row-box {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -18,11 +20,12 @@
     font-size: 18px;
     line-height: normal;
     margin: 30px 0;
+    margin-left: 5vw;
     font-family: Roboto;
     border-radius: 10px;
 }
 
-.knowledge-power, .power-text, .our-mission {
+.knowledge-power, .power-text {
     text-align: left;
     margin: 20px;
 }
@@ -30,52 +33,53 @@
 .knowledge-power, .action-call {
     font-family: Roboto;
     letter-spacing: 2px;
-    text-align: left;
+
 }
 
 .our-mission {
     font-size: 14px;
     color: #35656F;
+    text-align: center;
+}
+
+.action-call {
+    text-align: center;
+    margin-bottom: 5vh;
 }
 
 .art-box {
-    position: relative;
+    position: absolute;
+    margin-right: 15vw;
 }
 
 
 .first-layer-art {
-    position: relative;
-    top: 0px;
-    left: 150px;
-    max-width: 700px;
-    max-height: 550px;
+    position: absolute;
+    width: 966px;
+    height: auto;
+    left: 900px;
+    top: -40px;
     min-width: 400px;
     min-height: 300px;
 }
 
 .top-layer-art {
     position: absolute;
-    top: 30px;
-    left: 200px;
-    max-width: 650px;
-    max-height: 450px;
+    width: 966px;
+    height: auto;
+    left: 900px;
+    top: -40px;
     min-width: 300px;
     min-height: 200px;
 }
 
 
 .action-call {
-    position: relative;
-    bottom: 50px;
-    left: 50px;
-    text-align: left;
+
 }
 
 .mission {
-    position: relative;
-    bottom: 50px;
     font-size: 20px;
-    left: 80px;
 }
 
 .big-container {
@@ -94,6 +98,11 @@
     border-radius: 20px;
     flex: 0 0 0 33.333333%;
     margin-left: 70px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .light {
@@ -105,204 +114,20 @@
 }
 
 .small-title {
-    font-family: "Al Bayan";
+    font-family: "Abhaya Libre";
+    font-weight: bold;
     font-size: 18px;
 }
 
 .small-txt {
-    font-family: "Al Bayan";
+    font-family: Roboto;
     font-size: 14px;
 }
 
 .small-txt, .small-title {
-    position: relative;
-    top: 160px;
+
     text-align: center;
     margin: 10px;
-}
-
-.poverty-first {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    top: -100px;
-    left: 30px;
-}
-
-.poverty-second {
-    position: relative;
-    width: 170px;
-    height: 150px;
-    top: -380px;
-    left: 70px;
-}
-
-.zero-hunger {
-    position: relative;
-    width: 250px;
-    height: 210px;
-    top: -100px;
-    left: 30px;
-}
-
-.zero-hunger-top {
-    position: relative;
-    width: 250px;
-    height: 100px;
-    top: -250px;
-    left: 30px;
-}
-
-.good-health {
-    position: relative;
-    width: 350px;
-    height: 300px;
-    top: -40px;
-    left: -20px;
-}
-
-.good-health-top {
-    position: relative;
-    width: 350px;
-    height: 200px;
-    top: -320px;
-    left: 0px;
-}
-
-.good-health-title {
-    position: relative;
-    top: -320px;
-    left: 0px;
-}
-
-.good-health-txt {
-    position: relative;
-    top: -320px;
-    left: 0px;
-}
-
-.quality-education {
-    position: relative;
-    width: 450px;
-    height: 350px;
-    top: -170px;
-    left: -60px;
-}
-
-.quality-education-top {
-    position: relative;
-    width: 250px;
-    height: 130px;
-    top: -430px;
-    left: 30px;
-}
-
-.gender-equality {
-    position: relative;
-    width: 300px;
-    height: 500px;
-    top: -150px;
-    left: -0px;
-}
-
-.gender-equality-top {
-    position: relative;
-    width: 180px;
-    height: 130px;
-    top: -470px;
-    left: 70px;
-}
-
-.gender-eql-title {
-    position: relative;
-    top: -470px;
-    left: 0px;
-}
-
-.gender-eql-txt {
-    position: relative;
-    top: -470px;
-    left: 0px;
-}
-
-.decent-work {
-    position: relative;
-    width: 250px;
-    height: 210px;
-    top: -120px;
-    left: 30px;
-}
-
-.decent-work-top {
-    position: relative;
-    width: 250px;
-    height: 100px;
-    top: -270px;
-    left: 30px;
-}
-
-.industry {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    top: -120px;
-    left: 30px;
-}
-
-.industry-second {
-    position: relative;
-    width: 170px;
-    height: 150px;
-    top: -410px;
-    left: 70px;
-}
-
-.life-first {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    top: -140px;
-    left: 30px;
-}
-
-.life-second {
-    position: relative;
-    width: 170px;
-    height: 150px;
-    top: -430px;
-    left: 70px;
-}
-
-.peace-first {
-    position: relative;
-    width: 250px;
-    height: 210px;
-    top: -150px;
-    left: 30px;
-}
-
-.peace-top {
-    position: relative;
-    width: 250px;
-    height: 100px;
-    top: -300px;
-    left: 30px;
-}
-
-.partnership-first {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    top: -130px;
-    left: 30px;
-}
-
-.partnership-second {
-    position: relative;
-    width: 170px;
-    height: 150px;
-    top: -410px;
-    left: 70px;
 }
 
 .un-goals-first {
@@ -322,14 +147,25 @@
 }
 
 .un-goals-title {
-    position: relative;
     font-family: "Al Bayan";
-    font-size: 24px;
+    font-size: 20px;
     letter-spacing: 5px;
-    top: -150px;
     font-weight: bold;
     text-align: center;
 
+}
+
+.graphics {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+    justify-self: start;
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(102, 102, 102, 0.15));
+    filter: drop-shadow(5px 5px 5px rgba(102, 102, 102, 0.15));
+}
+
+.small-box p {
+    font-family: Roboto;
 }
 
 
