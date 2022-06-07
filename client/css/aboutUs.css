@@ -1,6 +1,8 @@
+/* Style for aboutUs.jsx */
+
 .main-bg-pic {
     width: 100%;
-    margin-bottom: 5vh;
+    margin-bottom: 2.5vh;
 }
 
 .second-row-box {
@@ -19,21 +21,18 @@
     left: 100px;
     font-size: 18px;
     line-height: normal;
-    margin: 30px 0;
-    margin-left: 5vw;
-    font-family: Roboto;
+    margin: 30px 0 30px 5vw;
+    padding: 25px;
     border-radius: 10px;
 }
 
 .knowledge-power, .power-text {
     text-align: left;
-    margin: 20px;
+    margin: 25px;
 }
 
 .knowledge-power, .action-call {
-    font-family: Roboto;
     letter-spacing: 2px;
-
 }
 
 .our-mission {
@@ -73,11 +72,6 @@
     min-height: 200px;
 }
 
-
-.action-call {
-
-}
-
 .mission {
     font-size: 20px;
 }
@@ -98,11 +92,15 @@
     border-radius: 20px;
     flex: 0 0 0 33.333333%;
     margin-left: 70px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all .2s ease-in-out;
+}
+
+.small-box:hover {
+    transform: scale(1.2);
 }
 
 .light {
@@ -114,58 +112,27 @@
 }
 
 .small-title {
-    font-family: "Abhaya Libre";
     font-weight: bold;
     font-size: 18px;
 }
 
+.small-title:last-of-type {
+    font-size: 24px;
+}
+
 .small-txt {
-    font-family: Roboto;
     font-size: 14px;
 }
 
 .small-txt, .small-title {
-
     text-align: center;
     margin: 10px;
-}
-
-.un-goals-first {
-    position: relative;
-    width: 250px;
-    height: 210px;
-    top: -10px;
-    left: 30px;
-}
-
-.un-goals-top {
-    position: relative;
-    width: 250px;
-    height: 100px;
-    top: -170px;
-    left: 30px;
-}
-
-.un-goals-title {
-    font-family: "Al Bayan";
-    font-size: 20px;
-    letter-spacing: 5px;
-    font-weight: bold;
-    text-align: center;
-
 }
 
 .graphics {
     width: 150px;
     height: 150px;
     margin-bottom: 15px;
-    justify-self: start;
     -webkit-filter: drop-shadow(5px 5px 5px rgba(102, 102, 102, 0.15));
     filter: drop-shadow(5px 5px 5px rgba(102, 102, 102, 0.15));
 }
-
-.small-box p {
-    font-family: Roboto;
-}
-
-
