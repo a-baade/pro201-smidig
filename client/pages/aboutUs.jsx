@@ -54,65 +54,81 @@ export function AboutUs() {
             <p className={"our-mission mission"}>OUR MISSION</p>
             <h1 className={"action-call custom-font-knowledge"}>A CALL TO ACTION</h1>
             <div className={"big-container"}>
-                <div className={"small-box light custom-shadow"}>
-                    <img src={Book} className={"graphics"} />
-                    <p className={"small-title "}>Quality education</p>
-                    <p className={"small-txt"}>
-                      Ensure inclusive and equitable quality education and promote
-                      lifelong learning opportunities for all
-                    </p>
-                </div>
-                <div className={"small-box light custom-shadow"}>
-                    <img src={Water} className={"graphics"} />
-                    <p className={"small-title "}>Clean water & sanitation</p>
-                    <p className={"small-txt"}>
-                        Ensure availability and sustainable management of water and
-                        sanitation for all
-                    </p>
-                </div>
-                <div className={"small-box light custom-shadow"}>
-                    <img src={Sustainability} className={"graphics"} />
-                    <p className={"small-title "}>Sustainable cities & communities</p>
-                    <p className={"small-txt"}>
-                        Make cities and human settlements inclusive, safe, resilient and
-                        sustainable
-                    </p>
-                </div>
-                <div className={"small-box dark custom-shadow"}>
-                    <img src={Consumption} className={"graphics"} />
-                    <p className={"small-title "}>Responsible consumption & production</p>
-                    <p className={"small-txt"}>
-                        Ensure sustainable consumption and production patterns
-                    </p>
-                </div>
-                <div className={"small-box light custom-shadow"}>
-                    <img src={ClimateAction} className={"graphics"} />
-                    <p className={"small-title "}>Climate action</p>
-                    <p className={"small-txt"}>
-                        Take urgent action to combat climate change and its impacts
-                    </p>
-                </div>
-                <div className={"small-box dark custom-shadow"}>
-                    <img src={Whale} className={"graphics"} />
-                    <p className={"small-title "}>Life below water</p>
-                    <p className={"small-txt"}>
-                        Conserve and sustainably use the oceans, seas and marine resources
-                        for sustainable development
-                    </p>
-                </div>
-                <div className={"small-box light custom-shadow"}>
-                    <img src={Cow} className={"graphics"} />
-                    <p className={"small-title "}>Life on land</p>
-                    <p className={"small-txt"}>
-                        Protect, restore and promote sustainable use of terrestrial
-                        ecosystems, sustainably manage forests, combat desertification, and
-                        halt and reverse land degradation and halt biodiversity loss
-                    </p>
-                </div>
-                <div className={"small-box dark custom-shadow"}>
-                    <img src={Flower} className={"graphics"} />
-                    <p className={"small-title"}>THE UN SDG GOALS</p>
-                </div>
+                <a href={"https://sdgs.un.org/goals/goal4"} className={"un-link"}>
+                    <div className={"small-box light custom-shadow"}>
+                        <img src={Book} className={"graphics"} />
+                        <p className={"small-title "}>Quality education</p>
+                        <p className={"small-txt"}>
+                            Ensure inclusive and equitable quality education and promote
+                            lifelong learning opportunities for all
+                        </p>
+                    </div>
+                </a>
+                <a href={"https://sdgs.un.org/goals/goal6"} className={"un-link"}>
+                    <div className={"small-box light custom-shadow"}>
+                        <img src={Water} className={"graphics"} />
+                        <p className={"small-title "}>Clean water & sanitation</p>
+                        <p className={"small-txt"}>
+                            Ensure availability and sustainable management of water and
+                            sanitation for all
+                        </p>
+                    </div>
+                </a>
+                <a href={"https://sdgs.un.org/goals/goal11"} className={"un-link"}>
+                    <div className={"small-box light custom-shadow"}>
+                        <img src={Sustainability} className={"graphics"} />
+                        <p className={"small-title "}>Sustainable cities & communities</p>
+                        <p className={"small-txt"}>
+                            Make cities and human settlements inclusive, safe, resilient and
+                            sustainable
+                        </p>
+                    </div>
+                </a>
+                <a href={"https://sdgs.un.org/goals/goal12"} className={"un-link"}>
+                    <div className={"small-box dark custom-shadow"}>
+                        <img src={Consumption} className={"graphics"} />
+                        <p className={"small-title "}>Responsible consumption & production</p>
+                        <p className={"small-txt"}>
+                            Ensure sustainable consumption and production patterns
+                        </p>
+                    </div>
+                </a>
+                <a href={"https://sdgs.un.org/goals/goal13"} className={"un-link"}>
+                    <div className={"small-box light custom-shadow"}>
+                        <img src={ClimateAction} className={"graphics"} />
+                        <p className={"small-title "}>Climate action</p>
+                        <p className={"small-txt"}>
+                            Take urgent action to combat climate change and its impacts
+                        </p>
+                    </div>
+                </a>
+                <a href={"https://sdgs.un.org/goals/goal14"} className={"un-link"}>
+                    <div className={"small-box dark custom-shadow"}>
+                        <img src={Whale} className={"graphics"} />
+                        <p className={"small-title "}>Life below water</p>
+                        <p className={"small-txt"}>
+                            Conserve and sustainably use the oceans, seas and marine resources
+                            for sustainable development
+                        </p>
+                    </div>
+                </a>
+                <a href={"https://sdgs.un.org/goals/goal15"} className={"un-link"}>
+                    <div className={"small-box light custom-shadow"}>
+                        <img src={Cow} className={"graphics"} />
+                        <p className={"small-title "}>Life on land</p>
+                        <p className={"small-txt"}>
+                            Protect, restore and promote sustainable use of terrestrial
+                            ecosystems, sustainably manage forests, combat desertification, and
+                            halt and reverse land degradation and halt biodiversity loss
+                        </p>
+                    </div>
+                </a>
+                <a href={"https://sdgs.un.org/goals"} className={"un-link"}>
+                    <div className={"small-box dark custom-shadow"}>
+                        <img src={Flower} className={"graphics"} />
+                        <p className={"small-title"}>THE UN SDG GOALS</p>
+                    </div>
+                </a>
             </div>
         </div>
     );

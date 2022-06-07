@@ -120,6 +120,11 @@
     font-size: 24px;
 }
 
+.un-link, .un-link p {
+    text-decoration: none;
+    color: black;
+}
+
 .small-txt {
     font-size: 14px;
 }
