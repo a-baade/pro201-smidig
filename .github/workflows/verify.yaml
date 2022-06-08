@@ -2,6 +2,8 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - 'client/__selenium_tests__'
 
 jobs:
   verify:
@@ -13,8 +15,6 @@ jobs:
       - name: install dependencies
         run: npm ci
       - run: npm test
-      ignore:
-        - "__selenium_tests__"
         env:
           MONGODB_URL: ${{ secrets.MONGODB_URL }}
           MONGODB_DATABASE: ${{secrets.MONGODB_DATABASE}}
