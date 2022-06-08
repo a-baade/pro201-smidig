@@ -75,6 +75,11 @@
 .mission {
     font-size: 20px;
 }
+.ourMission-txt{
+    justify-content: center;
+    position: relative;
+    margin: 0 0 0 -4vh;
+}
 
 .big-container {
     position: relative;
@@ -145,6 +150,10 @@
 
 @media (max-width: 1325px) {
 
+    .knowledge-text-box {
+        left: 0;
+    }
+
     .art-box {
         overflow: hidden;
     }
@@ -156,25 +165,22 @@
     .second-row-box {
         justify-content: center;
     }
-    .ourMission-txt{
-        position: relative;
-        margin: 0 0 0 5%;
-    }
 }
 
 @media (max-width: 1796px) {
 
     .knowledge-text-box {
-        left: 5vm;
+        left: 0;
     }
 
     .big-container {
         justify-content: center;
+        left: -2vh;
     }
 
     .ourMission-txt{
         justify-content: center;
         position: relative;
-        margin: 0 0 0 5%;
+        margin: 0 0 0 5vh;
     }
 }
