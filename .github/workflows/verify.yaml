@@ -7,14 +7,14 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 2
-    exclude_patterns:
-      - "__selenium_tests__/"
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
       - name: install dependencies
         run: npm ci
       - run: npm test
+      ignore:
+        - "__selenium_tests__"
         env:
           MONGODB_URL: ${{ secrets.MONGODB_URL }}
           MONGODB_DATABASE: ${{secrets.MONGODB_DATABASE}}
