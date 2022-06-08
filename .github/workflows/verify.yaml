@@ -3,7 +3,7 @@ on:
     branches:
       - master
     paths-ignore:
-      - 'client/__selenium_tests__'
+      - 'client/__selenium_tests__/**'
 
 jobs:
   verify:
