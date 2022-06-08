@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    exclude_patterns:
+      - "__selenium_tests__/"
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - name: install dependencies
+        run: npm ci
+      - run: npm test
+        env:
+          MONGODB_URL: ${{ secrets.MONGODB_URL }}
+          MONGODB_DATABASE: ${{secrets.MONGODB_DATABASE}}
+          COOKIE_SECRET: ${{secrets.COOKIE_SECRET}}
+          GOOGLE_CLIENT_ID: ${{secrets.GOOGLE_CLIENT_ID}}
+      - name: Collect coverage from client
+        uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+          working-directory: client
+      - name: Collect coverage from server
+        uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+          working-directory: server
+        env:
+          MONGODB_URL: ${{ secrets.MONGODB_URL }}
+          MONGODB_DATABASE: ${{secrets.MONGODB_DATABASE}}
+          COOKIE_SECRET: ${{secrets.COOKIE_SECRET}}
+          GOOGLE_CLIENT_ID: ${{secrets.GOOGLE_CLIENT_ID}}
