@@ -6,18 +6,22 @@ import Education from "../pics/bg-pictures/img_2.png";
 import NewsImg1 from "../pics/bg-pictures/img_3.png";
 import NewsImg2 from "../pics/bg-pictures/img_4.png";
 import NewsImg3 from "../pics/bg-pictures/img_5.jpg";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export function FrontPage() {
   return (
     <div className={"page-margin"}>
       <div
-          className={"front-image"}
-          style={{ backgroundImage: `url(${FrontBg})`}}
+        className={"front-image"}
+        style={{ backgroundImage: `url(${FrontBg})` }}
       >
-        <h1 className={"front-image-text custom-font-knowledge"}>Meliora Impact</h1>
+        <h1 className={"front-image-text custom-font-knowledge"}>
+          Meliora Impact
+        </h1>
         <Link to={"/signup"}>
-          <button className={"front-image-button custom-shadow-button"}>Join us</button>
+          <button className={"front-image-button custom-shadow-button"}>
+            Join us
+          </button>
         </Link>
       </div>
 
@@ -42,7 +46,9 @@ export function FrontPage() {
           eget ornare.
         </p>
         <Link to={"/about"}>
-          <button className={"about-us-button custom-shadow-button"}>Read more</button>
+          <button className={"about-us-button custom-shadow-button"}>
+            Read more
+          </button>
         </Link>
       </div>
       <div className={"topic-container"}>
@@ -52,10 +58,11 @@ export function FrontPage() {
             <img src={Nature} alt={"Picture of nature"} />
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            viverra id metus ut scelerisque. Morbi luctus tincidunt neque, sed
-            sagittis ligula consectetur nec. Vivamus consequat neque at varius
-            faucibus.
+            Nature is by design sustainable, it has supported itself for decades
+            but human intervention across the past centuries has been weakening
+            the very infrastructure it stands on. We always aim to protect and
+            invest in what is already here so we as well it stands a chance for
+            future growth.
           </p>
         </div>
         <div className={"topic"}>
@@ -64,10 +71,11 @@ export function FrontPage() {
             <img src={Welfare} alt={"Picture of poor children"} />
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            viverra id metus ut scelerisque. Morbi luctus tincidunt neque, sed
-            sagittis ligula consectetur nec. Vivamus consequat neque at varius
-            faucibus.
+            The clean water crisis persist as a leading issue in several large
+            parts of the world. It is a human right and necessity yet is
+            consistently overlooked and lacking in support. Our aim is to uplift
+            and highlight these core violations of human rights to foster more
+            support for the communities at large.
           </p>
         </div>
         <div className={"topic"}>
@@ -76,10 +84,11 @@ export function FrontPage() {
             <img src={Education} alt={"Picture of child in school"} />
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            viverra id metus ut scelerisque. Morbi luctus tincidunt neque, sed
-            sagittis ligula consectetur nec. Vivamus consequat neque at varius
-            faucibus.
+            Studies prove that education plays a large role in how well people
+            in communities of all ranges fare supporting themselves and breaking
+            cycles generational poverty and trauma. We strongly believe it is a
+            right to have access to quality education and learning which is why
+            it is part of our focus.
           </p>
         </div>
       </div>
