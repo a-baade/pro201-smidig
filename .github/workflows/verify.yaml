@@ -2,13 +2,13 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - 'client/__selenium_tests__/**'
 
 jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 2
-    exclude_patterns:
-      - "__selenium_tests__/"
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
