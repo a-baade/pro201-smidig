@@ -55,7 +55,8 @@
       "**/*.jsx",
       "**/*.js",
       "!dist/**",
-      "!coverage/**"
+      "!coverage/**",
+      "!__selenium_tests__/**"
     ]
   }
 }
