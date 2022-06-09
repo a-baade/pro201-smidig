@@ -78,7 +78,7 @@
 .ourMission-txt{
     justify-content: center;
     position: relative;
-    margin: 0 0 0 -4vh;
+    margin: 0 0 0 -5vh;
 }
 
 .big-container {
@@ -118,6 +118,7 @@
 .small-title {
     font-weight: bold;
     font-size: 18px;
+    font-family: 'Abhaya Libre', serif;
 }
 
 .small-title:last-of-type {
@@ -135,7 +136,7 @@
 
 .small-txt, .small-title {
     text-align: center;
-    margin: 10px;
+    margin: 5px;
 }
 
 .graphics {
