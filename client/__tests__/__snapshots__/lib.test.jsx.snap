@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput and FormPassword components should test form input 2`] = `"<div class=\\"form-input\\"><label><strong></strong> <input value=\\"\\"></label></div>"`;
+
+exports[`FormInput and FormPassword components should test form password 2`] = `"<div class=\\"form-input\\"><label><strong></strong> <input type=\\"password\\" value=\\"\\"></label></div>"`;
+
+exports[`FormInput and FormPassword components should test loading spinner 2`] = `"<div class=\\"loading-wrapper\\"><div class=\\"loading\\"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>"`;
