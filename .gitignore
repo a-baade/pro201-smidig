@@ -9,3 +9,4 @@ dist/
 /server/.env
 /client/coverage/
 /server/coverage/
+/client/__selenium_tests__/
