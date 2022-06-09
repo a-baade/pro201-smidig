@@ -49,7 +49,8 @@
       "**/*.js",
       "!server.js",
       "!coverage/**",
-      "!loginApi.js"
+      "!loginApi.js",
+      "!__selenium_tests__/**"
     ]
   }
 }
