@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "jest",
+    "test": "jest ./__tests__/**",
     "dev": "parcel watch index.html",
     "build": "npm install --include=dev && parcel build index.html"
   },
