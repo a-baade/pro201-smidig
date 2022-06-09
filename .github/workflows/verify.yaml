@@ -15,6 +15,7 @@ jobs:
       - run: npm test
         env:
           MONGODB_URL: ${{ secrets.MONGODB_URL }}
+          MONGO_DATABASE: ${{ secrets.MONGO_DATABASE }}
           COOKIE_SECRET: ${{secrets.COOKIE_SECRET}}
           GOOGLE_CLIENT_ID: ${{secrets.GOOGLE_CLIENT_ID}}
       - name: Collect coverage from client
@@ -27,5 +28,6 @@ jobs:
           working-directory: server
         env:
           MONGODB_URL: ${{ secrets.MONGODB_URL }}
+          MONGO_DATABASE: ${{ secrets.MONGO_DATABASE }}
           COOKIE_SECRET: ${{secrets.COOKIE_SECRET}}
           GOOGLE_CLIENT_ID: ${{secrets.GOOGLE_CLIENT_ID}}
