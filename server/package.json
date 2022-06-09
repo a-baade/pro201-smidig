@@ -49,7 +49,7 @@
       "**/*.js",
       "!server.js",
       "!coverage/**",
-      "!loginApi.js",
+      "!loginApi.js"
     ]
   }
 }
