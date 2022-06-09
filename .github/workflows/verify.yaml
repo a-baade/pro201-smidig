@@ -2,8 +2,6 @@ on:
   push:
     branches:
       - master
-    paths-ignore:
-      - 'client/__selenium_tests__/**'
 
 jobs:
   verify:
@@ -17,7 +15,6 @@ jobs:
       - run: npm test
         env:
           MONGODB_URL: ${{ secrets.MONGODB_URL }}
-          MONGODB_DATABASE: ${{secrets.MONGODB_DATABASE}}
           COOKIE_SECRET: ${{secrets.COOKIE_SECRET}}
           GOOGLE_CLIENT_ID: ${{secrets.GOOGLE_CLIENT_ID}}
       - name: Collect coverage from client
@@ -30,6 +27,5 @@ jobs:
           working-directory: server
         env:
           MONGODB_URL: ${{ secrets.MONGODB_URL }}
-          MONGODB_DATABASE: ${{secrets.MONGODB_DATABASE}}
           COOKIE_SECRET: ${{secrets.COOKIE_SECRET}}
           GOOGLE_CLIENT_ID: ${{secrets.GOOGLE_CLIENT_ID}}

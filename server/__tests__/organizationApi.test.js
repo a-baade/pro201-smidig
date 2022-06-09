@@ -22,7 +22,7 @@ afterAll(() => {
 
 describe("organizations api", () => {
   it("should get organizations", async function () {
-    const email = ["Test email"];
+    const email = "Test email";
     await request(app).post("/api/register").send({
       firstName: "Test name",
       lastName: "Test name",
