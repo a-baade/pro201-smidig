@@ -50,7 +50,11 @@
       "!server.js",
       "!coverage/**",
       "!loginApi.js",
-      "!__selenium_tests__/**"
+      "!charityTest.test.jsx",
+      "!frontPageSelenium.test.jsx",
+      "!localLoginSelenium.test.jsx",
+      "!loginGoogleSelenium.test.jsx",
+      "!signUpSelenium.test.jsx"
     ]
   }
 }
